@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xs3p.xsl"?>
+
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://registry.samply.de/schemata/import_v1" xmlns="http://registry.samply.de/schemata/import_v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+        <xs:simpleType name="Dataelement_85_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="other" />
+
+                        <xs:enumeration value="female" />
+
+                        <xs:enumeration value="male" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_20_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_24_4_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_77_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Regional lymph nodes - N3" />
+
+                        <xs:enumeration value="Regional lymph nodes - NX" />
+
+                        <xs:enumeration value="Regional lymph nodes - N0" />
+
+                        <xs:enumeration value="Regional lymph nodes - N1" />
+
+                        <xs:enumeration value="Regional lymph nodes - N1a" />
+
+                        <xs:enumeration value="Regional lymph nodes - N1b" />
+
+                        <xs:enumeration value="Regional lymph nodes - N1c" />
+
+                        <xs:enumeration value="Regional lymph nodes - N2" />
+
+                        <xs:enumeration value="Regional lymph nodes - N2a" />
+
+                        <xs:enumeration value="Regional lymph nodes - N2b" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_54_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Other" />
+
+                        <xs:enumeration value="Healthy colon tissue" />
+
+                        <xs:enumeration value="Tumor" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_31_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="CT - Unknown" />
+
+                        <xs:enumeration value="CT - Done, data not available" />
+
+                        <xs:enumeration value="CT - Done, data available" />
+
+                        <xs:enumeration value="CT- Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_73_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="8th edition" />
+
+                        <xs:enumeration value="Not known" />
+
+                        <xs:enumeration value="7th edition" />
+
+                        <xs:enumeration value="6th edition" />
+
+                        <xs:enumeration value="5th edition" />
+
+                        <xs:enumeration value="4th edition or earlier" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_92_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Localization of primary tumor - C20" />
+
+                        <xs:enumeration value="Localization of primary tumor - C19" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.7" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.6" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.5" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.4" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.3" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.2" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.1" />
+
+                        <xs:enumeration value="Localization of primary tumor - C18.0" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_58_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Invasion front not included" />
+
+                        <xs:enumeration value="Readily available" />
+
+                        <xs:enumeration value="Can be generated" />
+
+                        <xs:enumeration value="No" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_63_4_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Lung imaging - Not done" />
+
+                        <xs:enumeration value="Lung imaging - Done, data available" />
+
+                        <xs:enumeration value="Lung imaging - Done, data not available" />
+
+                        <xs:enumeration value="Lung imaging - Unknown" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_25_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_21_5_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_55_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Other" />
+
+                        <xs:enumeration value="Cryopreservation" />
+
+                        <xs:enumeration value="FFPE" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_93_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Location of tumor - C18.0" />
+
+                        <xs:enumeration value="Location of tumor - C18.1" />
+
+                        <xs:enumeration value="Location of tumor - C18.2" />
+
+                        <xs:enumeration value="Location of tumor - C18.3" />
+
+                        <xs:enumeration value="Location of tumor - C18.4" />
+
+                        <xs:enumeration value="Location of tumor - C18.5" />
+
+                        <xs:enumeration value="Location of tumor - C18.6" />
+
+                        <xs:enumeration value="Location of tumor - C18.7" />
+
+                        <xs:enumeration value="Location of tumor - C19" />
+
+                        <xs:enumeration value="Location of tumor - C19.9" />
+
+                        <xs:enumeration value="Location of tumor - C20" />
+
+                        <xs:enumeration value="Location of tumor - C20.9" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_70_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Stage - IV" />
+
+                        <xs:enumeration value="Stage - III" />
+
+                        <xs:enumeration value="Stage - II" />
+
+                        <xs:enumeration value="Stage - IVC" />
+
+                        <xs:enumeration value="Stage - IIC" />
+
+                        <xs:enumeration value="Stage - IVB" />
+
+                        <xs:enumeration value="Stage - IVA" />
+
+                        <xs:enumeration value="Stage - IIIC" />
+
+                        <xs:enumeration value="Stage - IIIB" />
+
+                        <xs:enumeration value="Stage - IIIA" />
+
+                        <xs:enumeration value="Stage - IIB" />
+
+                        <xs:enumeration value="Stage - II A" />
+
+                        <xs:enumeration value="Stage - I" />
+
+                        <xs:enumeration value="Stage - 0" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_59_6_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Other" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - 5-FU 325-350 mg/m2 + LV 20 mg/m2i.v. bolus, day1-5, weeks 1 and 5" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - 5-FU 400 mg/m2 + 100 mg i.v. bolus, d 1,2, 11,12,21,22" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - 5-FU 225 mg/m2 i.v. continuous infusion, 5 days per week" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - 5-FU 1000 mg/m2 i.v. continuous infusion, day 1-5, weeks 1 and 5" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - Capecitabine 800-825 mg/m2 bid po, day 1-5, together with radiation or continuously untill end of radiation" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - UFT (300-340mg/m2/day) and LV (22.5-90 mg/day) po continuously, 5(-7) days per week, together with radiotherapy" />
+
+                        <xs:enumeration value="Scheme of pharmacotherapy - Only preoperatively (no standard): 5-FU 250 mg/m2 i.v. continuous infusion on days 1-13 nad 22-35 and oxaliplatin 50mg/m2 i.v. day 1,8,22 and 29" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_87_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="BRAF, PIC3CA, HER2 mutation status - Partial information available" />
+
+                        <xs:enumeration value="BRAF, PIC3CA, HER2 mutation status - not mutated" />
+
+                        <xs:enumeration value="BRAF, PIC3CA, HER2 mutation status - mutated" />
+
+                        <xs:enumeration value="BRAF, PIC3CA, HER2 mutation status - not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_83_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="WHO Grading - Grade - G1" />
+
+                        <xs:enumeration value="WHO Grading - Grade - G2" />
+
+                        <xs:enumeration value="WHO Grading - Grade - G3" />
+
+                        <xs:enumeration value="WHO Grading - Grade - G4" />
+
+                        <xs:enumeration value="WHO Grading - Grade - GX" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_49_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Other" />
+
+                        <xs:enumeration value="Endo-rectal tumor resection" />
+
+                        <xs:enumeration value="Abdomino-perineal resection" />
+
+                        <xs:enumeration value="Anterior resection of rectum" />
+
+                        <xs:enumeration value="Low anteroir colon resection" />
+
+                        <xs:enumeration value="Pan-procto colectomy" />
+
+                        <xs:enumeration value="Total colectomy" />
+
+                        <xs:enumeration value="Sigmoid colectomy" />
+
+                        <xs:enumeration value="Transverse colectomy" />
+
+                        <xs:enumeration value="Left hemicolectomy" />
+
+                        <xs:enumeration value="Right hemicolectomy" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_22_4_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_68_4_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Localization of metastasis - None" />
+
+                        <xs:enumeration value="Localization of metastasis - Pulmonary" />
+
+                        <xs:enumeration value="Localization of metastasis - Osseous" />
+
+                        <xs:enumeration value="Localization of metastasis - Hepatic" />
+
+                        <xs:enumeration value="Localization of metastasis - Brain" />
+
+                        <xs:enumeration value="Localization of metastasis - Lymph nodes" />
+
+                        <xs:enumeration value="Localization of metastasis - Bone marrow" />
+
+                        <xs:enumeration value="Localization of metastasis - Pleura" />
+
+                        <xs:enumeration value="Localization of metastasis - Peritoneum" />
+
+                        <xs:enumeration value="Localization of metastasis - Adrenals" />
+
+                        <xs:enumeration value="Localization of metastasis - Skin" />
+
+                        <xs:enumeration value="Localization of metastasis - Others" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_75_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Distant metastasis - MX" />
+
+                        <xs:enumeration value="Distant metastasis - M1c" />
+
+                        <xs:enumeration value="Distant metastasis - M0" />
+
+                        <xs:enumeration value="Distant metastasis - M1" />
+
+                        <xs:enumeration value="Distant metastasis - M1a" />
+
+                        <xs:enumeration value="Distant metastasis - M1b" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_33_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Specific response - Complete response" />
+
+                        <xs:enumeration value="Specific response - Partial response" />
+
+                        <xs:enumeration value="Specific response - Stable disease" />
+
+                        <xs:enumeration value="Specific response - Progressive disease" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_71_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Primary Tumor - T4" />
+
+                        <xs:enumeration value="Primary Tumor - T4b" />
+
+                        <xs:enumeration value="Primary Tumor - T4a" />
+
+                        <xs:enumeration value="Primary Tumor - T3" />
+
+                        <xs:enumeration value="Primary Tumor - T2" />
+
+                        <xs:enumeration value="Primary Tumor - T1" />
+
+                        <xs:enumeration value="Primary Tumor - Tis" />
+
+                        <xs:enumeration value="Primary Tumor - T0" />
+
+                        <xs:enumeration value="Primary Tumor - TX" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_14_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="YES" />
+
+                        <xs:enumeration value="NO" />
+
+                        <xs:enumeration value="NOT_DONE" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_88_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Colonoscopy diagnostic exam- Unknown" />
+
+                        <xs:enumeration value="Colonoscopy diagnostic exam- Not done" />
+
+                        <xs:enumeration value="Colonoscopy diagnostic exam - Negative" />
+
+                        <xs:enumeration value="Colonoscopy diagnostic exam - Positive" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_61_5_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Liver imaging - Unknown Not done" />
+
+                        <xs:enumeration value="Liver imaging - Done, data available" />
+
+                        <xs:enumeration value="Liver imaging - Done, data not available" />
+
+                        <xs:enumeration value="Liver imaging - Unknown" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_5_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="ALIVE" />
+
+                        <xs:enumeration value="DEATH_COLON_CANCER" />
+
+                        <xs:enumeration value="DEATH_OTHER" />
+
+                        <xs:enumeration value="DEATH_UNKNOWN_REASON" />
+
+                        <xs:enumeration value="UNKNOWN" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_9_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="R2" />
+
+                        <xs:enumeration value="R1" />
+
+                        <xs:enumeration value="R0" />
+
+                        <xs:enumeration value="RX" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_23_5_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not mutated" />
+
+                        <xs:enumeration value="Mutated" />
+
+                        <xs:enumeration value="Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_53_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Not known" />
+
+                        <xs:enumeration value="1st edition" />
+
+                        <xs:enumeration value="2nd edition" />
+
+                        <xs:enumeration value="3rd edition" />
+
+                        <xs:enumeration value="4th edition" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_30_3_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="MRI - Unknown" />
+
+                        <xs:enumeration value="MRI - Done, data not available" />
+
+                        <xs:enumeration value="MRI - Done, data available" />
+
+                        <xs:enumeration value="MRI - Not done" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_91_1_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="Signet ring cell carcinoma" />
+
+                        <xs:enumeration value="Cribriform comedo-type adenocarcinoma" />
+
+                        <xs:enumeration value="Adenocarcinoma" />
+
+                        <xs:enumeration value="Mucinous carcinoma" />
+
+                        <xs:enumeration value="Signet-ring cell carcinoma" />
+
+                        <xs:enumeration value="Medullary carcinoma" />
+
+                        <xs:enumeration value="High-grade neuroendocrine carcinoma" />
+
+                        <xs:enumeration value="Large cell neuroendocrine carcinoma" />
+
+                        <xs:enumeration value="small cell neuroendocrine carcinoma" />
+
+                        <xs:enumeration value="Squamous cell carcinoma" />
+
+                        <xs:enumeration value="Adeonsquamous carcinoma" />
+
+                        <xs:enumeration value="Micropapillary carcinoma" />
+
+                        <xs:enumeration value="Serrated adenocarcinoma" />
+
+                        <xs:enumeration value="Spindle cell carcinoma" />
+
+                        <xs:enumeration value="Mixed adenoneuroendocrine carcinoma" />
+
+                        <xs:enumeration value="Undifferentiated carcinoma" />
+
+                        <xs:enumeration value="Other" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_15_2_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="LOSS_OF_EXPRESSION" />
+
+                        <xs:enumeration value="EXPRESSION" />
+
+                        <xs:enumeration value="NOT_DONE" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+        <xs:simpleType name="Dataelement_57_4_type">
+            <xs:restriction base="xs:string">
+            
+                        <xs:enumeration value="No" />
+
+                        <xs:enumeration value="Can be generated" />
+
+                        <xs:enumeration value="Readily available" />
+
+            </xs:restriction>
+        </xs:simpleType>
+
+
+
+  <xs:element name="BHImport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Mdr">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:anyURI" name="URL" fixed="https://mdr.osse-register.de/v3/api/mdr"/>
+              <xs:element type="xs:string" name="Namespace" fixed="urn:ccdg"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        
+        <xs:element name="BHPatient" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Identifier">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:string" name="encrypted"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              
+              <xs:element name="Locations">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Location" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          
+                          <xs:element name="BasicData">
+                            <xs:complexType>
+                              <xs:sequence>
+
+                                <xs:element name="Form" minOccurs="0">
+                                  <xs:annotation>
+                                      <xs:documentation></xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType mixed="true">
+                                    <xs:all>
+                                      
+                                      <xs:element name="Dataelement_2_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Participation in clinical study</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Participation in clinical study"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_85_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Biological sex of the person, defined by chromosomes.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_85_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Biological sex"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_20_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>KRAS exon 2 (codons 12 or 13) mutation status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_20_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="KRAS exon 2 (codons 12 or 13)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_6_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Timestamp of last update of vital status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Timestamp of last update of vital status"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_24_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>NRAS exon  3 (codons 59 or 61) mutation status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_24_4_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="NRAS exon 3 (codons 59 or 61)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_31_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation> Diagnostic exam CT. This value shall be TRUE only if they were done within the context of the primary diagnosis. The values are advertising what is available in the biobank after further request and data is not provided as a part of collecting the central data set.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_31_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="CT"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_16_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Risk situation (only HNPCC), Amsterdam criteria</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Risk situation (only HNPCC)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_63_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Lung imaging diagnostic exam. If CT or MRI or PET scan is available, this should be also considered one of the “Done” options. This value shall be TRUE only if they were done within the context of the primary diagnosis. The values are advertising what is available in the biobank after further request and data is not provided as a part of collecting the central data set.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_63_4_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Lung imaging"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_3_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Age at initial histopathological diagnosis (biopsy or surgical specimen of the primary tumor) rounded to years.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Age at diagnosis (rounded to years)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_7_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Weeks after first colon cancer therapy started for the given person. If the data is collected at the source in months only, the conversion should be  weeks := months*4</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Overall survival status"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_25_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>NRAS exon 4 (codons 117 or 146) mutation status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_25_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="NRAS exon 4 (codons 117 or 146)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_21_5" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>KRAS exon 3 (codons 59 or 61) mutation status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_21_5_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="KRAS exon 3 (codons 59 or 61)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_51_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Date at which colon cancer was diagnosed for the first time. Histopathological diagnosis by biopsy or surgery qualifies as primary diagnosis</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of diagnosis"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_87_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>BRAF, PIC3CA, HER2 mutation status. If only 1 or 2 of the three mutation analyses have been done, the “Partial information available” value shall be selected</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_87_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="BRAF, PIC3CA, HER2 mutation status"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_4_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Weeks between primary diagnosis and diagnosed recurrence. If only months is available, conversion is weeks := months * 4. Any re-occurrence of cancer, be it a local re-occurrence, a lymph node metastasis, or a distant metastasis</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Time of recurrence (metastasis diagnosis)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_22_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>KRAS exon 4 (codons 117 or 146) </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_22_4_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="KRAS exon 4 (codons 117 or 146) mutation status"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_14_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Microsatellites analysed BAT26, D17S250, D5S346, BAT40, D2S123 and BAT25. Image cytometry does not qualify for comparability reasons</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_14_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Microsatellite instability"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_88_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Colonoscopy - Diagnostic exam. In case of rectal cancer, use rectoscopy also qualifies to answer TRUE here. But only rectoscopy in case of colon cancer does NOT qualify for TRUE. If the colonoscopy has been done outside of the biobank or the result is not available for some reason, the answer can be “not done”. This value shall be TRUE only if they were done within the context of the primary diagnosis. The values are advertising what is available in the biobank after further request and data is not provided as a part of collecting the central data set.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_88_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Colonoscopy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_61_5" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Liver imaging diagnostic exam. This value shall be TRUE only if they were done within the context of the primary diagnosis. The values are advertising what is available in the biobank after further request and data is not provided as a part of collecting the central data set.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_61_5_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Liver imaging"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_5_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Vital status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_5_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Vital status"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_23_5" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>NRAS exon 2 (codons 12 or 13) mutation status</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_23_5_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="NRAS exon 2 (codons 12 or 13)"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_30_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>MRI diagnostic exam. This value shall be TRUE only if they were done within the context of the primary diagnosis. The values are advertising what is available in the biobank after further request and data is not provided as a part of collecting the central data set.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_30_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="MRI"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_15_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Mismatch repair gene expression – IHC array for different genes (common for 3). Expression of MLH1, MSH2, PMS2 and MSH6</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_15_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Mismatch repair gene expression"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                    </xs:all>
+                                    <xs:attribute name="name" use="required" fixed="form_28_ver-27" />
+                                  </xs:complexType>
+                                </xs:element>
+
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+
+                          <xs:element name="Events" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Event" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="LogitudinalData">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            
+
+                                            <xs:element name="Form" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_67_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Surgery type, if not present on the list</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Other surgery type"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_93_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Location of the tumor</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_93_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Location of the tumor"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_8_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Time difference between initial diagnosis and surgery. Weeks between initial diagnosis and date of surgery. Pre-operatively treated cases (neoadjuvant therapy) are welcome, but there needs to be surgery later on anyway, to have also sufficient amount of biological material.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Time difference between initial diagnosis and surgery"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_49_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Surgery type</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_49_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Surgery type"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_9_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Whether the surgery removed the entire tumor.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_9_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Surgery radicality"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_32_ver-8" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form1" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_89_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Calendar year in which the sample was collected.(YYYY)</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Year of sample collection"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_54_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Type of specimen</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_54_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Material type"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_55_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>The preservation mode for the specimen</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_55_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Preservation mode"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_56_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>An identifier, unique within the biobank</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Sample ID"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_35_ver-6" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form2" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_77_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>TNM - Regional lymph nodes. It shall be interpreted as pTN - for tumor samples and biopsies, as the TN should come from the sample or biopsy. M may come from imaging (hence it may come from cTNM clinical assessment). Rationale: pTNM - is more reliable and should be available for tumors and biopsies</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_77_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Regional lymph nodes"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_73_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>The version of the UICC system under which the staging was done. Version years:8th edition (since 2017),7th edition (used 2010-2017),6th. ed (used 2003-2009),5th. ed (used 1998-2002),4th. ed (used before 1998)</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_73_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="UICC version"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_92_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Histopathology part - Localization of primary tumor</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_92_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Localization of primary tumor"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_58_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Do you have high-resolution digital imaging (corresponding to magnification 40x) containing invasion front from the histopatology?</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_58_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Availability invasion front digital imaging"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_82_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Biological material from recurrence available</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Biological material from recurrence available"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_70_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>UICC Stage. The stages list is based on 8th edition, and backwards compatible with earlier editions. </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_70_2_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Stage"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_83_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Grade. For Sweden “medium high” shall map to G3,  and “low medium” shall map to G2. This has to be documented in the provenance information</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_83_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Grade"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_68_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Histopathology part - Localization of metastasis</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_68_4_type">
+                                          <xs:attribute type="xs:string" name="name" use="required" fixed="Localization of metastasis"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_75_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>TNM - Distant metastasis. It shall be interpreted as pTN - for tumor samples and biopsies, as the TN should come from the sample or biopsy. M may come from imaging (hence it may come from cTNM clinical assessment). Rationale: pTNM - is more reliable and should be available for tumors and biopsies</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_75_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Distant metastasis"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_71_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>TNM Primary Tumor. It shall be interpreted as pTN - for tumor samples and biopsies, as the TN should come from the sample or biopsy. M may come from imaging (hence it may come from cTNM clinical assessment). Rationale: pTNM - is more reliable and should be available for tumors and biopsies</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_71_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Primary Tumor"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_53_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>The version of the WHO classification system used.Version years:4th ed. (used since 2011),3rd ed. (2001-2010),2nd ed. (1991-2000),1st ed. (1979-1990)</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_53_3_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="WHO version"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_91_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Histopathology Part - Morphology. This is a mandatory part of histopathological diagnosis, therefore it should be available. If really not available, “Other” may be used, but it is a sign of insufficient data detail</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_91_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Morphology"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_57_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Do you have high-resolution digital imaging (corresponding to magnification 40x) from the histopatology?. Only scans of the surgical material should be considered here. The rationale is that smaller sections of the material (e.g., biopsies) do not contain sufficiently representative material for machine learning approaches</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_57_4_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Availability digital imaging"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_34_ver-22" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form3" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_81_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Other pharmacotherapy scheme. When Other option is selected for pharmacotherapy scheme, the plain text description shall be provided. The plain text must include at least the chemical compounds used, the dosage and timing is optional</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Other pharmacotherapy scheme"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_59_6" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Scheme of pharmacotherapy. If the theraphy was terminated or changed (e.g., dosage reduced), “Other” shall be selected. Additional textual information should be provided in such a case, see PHARMACOTHERAPY_SCHEME_DESCRIPTION</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_59_6_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Scheme of pharmacotherapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_10_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Start of the drug intake in weeks since initial diagnosis.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of start of pharamacotherapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_11_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>End of the drug intake  in weeks since initial diagnosis.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of end of pharamcotherapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_33_ver-10" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form4" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_33_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Response to therapy - Specific response</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="Dataelement_33_1_type">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Specific response"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_34_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Date response was obtained in weeks since initial diagnosis</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date response was obtained in weeks since initial diagnosis"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_31_ver-2" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form5" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_12_4" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Start of the radiation therapy in weeks since initial diagnosis. For combined therapies, they should be entered as separate therapies.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of start of radiation therapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_13_2" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>End of the radiation therapy in weeks since initial diagnosis.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of end of radiation therapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_29_ver-5" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            <xs:element name="Form6" minOccurs="0">
+                                              <xs:annotation>
+                                                  <xs:documentation></xs:documentation>
+                                              </xs:annotation>
+                                              <xs:complexType mixed="true">
+                                                <xs:all>
+                                      
+                                      <xs:element name="Dataelement_35_3" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Targeted therapy - Date of start (weeks since initial diagnosis)</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of start of targeted therapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+                                      <xs:element name="Dataelement_36_1" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>Targeted therapy - Date of end (weeks since initial diagnosis)</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="name" use="required" fixed="Date of end of targeted therapy"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+
+
+                                      
+                                                </xs:all>
+                                                <xs:attribute name="name" use="required" fixed="form_30_ver-3" />
+                                              </xs:complexType>
+                                            </xs:element>
+
+                                            
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="name" use="required">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+                                          <xs:minLength value="1"/>
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="eventtype" use="required">
+                                      <xs:simpleType>
+                                        <xs:restriction base="xs:string">
+
+                        <xs:enumeration value="Sample" />
+
+                        <xs:enumeration value="Histopathology" />
+
+                        <xs:enumeration value="Pharmacotherapy" />
+
+                        <xs:enumeration value="Radiation therapy" />
+
+                        <xs:enumeration value="Response to therapy" />
+
+                        <xs:enumeration value="Surgery" />
+
+                        <xs:enumeration value="Targeted Therapy" />
+
+                                        </xs:restriction>
+                                      </xs:simpleType>
+                                    </xs:attribute>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          
+                        </xs:sequence>
+                        <xs:attribute name="name" use="required">
+                          <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                              <xs:minLength value="1"/>
+                            </xs:restriction>
+                          </xs:simpleType>
+                        </xs:attribute>
+
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

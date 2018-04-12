@@ -1,0 +1,198 @@
+SourceString	Score	Map	TargetString
+
+TNM-T = 1	23.13	X	Histopathology / TNM / Primary Tumor = T1
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T0
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T2
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T3
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T4
+TNM-T = 1	8.38		Histopathology / TNM / Distant metastasis = M1
+TNM-T = 1	8.38		Histopathology / TNM / Regional lymph nodes = N1
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1b
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1a
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1c
+TNM-T = 1	8.0		Histopathology / TNM / Primary Tumor = T4a
+TNM-T = 1	8.0		Histopathology / TNM / Primary Tumor = T4b
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+TNM-T = 2	23.13	X	Histopathology / TNM / Primary Tumor = T2
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T0
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T1
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T3
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T4
+TNM-T = 2	8.38		Histopathology / TNM / Regional lymph nodes = N2
+TNM-T = 2	8.0		Histopathology / TNM / Primary Tumor = T4a
+TNM-T = 2	8.0		Histopathology / TNM / Primary Tumor = T4b
+TNM-T = 2	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+TNM-T = 2	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+TNM-T = 3	23.13	X	Histopathology / TNM / Primary Tumor = T3
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T0
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T1
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T2
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T4
+TNM-T = 3	8.38		Histopathology / TNM / Regional lymph nodes = N3
+TNM-T = 3	8.0		Histopathology / TNM / Primary Tumor = T4a
+TNM-T = 3	8.0		Histopathology / TNM / Primary Tumor = T4b
+
+TNM-N = 1	23.13	X	Histopathology / TNM / Regional lymph nodes = N1
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1c
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1b
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1a
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N2
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N0
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N3
+TNM-N = 1	8.38		Histopathology / TNM / Distant metastasis = M1
+TNM-N = 1	8.38		Histopathology / TNM / Primary Tumor = T1
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1b
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1a
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1c
+TNM-N = 1	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+TNM-N = 1	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+TNM-N = 2	23.13	X	Histopathology / TNM / Regional lymph nodes = N2
+TNM-N = 2	22.0		Histopathology / TNM / Regional lymph nodes = N2b
+TNM-N = 2	22.0		Histopathology / TNM / Regional lymph nodes = N2a
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N1
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N0
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N3
+TNM-N = 2	8.38		Histopathology / TNM / Primary Tumor = T2
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+TNM-N = 3	23.13	X	Histopathology / TNM / Regional lymph nodes = N3
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N2
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N1
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N0
+TNM-N = 3	8.38		Histopathology / TNM / Primary Tumor = T3
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+TNM-M = 0	23.13	X	Histopathology / TNM / Distant metastasis = M0
+TNM-M = 0	8.75		Histopathology / TNM / Distant metastasis = M1
+TNM-M = 0	8.38		Histopathology / TNM / Primary Tumor = T0
+TNM-M = 0	8.38		Histopathology / TNM / Regional lymph nodes = N0
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1b
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1a
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1c
+
+TNM-M = 1	23.13	X	Histopathology / TNM / Distant metastasis = M1
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1b
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1a
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1c
+TNM-M = 1	8.75		Histopathology / TNM / Distant metastasis = M0
+TNM-M = 1	8.38		Histopathology / TNM / Primary Tumor = T1
+TNM-M = 1	8.38		Histopathology / TNM / Regional lymph nodes = N1
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+UICC Stage = 0	51.43	X	Histopathology / UICC staging / Stage = 0
+UICC Stage = 0	22.43		Histopathology / UICC staging / Stage = IIIC
+UICC Stage = 0	22.3		Histopathology / UICC staging / Stage = IIC
+UICC Stage = 0	22.3		Histopathology / UICC staging / Stage = IVC
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = I
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = II A
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIB
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIIA
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIIB
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IVA
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IVB
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = II
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = III
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IV
+
+UICC Stage = 3C	22.43	X	Histopathology / UICC staging / Stage = IIIC
+UICC Stage = 3C	22.3		Histopathology / UICC staging / Stage = IIC
+UICC Stage = 3C	22.3		Histopathology / UICC staging / Stage = IVC
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = 0
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = I
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = II A
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIB
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIIA
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIIB
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IVA
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IVB
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = II
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = III
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IV
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 4th. ed
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = Not known
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+UICC Stage = 2A	23.8	X	Histopathology / UICC staging / Stage = II A
+UICC Stage = 2A	22.43		Histopathology / UICC staging / Stage = IIIC
+UICC Stage = 2A	22.3		Histopathology / UICC staging / Stage = IIC
+UICC Stage = 2A	22.3		Histopathology / UICC staging / Stage = IVC
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = 0
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = I
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIB
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIIA
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIIB
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IVA
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IVB
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = II
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = III
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IV
+UICC Stage = 2A	17.96		Histopathology / TNM / Regional lymph nodes = N2a
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 4th. ed
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = Not known
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+Colonoscopy = Negative	118.0	X	Diagnostic exam / Colonoscopy = Negative
+
+Colonoscopy = Unknown	112.0	X	Diagnostic exam / Colonoscopy = Unknown
+
+Colonoscopy = Positive	118.0	X	Diagnostic exam / Colonoscopy = Positive
+
+Colonoscopy = Not Done	540.0	X	Diagnostic exam / Colonoscopy = Not done
+
+CT = Data Not Available	612.0	X	Diagnostic exam / CT = Done, data not available
+CT = Data Not Available	500.0		Diagnostic exam / Liver imaging = Done, data not available
+CT = Data Not Available	500.0		Diagnostic exam / Lung imaging = Done, data not available
+CT = Data Not Available	500.0		Diagnostic exam / MRI = Done, data not available
+
+CT = Data Available	194.0	X	Diagnostic exam / CT = Done, data available
+CT = Data Available	138.0		Diagnostic exam / CT = Done, data not available
+CT = Data Available	112.0		Diagnostic exam / CT = Not done
+CT = Data Available	112.0		Diagnostic exam / CT = Unknown
+CT = Data Available	82.0		Diagnostic exam / Liver imaging = Done, data available
+CT = Data Available	82.0		Diagnostic exam / Lung imaging = Done, data available
+CT = Data Available	82.0		Diagnostic exam / MRI = Done, data available
+
+CT = Not Done	1286.0	X	Diagnostic exam / CT = Not done
+
+Gender = Male	64.0	X	Patient Data / Biological sex = male
+
+Gender = Female	76.0	X	Patient Data / Biological sex = female
+
+Age = INTEGER	20.0	X	Patient Data / Age at diagnosis (rounded to years) = INTEGER
+Age = INTEGER	14.0		Radiation therapy / Date of end of radiation therapy = INTEGER
+Age = INTEGER	14.0		Radiation therapy / Date of start of radiation therapy = INTEGER
+Age = INTEGER	14.0		Pharmacotherapy / Date of end of pharamcotherapy = INTEGER
+Age = INTEGER	14.0		Pharmacotherapy / Date of start of pharamacotherapy = INTEGER
+Age = INTEGER	14.0		Patient Data / Time of recurrence (metastasis diagnosis) = INTEGER
+Age = INTEGER	14.0		Targeted therapy / Date of end of targeted therapy = INTEGER
+Age = INTEGER	14.0		Targeted therapy / Date of start of targeted therapy = INTEGER
+Age = INTEGER	14.0		Sample / Year of sample collection = INTEGER
+Age = INTEGER	14.0		Surgery / Time difference between initial diagnosis and surgery = INTEGER
+Age = INTEGER	14.0		Response to thearapy / Date response was obtained in weeks since initial diagnosis = INTEGER
+Age = INTEGER	14.0		Vital status and survival information / Overall survival status = INTEGER
+
+Material Type = Healthy Tissue	276.0	X	Sample / Material type = Healthy colon tissue
+
+Material Type = Tumor	240.0	X	Sample / Material type = Tumor tissue
+
+Sample ID = STRING	196.0	X	Sample / Sample ID = STRING
+
