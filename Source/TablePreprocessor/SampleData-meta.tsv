@@ -1,0 +1,27 @@
+URN (do not edit)	SOURCE Slot (do not edit)	Data Type	Permitted Value	MDR Path (do not edit)	Matching Input (can be edited)
+	TNM-T	ENUMERATED	1	TNM-T = 1	TNM-T = 1
+	TNM-T	ENUMERATED	2	TNM-T = 2	TNM-T = 2
+	TNM-T	ENUMERATED	3	TNM-T = 3	TNM-T = 3
+	TNM-N	ENUMERATED	1	TNM-N = 1	TNM-N = 1
+	TNM-N	ENUMERATED	2	TNM-N = 2	TNM-N = 2
+	TNM-N	ENUMERATED	3	TNM-N = 3	TNM-N = 3
+	TNM-M	ENUMERATED	1	TNM-M = 1	TNM-M = 1
+	TNM-M	ENUMERATED	2	TNM-M = 2	TNM-M = 2
+	TNM-M	ENUMERATED	3	TNM-M = 3	TNM-M = 3
+	UICC Stage	ENUMERATED	0	UICC Stage = 0	UICC Stage = 0
+	UICC Stage	ENUMERATED	2B	UICC Stage = 2B	UICC Stage = 2B
+	UICC Stage	ENUMERATED	3C	UICC Stage = 3C	UICC Stage = 3C
+	UICC Stage	ENUMERATED	1	UICC Stage = 1	UICC Stage = 1
+	UICC Stage	ENUMERATED	2A	UICC Stage = 2A	UICC Stage = 2A
+	Colonoscopy	ENUMERATED	Negative	Colonoscopy = Negative	Colonoscopy = Negative
+	Colonoscopy	ENUMERATED	Unknown	Colonoscopy = Unknown	Colonoscopy = Unknown
+	Colonoscopy	ENUMERATED	Positive	Colonoscopy = Positive	Colonoscopy = Positive
+	Colonoscopy	ENUMERATED	Not Done	Colonoscopy = Not Done	Colonoscopy = Not Done
+	CT	ENUMERATED	Done	CT = Done	CT = Done
+	CT	ENUMERATED	Not Done	CT = Not Done	CT = Not Done
+	Gender	ENUMERATED	Male	Gender = Male	Gender = Male
+	Gender	ENUMERATED	Female	Gender = Female	Gender = Female
+	Age	INTEGER		Age = INTEGER	Age = INTEGER
+	Material Type	ENUMERATED	Healthy Tissue	Material Type = Healthy Tissue	Material Type = Healthy Tissue
+	Material Type	ENUMERATED	Tumor	Material Type = Tumor	Material Type = Tumor
+	Sample ID	STRING		Sample ID = STRING	Sample ID = STRING

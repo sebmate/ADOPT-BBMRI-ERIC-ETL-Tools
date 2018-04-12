@@ -1,0 +1,20 @@
+Patient	TNM-T	TNM-N	TNM-M	UICC Stage	Colonoscopy	CT	Gender	Age	Material Type	Sample ID
+	ENUMERATED	ENUMERATED	ENUMERATED	ENUMERATED	ENUMERATED	ENUMERATED	ENUMERATED	INTEGER	ENUMERATED	STRING
+10001	1	2	3	0	Positive	Done	Male	40	Tumor	10008
+10002	2	3	2	1	Negative	Not Done	Female	41	Healthy Tissue	10009
+10003	3	1	1	2A	Not Done	Done	Male	42	Tumor	10010
+10004	1	2	3	2B	Unknown	Not Done	Female	43	Healthy Tissue	10011
+10005	2	3	2	3C	Positive	Not Done	Male	44	Tumor	10012
+10006	3	1	1	0	Negative	Done	Female	45	Healthy Tissue	10013
+10007	1	2	3	1	Not Done	Not Done	Male	46	Tumor	10014
+10008	2	3	2	2A	Unknown	Not Done	Female	47	Healthy Tissue	10015
+10009	3	1	1	2B	Positive	Done	Male	48	Tumor	10016
+10010	1	2	3	3C	Negative	Not Done	Female	49	Healthy Tissue	10017
+10011	2	3	2	0	Not Done	Not Done	Male	50	Tumor	10018
+10012	3	1	1	1	Unknown	Done	Female	51	Healthy Tissue	10019
+10013	1	2	3	2A	Positive	Not Done	Male	52	Tumor	10020
+10014	2	3	2	2B	Negative	Not Done	Female	53	Healthy Tissue	10021
+10015	3	1	1	3C	Not Done	Done	Male	54	Tumor	10022
+10016	1	2	3	0	Unknown	Not Done	Female	55	Healthy Tissue	10023
+10017	2	3	2	1	Positive	Not Done	Male	56	Tumor	10024
+10018	3	1	1	2A	Negative	Done	Female	57	Healthy Tissue	10025

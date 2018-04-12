@@ -1,0 +1,172 @@
+<?xml version="1.1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schema.samply.de/store" xmlns="http://schema.samply.de/store" xmlns:dns="http://schema.samply.de/store" elementFormDefault="qualified">
+	<xs:element name="store">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="biobank" type="biobankType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="collection" type="collectionType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="sample" type="sampleType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="sampleContext" type="sampleContextType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="event" type="eventType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="donor" type="donorType" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		
+		<!-- unique id's -->
+		<xs:unique name="biobankId">
+			<xs:selector xpath="dns:biobank"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:unique name="collectionId">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:unique name="sampleId">
+			<xs:selector xpath="dns:sample"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:unique name="sampleContextId">
+			<xs:selector xpath="dns:sampleContext"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:unique name="eventId">
+			<xs:selector xpath="dns:event"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:unique name="donorId">
+			<xs:selector xpath="dns:donor"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		
+		<!-- define foreign keys -->
+		<xs:key name="biobankKey">
+			<xs:selector xpath="dns:biobank"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="collectionKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="sampleKey">
+			<xs:selector xpath="dns:sample"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="sampleContextKey">
+			<xs:selector xpath="dns:sampleContext"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="eventKey">
+			<xs:selector xpath="dns:event"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		<xs:key name="donorKey">
+			<xs:selector xpath="dns:donor"/>
+			<xs:field xpath="@id"/>
+		</xs:key>
+		
+		<!-- define foreign key constraints -->
+		<xs:keyref name="collectionbiobankRef" refer="biobankKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@biobankId"/>
+		</xs:keyref>
+		<xs:keyref name="samplecollectionRef" refer="collectionKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@collectionId"/>
+		</xs:keyref>
+		<xs:keyref name="samplesampleContextRef" refer="sampleContextKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@sampleContextId"/>
+		</xs:keyref>
+		<xs:keyref name="sampleContextdonorRef" refer="donorKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@donorId"/>
+		</xs:keyref>
+		<xs:keyref name="eventdonorRef" refer="donorKey">
+			<xs:selector xpath="dns:collection"/>
+			<xs:field xpath="@donorId"/>
+		</xs:keyref>
+		
+	</xs:element>
+	
+	<!-- RegEx for MDR keys -->
+	<xs:simpleType name="mdrKeyType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\w+:\w+:\w+:\d+:\d+"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- Key-value-Pairings according to MDR -->
+	<xs:complexType name="mdrKeyValueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="key" type="mdrKeyType"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<!-- biobank -->
+	<xs:complexType name="biobankType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- collection -->
+	<xs:complexType name="collectionType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="biobankId" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- sample -->
+	<xs:complexType name="sampleType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="collectionId" type="xs:string" use="required"/>
+		<xs:attribute name="sampleContextId" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- sampleContext -->
+	<xs:complexType name="sampleContextType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="donorId" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- event -->
+	<xs:complexType name="eventType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="donorId" type="xs:string" use="required"/>
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+	<!-- donor -->
+	<xs:complexType name="donorType">
+		<xs:sequence>
+			<!-- generic attributes -->
+			<xs:element name="genericAttribute" type="mdrKeyValueType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<!-- foreign keys -->
+		<xs:attribute name="id" type="xs:string" use="required"/>
+	</xs:complexType>
+	
+</xs:schema>
