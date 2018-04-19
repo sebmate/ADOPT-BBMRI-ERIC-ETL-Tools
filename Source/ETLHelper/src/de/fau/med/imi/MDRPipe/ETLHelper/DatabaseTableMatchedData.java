@@ -135,14 +135,12 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 						query += "t.\"" + DatabaseTableTranslation.TRANSLATION_SOURCE_DATA_TYPE + "\" != \"ENUMERATED\"";
 						query += ") ";
 					query += ") ";
-				//TODO: DIFFERENCE BETWEEN ENUMERATED AND NORMAL
 			query += "GROUP BY ";
 			query += "d.\"" + DatabaseTableData.DATA_ID + "\" ";
 		query += "ORDER BY ";
 			query += "d.\"" + DatabaseTableData.DATA_CASEID + "\" ASC, ";
 			query += "d.\"" + DatabaseTableData.DATA_INSTANCE + "\" ASC, ";
 			query += "d.\"" + DatabaseTableData.DATA_TIMESTAMP + "\" ASC";
-		System.out.println(query);
 		return query;
 	}
 	
@@ -160,8 +158,8 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		System.out.println("Number of data records that don't have a mapping: " + numberOfNonMatchedDataelements);
 		
 		if(numberOfNonMatchedDataelements > 0) {
-			System.out.println("Concepts that don't have a mapping:");
-			System.out.println(this.showNonMatchedConcepts());
+			System.out.println("");
+			System.out.println(this.showNonMatchedDataRecords());
 		}
 		
 		double percent = ((double) numberOfMatchedDataelements / (double) numberOfDataelements) * 100.0;
@@ -169,23 +167,23 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		
 	}
 	
-	public String showNonMatchedConcepts() {
+	public String showNonMatchedDataRecords() {
 		
 		String nonMatchedConcepts = "";
 		
 		String query = "SELECT ";
-			query += "DISTINCT \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\", ";
+			query += "DISTINCT \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\", \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE + "\", ";
 			query += "COUNT(\"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\") as conceptCount ";
 		query += "FROM " + this.getName() + " ";
 		query += "WHERE \"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP + "\" IS NOT \"X\" ";
-		query += "GROUP BY \"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_SOURCE_STRING + "\"";
+		query += "GROUP BY \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\", \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE + "\"";
 		
 		try {
 			this.getDatabaseStorage().setStatement(this.getDatabaseStorage().getConnection().createStatement());
 			this.getDatabaseStorage().getStatement().setQueryTimeout(30);
 			ResultSet nonMatchedConceptsResultSet = this.getDatabaseStorage().getStatement().executeQuery(query);
 			while(nonMatchedConceptsResultSet.next()) {
-				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT) + ": " + nonMatchedConceptsResultSet.getString("conceptCount") + "\n";
+				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT)  + " = " + nonMatchedConceptsResultSet.getString(DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
 			}
 		} catch (SQLException e) {
 			if(MDRPipeConfiguration.getDebug()) {
