@@ -1,0 +1,84 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://registry.samply.de/schemata/import_v2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="OSSEImport">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Mdr">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="URL"/>
+                            <xs:element type="xs:string" name="Namespace"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OSSEPatient" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Identifier">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="encrypted"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Locations">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Location" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="BasicData" minOccurs="1" maxOccurs="1">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Dataelement" maxOccurs="unbounded" minOccurs="1">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:string" name="mdrkey" use="required"/>
+                                                                                <xs:attribute type="xs:string" name="name" use="required"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Events">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Event" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Dataelement" maxOccurs="unbounded" minOccurs="1">
+                                                                                <xs:complexType>
+                                                                                    <xs:simpleContent>
+                                                                                        <xs:extension base="xs:string">
+                                                                                            <xs:attribute type="xs:string" name="mdrkey" use="required"/>
+                                                                                            <xs:attribute type="xs:string" name="name" use="required"/>
+                                                                                        </xs:extension>
+                                                                                    </xs:simpleContent>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="eventtype" use="required"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="name"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
