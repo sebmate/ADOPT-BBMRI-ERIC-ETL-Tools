@@ -116,7 +116,7 @@
         <BasicData>
           <Form name="form_28_ver-27">
             <Dataelement_88_1 name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement_88_1>
-            <Dataelement_30_3 name="MRI">MRI - Done, data not available</Dataelement_30_3>
+            <Dataelement_31_3 name="CT">CT - Done, data not available</Dataelement_31_3>
             <Dataelement_85_1 name="Biological sex">female</Dataelement_85_1>
             <Dataelement_3_1 name="Age at diagnosis (rounded to years)">43</Dataelement_3_1>
           </Form>
@@ -325,7 +325,7 @@
         <BasicData>
           <Form name="form_28_ver-27">
             <Dataelement_88_1 name="Colonoscopy">Colonoscopy diagnostic exam - Negative</Dataelement_88_1>
-            <Dataelement_30_3 name="MRI">MRI - Done, data not available</Dataelement_30_3>
+            <Dataelement_31_3 name="CT">CT - Done, data not available</Dataelement_31_3>
             <Dataelement_85_1 name="Biological sex">female</Dataelement_85_1>
             <Dataelement_3_1 name="Age at diagnosis (rounded to years)">49</Dataelement_3_1>
           </Form>
@@ -534,7 +534,7 @@
         <BasicData>
           <Form name="form_28_ver-27">
             <Dataelement_88_1 name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement_88_1>
-            <Dataelement_30_3 name="MRI">MRI - Done, data not available</Dataelement_30_3>
+            <Dataelement_31_3 name="CT">CT - Done, data not available</Dataelement_31_3>
             <Dataelement_85_1 name="Biological sex">female</Dataelement_85_1>
             <Dataelement_3_1 name="Age at diagnosis (rounded to years)">55</Dataelement_3_1>
           </Form>

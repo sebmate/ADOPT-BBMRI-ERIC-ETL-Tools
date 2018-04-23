@@ -216,10 +216,10 @@ Colonoscopy = Positive	118.0		X	Diagnostic exam / Colonoscopy = Positive	2
 
 Colonoscopy = Not Done	540.0		X	Diagnostic exam / Colonoscopy = Not done	2
 
-CT = Data Not Available	612.0			Diagnostic exam / CT = Done, data not available	2
+CT = Data Not Available	612.0		X	Diagnostic exam / CT = Done, data not available	2
 CT = Data Not Available	500.0			Diagnostic exam / Liver imaging = Done, data not available	2
 CT = Data Not Available	500.0			Diagnostic exam / Lung imaging = Done, data not available	2
-CT = Data Not Available	500.0		X	Diagnostic exam / MRI = Done, data not available	2
+CT = Data Not Available	500.0			Diagnostic exam / MRI = Done, data not available	2
 
 CT = Data Available	194.0		X	Diagnostic exam / CT = Done, data available	2
 CT = Data Available	138.0			Diagnostic exam / CT = Done, data not available	2

@@ -85,7 +85,7 @@
             <Location name="Demo Biobank">
                 <BasicData>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">43</Dataelement>
                 </BasicData>
@@ -234,7 +234,7 @@
             <Location name="Demo Biobank">
                 <BasicData>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam - Negative</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">49</Dataelement>
                 </BasicData>
@@ -383,7 +383,7 @@
             <Location name="Demo Biobank">
                 <BasicData>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">55</Dataelement>
                 </BasicData>
