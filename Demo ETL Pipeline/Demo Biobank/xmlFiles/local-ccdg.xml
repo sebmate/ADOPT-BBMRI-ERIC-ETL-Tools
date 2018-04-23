@@ -15,13 +15,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">40</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - 0</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10008</Dataelement>
                     </Event>
@@ -40,13 +40,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">41</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
-                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
+                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IV</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10009</Dataelement>
                     </Event>
@@ -65,13 +65,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">42</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - II A</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10010</Dataelement>
                     </Event>
@@ -84,19 +84,18 @@
         <Locations>
             <Location name="Demo Biobank">
                 <BasicData>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:87:1" name="BRAF, PIC3CA, HER2 mutation status">BRAF, PIC3CA, HER2 mutation status - not done</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">43</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10011</Dataelement>
                     </Event>
@@ -115,13 +114,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">44</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10012</Dataelement>
                     </Event>
@@ -140,13 +139,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">45</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - 0</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10013</Dataelement>
                     </Event>
@@ -165,13 +164,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">46</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10014</Dataelement>
                     </Event>
@@ -190,13 +189,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">47</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - II A</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10015</Dataelement>
                     </Event>
@@ -215,13 +214,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">48</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - II A</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10016</Dataelement>
                     </Event>
@@ -235,18 +234,18 @@
             <Location name="Demo Biobank">
                 <BasicData>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam - Negative</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">49</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10017</Dataelement>
                     </Event>
@@ -265,13 +264,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">50</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - 0</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10018</Dataelement>
                     </Event>
@@ -290,13 +289,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">51</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
-                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
+                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - I</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10019</Dataelement>
                     </Event>
@@ -315,13 +314,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">52</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
-                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
+                        <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IV</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10020</Dataelement>
                     </Event>
@@ -339,13 +338,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">53</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - II A</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10021</Dataelement>
                     </Event>
@@ -364,13 +363,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">54</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10022</Dataelement>
                     </Event>
@@ -384,18 +383,18 @@
             <Location name="Demo Biobank">
                 <BasicData>
                     <Dataelement mdrkey="urn:ccdg:dataelement:88:1" name="Colonoscopy">Colonoscopy diagnostic exam- Unknown</Dataelement>
-                    <Dataelement mdrkey="urn:ccdg:dataelement:31:3" name="CT">CT - Done, data not available</Dataelement>
+                    <Dataelement mdrkey="urn:ccdg:dataelement:30:3" name="MRI">MRI - Done, data not available</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:85:1" name="Biological sex">female</Dataelement>
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">55</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - 0</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10023</Dataelement>
                     </Event>
@@ -414,13 +413,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">56</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T2</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M0</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - IIIC</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Tumor</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10024</Dataelement>
                     </Event>
@@ -439,13 +438,13 @@
                     <Dataelement mdrkey="urn:ccdg:dataelement:3:1" name="Age at diagnosis (rounded to years)">57</Dataelement>
                 </BasicData>
                 <Events>
-                    <Event name="19/04/2018" eventtype="Histopathology">
+                    <Event name="23/04/2018" eventtype="Histopathology">
                         <Dataelement mdrkey="urn:ccdg:dataelement:71:1" name="Primary Tumor">Primary Tumor - T3</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:77:1" name="Regional lymph nodes">Regional lymph nodes - N1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:75:1" name="Distant metastasis">Distant metastasis - M1</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:70:2" name="Stage">Stage - II A</Dataelement>
                     </Event>
-                    <Event name="19/04/2018" eventtype="Sample">
+                    <Event name="23/04/2018" eventtype="Sample">
                         <Dataelement mdrkey="urn:ccdg:dataelement:54:2" name="Material type">Healthy colon tissue</Dataelement>
                         <Dataelement mdrkey="urn:ccdg:dataelement:56:2" name="Sample ID">10025</Dataelement>
                     </Event>

@@ -128,11 +128,11 @@ UICC Stage = 3C	11.43			Histopathology / UICC staging / UICC version = 7th ed.	2
 UICC Stage = 3C	11.43			Histopathology / UICC staging / UICC version = Not known	2
 UICC Stage = 3C	11.43			Histopathology / UICC staging / UICC version = 8th ed.	2
 
-UICC Stage = 1	22.43		X	Histopathology / UICC staging / Stage = IIIC	2
+UICC Stage = 1	22.43			Histopathology / UICC staging / Stage = IIIC	2
 UICC Stage = 1	22.3			Histopathology / UICC staging / Stage = IIC	2
 UICC Stage = 1	22.3			Histopathology / UICC staging / Stage = IVC	2
 UICC Stage = 1	21.43			Histopathology / UICC staging / Stage = 0	2
-UICC Stage = 1	21.43			Histopathology / UICC staging / Stage = I	2
+UICC Stage = 1	21.43		X	Histopathology / UICC staging / Stage = I	2
 UICC Stage = 1	21.43			Histopathology / UICC staging / Stage = II A	2
 UICC Stage = 1	21.43			Histopathology / UICC staging / Stage = IIB	2
 UICC Stage = 1	21.43			Histopathology / UICC staging / Stage = IIIA	2
@@ -149,118 +149,118 @@ UICC Stage = 1	11.43			Histopathology / UICC staging / UICC version = 7th ed.	2
 UICC Stage = 1	11.43			Histopathology / UICC staging / UICC version = Not known	2
 UICC Stage = 1	11.43			Histopathology / UICC staging / UICC version = 8th ed.	2
 
-UICC Stage = 4	22.43		X	Histopathology / UICC staging / Stage = IIIC	1
-UICC Stage = 4	22.3			Histopathology / UICC staging / Stage = IIC	1
-UICC Stage = 4	22.3			Histopathology / UICC staging / Stage = IVC	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = 0	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = I	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = II A	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIB	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIIA	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIIB	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IVA	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IVB	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = II	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = III	1
-UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IV	1
-UICC Stage = 4	13.43			Histopathology / UICC staging / UICC version = 4th. ed	1
-UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 5th. ed	1
-UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 6th. ed	1
-UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 7th ed.	1
-UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = Not known	1
-UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 8th ed.	1
+UICC Stage = 4	22.43			Histopathology / UICC staging / Stage = IIIC	2
+UICC Stage = 4	22.3			Histopathology / UICC staging / Stage = IIC	2
+UICC Stage = 4	22.3			Histopathology / UICC staging / Stage = IVC	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = 0	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = I	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = II A	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIB	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIIA	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IIIB	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IVA	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = IVB	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = II	2
+UICC Stage = 4	21.43			Histopathology / UICC staging / Stage = III	2
+UICC Stage = 4	21.43		X	Histopathology / UICC staging / Stage = IV	2
+UICC Stage = 4	13.43			Histopathology / UICC staging / UICC version = 4th. ed	2
+UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 5th. ed	2
+UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 6th. ed	2
+UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 7th ed.	2
+UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = Not known	2
+UICC Stage = 4	11.43			Histopathology / UICC staging / UICC version = 8th ed.	2
 
-UICC Stage = Not Done	154.13		X	Molecular markers / BRAF, PIC3CA, HER2 mutation status = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 4 (codons 117 or 146) = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 3 (codons 59 or 61) = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 2 (codons 12 or 13) = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 4 (codons 117 or 146) mutation status = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 3 (codons 59 or 61) = Not done	1
-UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 2 (codons 12 or 13) = Not done	1
-UICC Stage = Not Done	152.0			Diagnostic exam / Colonoscopy = Not done	1
-UICC Stage = Not Done	152.0			Diagnostic exam / CT = Not done	1
-UICC Stage = Not Done	152.0			Diagnostic exam / Liver imaging = Not done	1
-UICC Stage = Not Done	152.0			Diagnostic exam / Lung imaging = Not done	1
-UICC Stage = Not Done	152.0			Diagnostic exam / MRI = Not done	1
-UICC Stage = Not Done	152.0			Molecular markers / Microsatellite instability = not done	1
-UICC Stage = Not Done	152.0			Molecular markers / Mismatch repair gene expression = not done	1
-UICC Stage = Not Done	51.43			Histopathology / UICC staging / UICC version = Not known	1
+UICC Stage = Not Done	154.13			Molecular markers / BRAF, PIC3CA, HER2 mutation status = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 4 (codons 117 or 146) = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 3 (codons 59 or 61) = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / NRAS exon 2 (codons 12 or 13) = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 4 (codons 117 or 146) mutation status = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 3 (codons 59 or 61) = Not done	2
+UICC Stage = Not Done	153.25			Molecular markers / KRAS mutation status / KRAS exon 2 (codons 12 or 13) = Not done	2
+UICC Stage = Not Done	152.0			Diagnostic exam / Colonoscopy = Not done	2
+UICC Stage = Not Done	152.0			Diagnostic exam / CT = Not done	2
+UICC Stage = Not Done	152.0			Diagnostic exam / Liver imaging = Not done	2
+UICC Stage = Not Done	152.0			Diagnostic exam / Lung imaging = Not done	2
+UICC Stage = Not Done	152.0			Diagnostic exam / MRI = Not done	2
+UICC Stage = Not Done	152.0			Molecular markers / Microsatellite instability = not done	2
+UICC Stage = Not Done	152.0			Molecular markers / Mismatch repair gene expression = not done	2
+UICC Stage = Not Done	51.43			Histopathology / UICC staging / UICC version = Not known	2
 
-UICC Stage = 2A	23.8		X	Histopathology / UICC staging / Stage = II A	1
-UICC Stage = 2A	22.43			Histopathology / UICC staging / Stage = IIIC	1
-UICC Stage = 2A	22.3			Histopathology / UICC staging / Stage = IIC	1
-UICC Stage = 2A	22.3			Histopathology / UICC staging / Stage = IVC	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = 0	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = I	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIB	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIIA	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIIB	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IVA	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IVB	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = II	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = III	1
-UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IV	1
-UICC Stage = 2A	17.96			Histopathology / TNM / Regional lymph nodes = N2a	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 4th. ed	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 5th. ed	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 6th. ed	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 7th ed.	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = Not known	1
-UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 8th ed.	1
+UICC Stage = 2A	23.8		X	Histopathology / UICC staging / Stage = II A	2
+UICC Stage = 2A	22.43			Histopathology / UICC staging / Stage = IIIC	2
+UICC Stage = 2A	22.3			Histopathology / UICC staging / Stage = IIC	2
+UICC Stage = 2A	22.3			Histopathology / UICC staging / Stage = IVC	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = 0	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = I	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIB	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIIA	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IIIB	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IVA	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IVB	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = II	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = III	2
+UICC Stage = 2A	21.43			Histopathology / UICC staging / Stage = IV	2
+UICC Stage = 2A	17.96			Histopathology / TNM / Regional lymph nodes = N2a	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 4th. ed	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 5th. ed	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 6th. ed	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 7th ed.	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = Not known	2
+UICC Stage = 2A	11.43			Histopathology / UICC staging / UICC version = 8th ed.	2
 
-Colonoscopy = Negative	118.0		X	Diagnostic exam / Colonoscopy = Negative	1
+Colonoscopy = Negative	118.0		X	Diagnostic exam / Colonoscopy = Negative	2
 
-Colonoscopy = Unknown	112.0		X	Diagnostic exam / Colonoscopy = Unknown	1
+Colonoscopy = Unknown	112.0		X	Diagnostic exam / Colonoscopy = Unknown	2
 
-Colonoscopy = Positive	118.0		X	Diagnostic exam / Colonoscopy = Positive	1
+Colonoscopy = Positive	118.0		X	Diagnostic exam / Colonoscopy = Positive	2
 
-Colonoscopy = Not Done	540.0		X	Diagnostic exam / Colonoscopy = Not done	1
+Colonoscopy = Not Done	540.0		X	Diagnostic exam / Colonoscopy = Not done	2
 
-CT = Data Not Available	612.0		X	Diagnostic exam / CT = Done, data not available	1
-CT = Data Not Available	500.0			Diagnostic exam / Liver imaging = Done, data not available	1
-CT = Data Not Available	500.0			Diagnostic exam / Lung imaging = Done, data not available	1
-CT = Data Not Available	500.0			Diagnostic exam / MRI = Done, data not available	1
+CT = Data Not Available	612.0			Diagnostic exam / CT = Done, data not available	2
+CT = Data Not Available	500.0			Diagnostic exam / Liver imaging = Done, data not available	2
+CT = Data Not Available	500.0			Diagnostic exam / Lung imaging = Done, data not available	2
+CT = Data Not Available	500.0		X	Diagnostic exam / MRI = Done, data not available	2
 
-CT = Data Available	194.0		X	Diagnostic exam / CT = Done, data available	1
-CT = Data Available	138.0			Diagnostic exam / CT = Done, data not available	1
-CT = Data Available	112.0			Diagnostic exam / CT = Not done	1
-CT = Data Available	112.0			Diagnostic exam / CT = Unknown	1
-CT = Data Available	82.0			Diagnostic exam / Liver imaging = Done, data available	1
-CT = Data Available	82.0			Diagnostic exam / Lung imaging = Done, data available	1
-CT = Data Available	82.0			Diagnostic exam / MRI = Done, data available	1
+CT = Data Available	194.0		X	Diagnostic exam / CT = Done, data available	2
+CT = Data Available	138.0			Diagnostic exam / CT = Done, data not available	2
+CT = Data Available	112.0			Diagnostic exam / CT = Not done	2
+CT = Data Available	112.0			Diagnostic exam / CT = Unknown	2
+CT = Data Available	82.0			Diagnostic exam / Liver imaging = Done, data available	2
+CT = Data Available	82.0			Diagnostic exam / Lung imaging = Done, data available	2
+CT = Data Available	82.0			Diagnostic exam / MRI = Done, data available	2
 
-CT = Not Done	1286.0		X	Diagnostic exam / CT = Not done	1
+CT = Not Done	1286.0		X	Diagnostic exam / CT = Not done	2
 
-Gender = Unknown	14.0			Diagnostic exam / Colonoscopy = Unknown	0
-Gender = Unknown	14.0			Diagnostic exam / CT = Unknown	0
-Gender = Unknown	14.0			Diagnostic exam / Liver imaging = Unknown	0
-Gender = Unknown	14.0			Diagnostic exam / Lung imaging = Unknown	0
-Gender = Unknown	14.0			Diagnostic exam / MRI = Unknown	0
-Gender = Unknown	14.0			Vital status and survival information / Vital status = unknown	0
-Gender = Unknown	14.0			Vital status and survival information / Vital status = death for unknown reasons	0
-Gender = Unknown	12.0			Patient Data / Biological sex = male	0
-Gender = Unknown	12.0			Patient Data / Biological sex = female	0
-Gender = Unknown	12.0			Patient Data / Biological sex = other	0
+Gender = Unknown	14.0			Diagnostic exam / Colonoscopy = Unknown	2
+Gender = Unknown	14.0			Diagnostic exam / CT = Unknown	2
+Gender = Unknown	14.0			Diagnostic exam / Liver imaging = Unknown	2
+Gender = Unknown	14.0			Diagnostic exam / Lung imaging = Unknown	2
+Gender = Unknown	14.0			Diagnostic exam / MRI = Unknown	2
+Gender = Unknown	14.0			Vital status and survival information / Vital status = unknown	2
+Gender = Unknown	14.0			Vital status and survival information / Vital status = death for unknown reasons	2
+Gender = Unknown	12.0			Patient Data / Biological sex = male	2
+Gender = Unknown	12.0			Patient Data / Biological sex = female	2
+Gender = Unknown	12.0			Patient Data / Biological sex = other	2
 
-Gender = Male	64.0		X	Patient Data / Biological sex = male	1
+Gender = Male	64.0		X	Patient Data / Biological sex = male	2
 
-Gender = Female	76.0		X	Patient Data / Biological sex = female	1
+Gender = Female	76.0		X	Patient Data / Biological sex = female	2
 
-Age = INTEGER	20.0		X	Patient Data / Age at diagnosis (rounded to years) = INTEGER	1
-Age = INTEGER	14.0			Radiation therapy / Date of end of radiation therapy = INTEGER	1
-Age = INTEGER	14.0			Radiation therapy / Date of start of radiation therapy = INTEGER	1
-Age = INTEGER	14.0			Pharmacotherapy / Date of end of pharamcotherapy = INTEGER	1
-Age = INTEGER	14.0			Pharmacotherapy / Date of start of pharamacotherapy = INTEGER	1
-Age = INTEGER	14.0			Patient Data / Time of recurrence (metastasis diagnosis) = INTEGER	1
-Age = INTEGER	14.0			Targeted therapy / Date of end of targeted therapy = INTEGER	1
-Age = INTEGER	14.0			Targeted therapy / Date of start of targeted therapy = INTEGER	1
-Age = INTEGER	14.0			Sample / Year of sample collection = INTEGER	1
-Age = INTEGER	14.0			Surgery / Time difference between initial diagnosis and surgery = INTEGER	1
-Age = INTEGER	14.0			Response to thearapy / Date response was obtained in weeks since initial diagnosis = INTEGER	1
-Age = INTEGER	14.0			Vital status and survival information / Overall survival status = INTEGER	1
+Age = INTEGER	20.0		X	Patient Data / Age at diagnosis (rounded to years) = INTEGER	2
+Age = INTEGER	14.0			Radiation therapy / Date of end of radiation therapy = INTEGER	2
+Age = INTEGER	14.0			Radiation therapy / Date of start of radiation therapy = INTEGER	2
+Age = INTEGER	14.0			Pharmacotherapy / Date of end of pharamcotherapy = INTEGER	2
+Age = INTEGER	14.0			Pharmacotherapy / Date of start of pharamacotherapy = INTEGER	2
+Age = INTEGER	14.0			Patient Data / Time of recurrence (metastasis diagnosis) = INTEGER	2
+Age = INTEGER	14.0			Targeted therapy / Date of end of targeted therapy = INTEGER	2
+Age = INTEGER	14.0			Targeted therapy / Date of start of targeted therapy = INTEGER	2
+Age = INTEGER	14.0			Sample / Year of sample collection = INTEGER	2
+Age = INTEGER	14.0			Surgery / Time difference between initial diagnosis and surgery = INTEGER	2
+Age = INTEGER	14.0			Response to thearapy / Date response was obtained in weeks since initial diagnosis = INTEGER	2
+Age = INTEGER	14.0			Vital status and survival information / Overall survival status = INTEGER	2
 
-Material Type = Healthy Tissue	276.0		X	Sample / Material type = Healthy colon tissue	1
+Material Type = Healthy Tissue	276.0		X	Sample / Material type = Healthy colon tissue	2
 
-Material Type = Tumor	240.0		X	Sample / Material type = Tumor tissue	1
+Material Type = Tumor	240.0		X	Sample / Material type = Tumor tissue	2
 
-Sample ID = STRING	196.0		X	Sample / Sample ID = STRING	1
+Sample ID = STRING	196.0		X	Sample / Sample ID = STRING	2

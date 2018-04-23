@@ -1,0 +1,3000 @@
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	23.13	X	Histopathology / TNM / Primary Tumor = T1
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T1 T 1
+
+Grams=2: "T 1" = "T 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T1" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+Grams=1: "1" ~ "T1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T0
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T0 T 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T0" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T2
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T2 T 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T2" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T3
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T3 T 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T3" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.75		Histopathology / TNM / Primary Tumor = T4
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4 T 4
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T4" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.38		Histopathology / TNM / Distant metastasis = M1
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1 M 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "M1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.38		Histopathology / TNM / Regional lymph nodes = N1
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1 N 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "N1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1b
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1B M 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1a
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1A M 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Distant metastasis = M1c
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1C M 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Primary Tumor = T4a
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4A T 4 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Primary Tumor = T4b
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4B T 4 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1C N 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1B N 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+Comparing: TNM T 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1A N 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	23.13	X	Histopathology / TNM / Primary Tumor = T2
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T2 T 2
+
+Grams=2: "T 2" = "T 2" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T2" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+Grams=1: "2" ~ "T2" (+0.375)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T0
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T0 T 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T0" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T1
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T1 T 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T1" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T3
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T3 T 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T3" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.75		Histopathology / TNM / Primary Tumor = T4
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4 T 4
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T4" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.38		Histopathology / TNM / Regional lymph nodes = N2
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2 N 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "2" ~ "N2" (+0.375)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.0		Histopathology / TNM / Primary Tumor = T4a
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4A T 4 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.0		Histopathology / TNM / Primary Tumor = T4b
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4B T 4 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2B N 2 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 2	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+Comparing: TNM T 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2A N 2 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "2" = "2" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	23.13	X	Histopathology / TNM / Primary Tumor = T3
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T3 T 3
+
+Grams=2: "T 3" = "T 3" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T3" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+Grams=1: "3" ~ "T3" (+0.375)
+Grams=1: "3" = "3" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T0
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T0 T 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T0" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T1
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T1 T 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T1" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T2
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T2 T 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T2" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.75		Histopathology / TNM / Primary Tumor = T4
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4 T 4
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" ~ "T4" (+0.75)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.38		Histopathology / TNM / Regional lymph nodes = N3
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N3 N 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "3" ~ "N3" (+0.375)
+Grams=1: "3" = "3" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.0		Histopathology / TNM / Primary Tumor = T4a
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4A T 4 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-T = 3	8.0		Histopathology / TNM / Primary Tumor = T4b
+
+Comparing: TNM T 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T4B T 4 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "T" = "T" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	23.13	X	Histopathology / TNM / Regional lymph nodes = N1
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1 N 1
+
+Grams=2: "N 1" = "N 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N1" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "1" ~ "N1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1c
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1C N 1 C
+
+Grams=2: "N 1" = "N 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1b
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1B N 1 B
+
+Grams=2: "N 1" = "N 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	22.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1A N 1 A
+
+Grams=2: "N 1" = "N 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N2
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2 N 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N2" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N0
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N0 N 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N0" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.75		Histopathology / TNM / Regional lymph nodes = N3
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N3 N 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N3" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.38		Histopathology / TNM / Distant metastasis = M1
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1 M 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "M1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.38		Histopathology / TNM / Primary Tumor = T1
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T1 T 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "T1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1b
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1B M 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1a
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1A M 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.0		Histopathology / TNM / Distant metastasis = M1c
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1C M 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2B N 2 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 1	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+Comparing: TNM N 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2A N 2 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	23.13	X	Histopathology / TNM / Regional lymph nodes = N2
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2 N 2
+
+Grams=2: "N 2" = "N 2" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N2" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "2" ~ "N2" (+0.375)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	22.0		Histopathology / TNM / Regional lymph nodes = N2b
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2B N 2 B
+
+Grams=2: "N 2" = "N 2" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	22.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2A N 2 A
+
+Grams=2: "N 2" = "N 2" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N1
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1 N 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N1" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N0
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N0 N 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N0" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.75		Histopathology / TNM / Regional lymph nodes = N3
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N3 N 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N3" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.38		Histopathology / TNM / Primary Tumor = T2
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T2 T 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "2" ~ "T2" (+0.375)
+Grams=1: "2" = "2" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1C N 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1B N 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 2	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+Comparing: TNM N 2
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1A N 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	23.13	X	Histopathology / TNM / Regional lymph nodes = N3
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N3 N 3
+
+Grams=2: "N 3" = "N 3" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N3" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+Grams=1: "3" ~ "N3" (+0.375)
+Grams=1: "3" = "3" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N2
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2 N 2
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N2" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N1
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1 N 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N1" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.75		Histopathology / TNM / Regional lymph nodes = N0
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N0 N 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" ~ "N0" (+0.75)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.38		Histopathology / TNM / Primary Tumor = T3
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T3 T 3
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "3" ~ "T3" (+0.375)
+Grams=1: "3" = "3" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N2b
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2B N 2 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N2a
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2A N 2 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1C N 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1B N 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-N = 3	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+Comparing: TNM N 3
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1A N 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "N" = "N" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	23.13	X	Histopathology / TNM / Distant metastasis = M0
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M0 M 0
+
+Grams=2: "M 0" = "M 0" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" ~ "M0" (+0.75)
+Grams=1: "M" = "M" (+2.0)
+Grams=1: "0" ~ "M0" (+0.375)
+Grams=1: "0" = "0" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.75		Histopathology / TNM / Distant metastasis = M1
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1 M 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" ~ "M1" (+0.75)
+Grams=1: "M" = "M" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.38		Histopathology / TNM / Primary Tumor = T0
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T0 T 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "0" ~ "T0" (+0.375)
+Grams=1: "0" = "0" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.38		Histopathology / TNM / Regional lymph nodes = N0
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N0 N 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "0" ~ "N0" (+0.375)
+Grams=1: "0" = "0" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1b
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1B M 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1a
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1A M 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 0	8.0		Histopathology / TNM / Distant metastasis = M1c
+
+Comparing: TNM M 0
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1C M 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	23.13	X	Histopathology / TNM / Distant metastasis = M1
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1 M 1
+
+Grams=2: "M 1" = "M 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" ~ "M1" (+0.75)
+Grams=1: "M" = "M" (+2.0)
+Grams=1: "1" ~ "M1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1b
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1B M 1 B
+
+Grams=2: "M 1" = "M 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1a
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1A M 1 A
+
+Grams=2: "M 1" = "M 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	22.0		Histopathology / TNM / Distant metastasis = M1c
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M1C M 1 C
+
+Grams=2: "M 1" = "M 1" (+12.0)
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" = "M" (+2.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.75		Histopathology / TNM / Distant metastasis = M0
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM DISTANT METASTASIS M0 M 0
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "M" ~ "M0" (+0.75)
+Grams=1: "M" = "M" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.38		Histopathology / TNM / Primary Tumor = T1
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM PRIMARY TUMOR T1 T 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "T1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.38		Histopathology / TNM / Regional lymph nodes = N1
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1 N 1
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" ~ "N1" (+0.375)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1c
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1C N 1 C
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1b
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1B N 1 B
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TNM-M = 1	8.0		Histopathology / TNM / Regional lymph nodes = N1a
+
+Comparing: TNM M 1
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N1A N 1 A
+
+Grams=1: "TNM" = "TNM" (+6.0)
+Grams=1: "1" = "1" (+2.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	51.43	X	Histopathology / UICC staging / Stage = 0
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE 0
+
+Grams=2: "STAGE 0" = "STAGE 0" (+28.0)
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+Grams=1: "0" = "0" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	22.43		Histopathology / UICC staging / Stage = IIIC
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIIC" (+1.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	22.3		Histopathology / UICC staging / Stage = IIC
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	22.3		Histopathology / UICC staging / Stage = IVC
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IVC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = I
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE I
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = II A
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE II A
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIB
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIIA
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IIIB
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IVA
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IVB
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = II
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE II
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = III
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE III
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 0	21.43		Histopathology / UICC staging / Stage = IV
+
+Comparing: UICC STAGE 0
+     with: HISTOPATHOLOGY UICC STAGING STAGE INTRAVENOUS
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	22.43	X	Histopathology / UICC staging / Stage = IIIC
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIIC" (+1.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	22.3		Histopathology / UICC staging / Stage = IIC
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	22.3		Histopathology / UICC staging / Stage = IVC
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IVC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = 0
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE 0
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = I
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE I
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = II A
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE II A
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIB
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIIA
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IIIB
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IVA
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IVB
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = II
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE II
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = III
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE III
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	21.43		Histopathology / UICC staging / Stage = IV
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING STAGE INTRAVENOUS
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 4th. ed
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION 4TH 4 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION 5TH 5 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION 6TH 6 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION 7TH 7 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = Not known
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION NOT NEG KNOWN
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 3C	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+Comparing: UICC STAGE 3C 3 C
+     with: HISTOPATHOLOGY UICC STAGING VERSION 8TH 8 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	22.43	X	Histopathology / UICC staging / Stage = IIIC
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIIC" (+1.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	22.3		Histopathology / UICC staging / Stage = IIC
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	22.3		Histopathology / UICC staging / Stage = IVC
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IVC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = 0
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE 0
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = I
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE I
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = II A
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE II A
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IIB
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IIIA
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IIIB
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IVA
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IVB
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = II
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE II
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = III
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE III
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	21.43		Histopathology / UICC staging / Stage = IV
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING STAGE INTRAVENOUS
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = 4th. ed
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION 4TH 4 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION 5TH 5 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION 6TH 6 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION 7TH 7 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = Not known
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION NOT NEG KNOWN
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 1	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+Comparing: UICC STAGE 1
+     with: HISTOPATHOLOGY UICC STAGING VERSION 8TH 8 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	22.43	X	Histopathology / UICC staging / Stage = IIIC
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIIC" (+1.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	22.3		Histopathology / UICC staging / Stage = IIC
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	22.3		Histopathology / UICC staging / Stage = IVC
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IVC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = 0
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE 0
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = I
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE I
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = II A
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE II A
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IIB
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IIIA
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IIIB
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IVA
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IVB
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = II
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE II
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = III
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE III
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	21.43		Histopathology / UICC staging / Stage = IV
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING STAGE INTRAVENOUS
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	13.43		Histopathology / UICC staging / UICC version = 4th. ed
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION 4TH 4 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "4" = "4" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION 5TH 5 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION 6TH 6 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION 7TH 7 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	11.43		Histopathology / UICC staging / UICC version = Not known
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION NOT NEG KNOWN
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 4	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+Comparing: UICC STAGE 4
+     with: HISTOPATHOLOGY UICC STAGING VERSION 8TH 8 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	154.13	X	Molecular markers / BRAF, PIC3CA, HER2 mutation status = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS BRAF PIC3CA PIC 3 CALCIUM HER2 HER 2 MUTATION STATUS NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "UICC" ~ "PIC3CA" (+1.25)
+Grams=1: "UICC" ~ "PIC" (+0.875)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / NRAS exon 4 (codons 117 or 146) = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS NRAS EXON 4 CODONS 117 OR 146 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / NRAS exon 3 (codons 59 or 61) = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS NRAS EXON 3 CODONS 59 OR 61 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / NRAS exon 2 (codons 12 or 13) = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS NRAS EXON 2 CODONS 12 OR 13 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / KRAS exon 4 (codons 117 or 146) mutation status = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS EXON 4 CODONS 117 OR 146 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / KRAS exon 3 (codons 59 or 61) = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS EXON 3 CODONS 59 OR 61 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	153.25		Molecular markers / KRAS mutation status / KRAS exon 2 (codons 12 or 13) = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS KRAS MUTATION STATUS EXON 2 CODONS 12 OR 13 NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" ~ "CODONS" (+1.25)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Diagnostic exam / Colonoscopy = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: DIAGNOSTIC EXAM COLONOSCOPY NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Diagnostic exam / CT = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Diagnostic exam / Liver imaging = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: DIAGNOSTIC EXAM LIVER IMAGING NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Diagnostic exam / Lung imaging = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: DIAGNOSTIC EXAM LUNG IMAGING NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Diagnostic exam / MRI = Not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: DIAGNOSTIC EXAM MAGNETIC RESONANCE IMAGING NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Molecular markers / Microsatellite instability = not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS MICROSATELLITE INSTABILITY NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	152.0		Molecular markers / Mismatch repair gene expression = not done
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: MOLECULAR MARKERS MISMATCH REPAIR GENE EXPRESSION NOT NEG DONE
+
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = Not Done	51.43		Histopathology / UICC staging / UICC version = Not known
+
+Comparing: UICC STAGE NOT NEG DONE
+     with: HISTOPATHOLOGY UICC STAGING VERSION NOT NEG KNOWN
+
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	23.8	X	Histopathology / UICC staging / Stage = II A
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE II A
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+Grams=1: "2A" ~ "A" (+0.375)
+Grams=1: "A" = "A" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	22.43		Histopathology / UICC staging / Stage = IIIC
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIIC" (+1.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	22.3		Histopathology / UICC staging / Stage = IIC
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IIC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	22.3		Histopathology / UICC staging / Stage = IVC
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVC
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "UICC" ~ "IVC" (+0.875)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = 0
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE 0
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = I
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE I
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIB
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIIA
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IIIB
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IIIB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IVA
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVA
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IVB
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE IVB
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = II
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE II
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = III
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE III
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	21.43		Histopathology / UICC staging / Stage = IV
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING STAGE INTRAVENOUS
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+Grams=1: "STAGE" = "STAGE" (+10.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	17.96		Histopathology / TNM / Regional lymph nodes = N2a
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY TNM REGIONAL LYMPH NODES N2A N 2 A
+
+Grams=2: "2 A" = "2 A" (+12.0)
+Grams=1: "2A" ~ "N2A" (+0.8333333333333335)
+Grams=1: "2A" ~ "2" (+0.75)
+Grams=1: "2A" ~ "A" (+0.375)
+Grams=1: "2" = "2" (+2.0)
+Grams=1: "A" = "A" (+2.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 4th. ed
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION 4TH 4 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 5th. ed
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION 5TH 5 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 6th. ed
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION 6TH 6 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 7th ed.
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION 7TH 7 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = Not known
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION NOT NEG KNOWN
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UICC Stage = 2A	11.43		Histopathology / UICC staging / UICC version = 8th ed.
+
+Comparing: UICC STAGE 2A 2 A
+     with: HISTOPATHOLOGY UICC STAGING VERSION 8TH 8 TH ED
+
+Grams=1: "UICC" = "UICC" (+8.0)
+Grams=1: "STAGE" ~ "STAGING" (+3.4285714285714284)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Colonoscopy = Negative	118.0	X	Diagnostic exam / Colonoscopy = Negative
+
+Comparing: COLONOSCOPY NEGATIVE
+     with: DIAGNOSTIC EXAM COLONOSCOPY NEGATIVE
+
+Grams=2: "COLONOSCOPY NEGATIVE" = "COLONOSCOPY NEGATIVE" (+80.0)
+Grams=1: "COLONOSCOPY" = "COLONOSCOPY" (+22.0)
+Grams=1: "NEGATIVE" = "NEGATIVE" (+16.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Colonoscopy = Unknown	112.0	X	Diagnostic exam / Colonoscopy = Unknown
+
+Comparing: COLONOSCOPY UNKNOWN
+     with: DIAGNOSTIC EXAM COLONOSCOPY UNKNOWN
+
+Grams=2: "COLONOSCOPY UNKNOWN" = "COLONOSCOPY UNKNOWN" (+76.0)
+Grams=1: "COLONOSCOPY" = "COLONOSCOPY" (+22.0)
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Colonoscopy = Positive	118.0	X	Diagnostic exam / Colonoscopy = Positive
+
+Comparing: COLONOSCOPY POSITIVE
+     with: DIAGNOSTIC EXAM COLONOSCOPY POSITIVE
+
+Grams=2: "COLONOSCOPY POSITIVE" = "COLONOSCOPY POSITIVE" (+80.0)
+Grams=1: "COLONOSCOPY" = "COLONOSCOPY" (+22.0)
+Grams=1: "POSITIVE" = "POSITIVE" (+16.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Colonoscopy = Not Done	540.0	X	Diagnostic exam / Colonoscopy = Not done
+
+Comparing: COLONOSCOPY NOT NEG DONE
+     with: DIAGNOSTIC EXAM COLONOSCOPY NOT NEG DONE
+
+Grams=4: "COLONOSCOPY NOT NEG DONE" = "COLONOSCOPY NOT NEG DONE" (+192.0)
+Grams=3: "COLONOSCOPY NOT NEG" = "COLONOSCOPY NOT NEG" (+114.0)
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "COLONOSCOPY NOT" = "COLONOSCOPY NOT" (+60.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "COLONOSCOPY" = "COLONOSCOPY" (+22.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Not Available	612.0	X	Diagnostic exam / CT = Done, data not available
+
+Comparing: COMPUTER TOMOGRAPHY DATA NOT NEG AVAILABLE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY DONE DATA NOT NEG AVAILABLE
+
+Grams=4: "DATA NOT NEG AVAILABLE" = "DATA NOT NEG AVAILABLE" (+176.0)
+Grams=3: "DATA NOT NEG" = "DATA NOT NEG" (+72.0)
+Grams=3: "NOT NEG AVAILABLE" = "NOT NEG AVAILABLE" (+102.0)
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=2: "DATA NOT" = "DATA NOT" (+32.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG AVAILABLE" = "NEG AVAILABLE" (+52.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Not Available	500.0		Diagnostic exam / Liver imaging = Done, data not available
+
+Comparing: COMPUTER TOMOGRAPHY DATA NOT NEG AVAILABLE
+     with: DIAGNOSTIC EXAM LIVER IMAGING DONE DATA NOT NEG AVAILABLE
+
+Grams=4: "DATA NOT NEG AVAILABLE" = "DATA NOT NEG AVAILABLE" (+176.0)
+Grams=3: "DATA NOT NEG" = "DATA NOT NEG" (+72.0)
+Grams=3: "NOT NEG AVAILABLE" = "NOT NEG AVAILABLE" (+102.0)
+Grams=2: "DATA NOT" = "DATA NOT" (+32.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG AVAILABLE" = "NEG AVAILABLE" (+52.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Not Available	500.0		Diagnostic exam / Lung imaging = Done, data not available
+
+Comparing: COMPUTER TOMOGRAPHY DATA NOT NEG AVAILABLE
+     with: DIAGNOSTIC EXAM LUNG IMAGING DONE DATA NOT NEG AVAILABLE
+
+Grams=4: "DATA NOT NEG AVAILABLE" = "DATA NOT NEG AVAILABLE" (+176.0)
+Grams=3: "DATA NOT NEG" = "DATA NOT NEG" (+72.0)
+Grams=3: "NOT NEG AVAILABLE" = "NOT NEG AVAILABLE" (+102.0)
+Grams=2: "DATA NOT" = "DATA NOT" (+32.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG AVAILABLE" = "NEG AVAILABLE" (+52.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Not Available	500.0		Diagnostic exam / MRI = Done, data not available
+
+Comparing: COMPUTER TOMOGRAPHY DATA NOT NEG AVAILABLE
+     with: DIAGNOSTIC EXAM MAGNETIC RESONANCE IMAGING DONE DATA NOT NEG AVAILABLE
+
+Grams=4: "DATA NOT NEG AVAILABLE" = "DATA NOT NEG AVAILABLE" (+176.0)
+Grams=3: "DATA NOT NEG" = "DATA NOT NEG" (+72.0)
+Grams=3: "NOT NEG AVAILABLE" = "NOT NEG AVAILABLE" (+102.0)
+Grams=2: "DATA NOT" = "DATA NOT" (+32.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG AVAILABLE" = "NEG AVAILABLE" (+52.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	194.0	X	Diagnostic exam / CT = Done, data available
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY DONE DATA AVAILABLE
+
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=2: "DATA AVAILABLE" = "DATA AVAILABLE" (+56.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	138.0		Diagnostic exam / CT = Done, data not available
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY DONE DATA NOT NEG AVAILABLE
+
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	112.0		Diagnostic exam / CT = Not done
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY NOT NEG DONE
+
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	112.0		Diagnostic exam / CT = Unknown
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY UNKNOWN
+
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	82.0		Diagnostic exam / Liver imaging = Done, data available
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM LIVER IMAGING DONE DATA AVAILABLE
+
+Grams=2: "DATA AVAILABLE" = "DATA AVAILABLE" (+56.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	82.0		Diagnostic exam / Lung imaging = Done, data available
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM LUNG IMAGING DONE DATA AVAILABLE
+
+Grams=2: "DATA AVAILABLE" = "DATA AVAILABLE" (+56.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Data Available	82.0		Diagnostic exam / MRI = Done, data available
+
+Comparing: COMPUTER TOMOGRAPHY DATA AVAILABLE
+     with: DIAGNOSTIC EXAM MAGNETIC RESONANCE IMAGING DONE DATA AVAILABLE
+
+Grams=2: "DATA AVAILABLE" = "DATA AVAILABLE" (+56.0)
+Grams=1: "DATA" = "DATA" (+8.0)
+Grams=1: "AVAILABLE" = "AVAILABLE" (+18.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CT = Not Done	1286.0	X	Diagnostic exam / CT = Not done
+
+Comparing: COMPUTER TOMOGRAPHY NOT NEG DONE
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY NOT NEG DONE
+
+Grams=5: "COMPUTER TOMOGRAPHY NOT NEG DONE" = "COMPUTER TOMOGRAPHY NOT NEG DONE" (+320.0)
+Grams=4: "COMPUTER TOMOGRAPHY NOT NEG" = "COMPUTER TOMOGRAPHY NOT NEG" (+216.0)
+Grams=4: "TOMOGRAPHY NOT NEG DONE" = "TOMOGRAPHY NOT NEG DONE" (+184.0)
+Grams=3: "COMPUTER TOMOGRAPHY NOT" = "COMPUTER TOMOGRAPHY NOT" (+138.0)
+Grams=3: "TOMOGRAPHY NOT NEG" = "TOMOGRAPHY NOT NEG" (+108.0)
+Grams=3: "NOT NEG DONE" = "NOT NEG DONE" (+72.0)
+Grams=2: "COMPUTER TOMOGRAPHY" = "COMPUTER TOMOGRAPHY" (+76.0)
+Grams=2: "TOMOGRAPHY NOT" = "TOMOGRAPHY NOT" (+56.0)
+Grams=2: "NOT NEG" = "NOT NEG" (+28.0)
+Grams=2: "NEG DONE" = "NEG DONE" (+32.0)
+Grams=1: "COMPUTER" = "COMPUTER" (+16.0)
+Grams=1: "TOMOGRAPHY" = "TOMOGRAPHY" (+20.0)
+Grams=1: "NOT" = "NOT" (+6.0)
+Grams=1: "NEG" = "NEG" (+6.0)
+Grams=1: "DONE" = "DONE" (+8.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Diagnostic exam / Colonoscopy = Unknown
+
+Comparing: GENDER UNKNOWN
+     with: DIAGNOSTIC EXAM COLONOSCOPY UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Diagnostic exam / CT = Unknown
+
+Comparing: GENDER UNKNOWN
+     with: DIAGNOSTIC EXAM COMPUTER TOMOGRAPHY UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Diagnostic exam / Liver imaging = Unknown
+
+Comparing: GENDER UNKNOWN
+     with: DIAGNOSTIC EXAM LIVER IMAGING UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Diagnostic exam / Lung imaging = Unknown
+
+Comparing: GENDER UNKNOWN
+     with: DIAGNOSTIC EXAM LUNG IMAGING UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Diagnostic exam / MRI = Unknown
+
+Comparing: GENDER UNKNOWN
+     with: DIAGNOSTIC EXAM MAGNETIC RESONANCE IMAGING UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Vital status and survival information / Vital status = unknown
+
+Comparing: GENDER UNKNOWN
+     with: VITAL STATUS AND SURVIVAL INFORMATION UNKNOWN
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	14.0		Vital status and survival information / Vital status = death for unknown reasons
+
+Comparing: GENDER UNKNOWN
+     with: VITAL STATUS AND SURVIVAL INFORMATION DEATH FOR UNKNOWN REASONS
+
+Grams=1: "UNKNOWN" = "UNKNOWN" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	12.0		Patient Data / Biological sex = male
+
+Comparing: GENDER UNKNOWN
+     with: PATIENT DATA BIOLOGICAL GENDER MALE
+
+Grams=1: "GENDER" = "GENDER" (+12.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	12.0		Patient Data / Biological sex = female
+
+Comparing: GENDER UNKNOWN
+     with: PATIENT DATA BIOLOGICAL GENDER FEMALE
+
+Grams=1: "GENDER" = "GENDER" (+12.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Unknown	12.0		Patient Data / Biological sex = other
+
+Comparing: GENDER UNKNOWN
+     with: PATIENT DATA BIOLOGICAL GENDER OTHER
+
+Grams=1: "GENDER" = "GENDER" (+12.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Male	64.0	X	Patient Data / Biological sex = male
+
+Comparing: GENDER MALE
+     with: PATIENT DATA BIOLOGICAL GENDER MALE
+
+Grams=2: "GENDER MALE" = "GENDER MALE" (+44.0)
+Grams=1: "GENDER" = "GENDER" (+12.0)
+Grams=1: "MALE" = "MALE" (+8.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Gender = Female	76.0	X	Patient Data / Biological sex = female
+
+Comparing: GENDER FEMALE
+     with: PATIENT DATA BIOLOGICAL GENDER FEMALE
+
+Grams=2: "GENDER FEMALE" = "GENDER FEMALE" (+52.0)
+Grams=1: "GENDER" = "GENDER" (+12.0)
+Grams=1: "FEMALE" = "FEMALE" (+12.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	20.0	X	Patient Data / Age at diagnosis (rounded to years) = INTEGER
+
+Comparing: AGE INTEGER
+     with: PATIENT DATA AGE AT DIAGNOSIS ROUNDED TO YEARS INTEGER
+
+Grams=1: "AGE" = "AGE" (+6.0)
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Radiation therapy / Date of end of radiation therapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: RADIATION THERAPY DATE OF END INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Radiation therapy / Date of start of radiation therapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: RADIATION THERAPY DATE OF START INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Pharmacotherapy / Date of end of pharamcotherapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: PHARMACOTHERAPY DATE OF END PHARAMCOTHERAPY INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Pharmacotherapy / Date of start of pharamacotherapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: PHARMACOTHERAPY DATE OF START PHARAMACOTHERAPY INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Patient Data / Time of recurrence (metastasis diagnosis) = INTEGER
+
+Comparing: AGE INTEGER
+     with: PATIENT DATA TIME OF RECURRENCE METASTASIS DIAGNOSIS INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Targeted therapy / Date of end of targeted therapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: TARGETED THERAPY DATE OF END INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Targeted therapy / Date of start of targeted therapy = INTEGER
+
+Comparing: AGE INTEGER
+     with: TARGETED THERAPY DATE OF START INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Sample / Year of sample collection = INTEGER
+
+Comparing: AGE INTEGER
+     with: SAMPLE YEAR OF COLLECTION INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Surgery / Time difference between initial diagnosis and surgery = INTEGER
+
+Comparing: AGE INTEGER
+     with: SURGERY TIME DIFFERENCE BETWEEN INITIAL DIAGNOSIS AND INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Response to thearapy / Date response was obtained in weeks since initial diagnosis = INTEGER
+
+Comparing: AGE INTEGER
+     with: RESPONSE TO THEARAPY DATE WAS OBTAINED IN WEEKS SINCE INITIAL DIAGNOSIS INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Age = INTEGER	14.0		Vital status and survival information / Overall survival status = INTEGER
+
+Comparing: AGE INTEGER
+     with: VITAL STATUS AND SURVIVAL INFORMATION OVERALL INTEGER
+
+Grams=1: "INTEGER" = "INTEGER" (+14.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Material Type = Healthy Tissue	276.0	X	Sample / Material type = Healthy colon tissue
+
+Comparing: MATERIAL TYPE HEALTHY TISSUE
+     with: SAMPLE MATERIAL TYPE HEALTHY COLON TISSUE
+
+Grams=3: "MATERIAL TYPE HEALTHY" = "MATERIAL TYPE HEALTHY" (+126.0)
+Grams=2: "MATERIAL TYPE" = "MATERIAL TYPE" (+52.0)
+Grams=2: "TYPE HEALTHY" = "TYPE HEALTHY" (+48.0)
+Grams=1: "MATERIAL" = "MATERIAL" (+16.0)
+Grams=1: "TYPE" = "TYPE" (+8.0)
+Grams=1: "HEALTHY" = "HEALTHY" (+14.0)
+Grams=1: "TISSUE" = "TISSUE" (+12.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Material Type = Tumor	240.0	X	Sample / Material type = Tumor tissue
+
+Comparing: MATERIAL TYPE TUMOR
+     with: SAMPLE MATERIAL TYPE TUMOR TISSUE
+
+Grams=3: "MATERIAL TYPE TUMOR" = "MATERIAL TYPE TUMOR" (+114.0)
+Grams=2: "MATERIAL TYPE" = "MATERIAL TYPE" (+52.0)
+Grams=2: "TYPE TUMOR" = "TYPE TUMOR" (+40.0)
+Grams=1: "MATERIAL" = "MATERIAL" (+16.0)
+Grams=1: "TYPE" = "TYPE" (+8.0)
+Grams=1: "TUMOR" = "TUMOR" (+10.0)
+
+
+############################################################################################################################################################
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sample ID = STRING	196.0	X	Sample / Sample ID = STRING
+
+Comparing: SAMPLE ID STRING
+     with: SAMPLE ID STRING
+
+Grams=3: "SAMPLE ID STRING" = "SAMPLE ID STRING" (+96.0)
+Grams=2: "SAMPLE ID" = "SAMPLE ID" (+36.0)
+Grams=2: "ID STRING" = "ID STRING" (+36.0)
+Grams=1: "SAMPLE" = "SAMPLE" (+12.0)
+Grams=1: "ID" = "ID" (+4.0)
+Grams=1: "STRING" = "STRING" (+12.0)
+
