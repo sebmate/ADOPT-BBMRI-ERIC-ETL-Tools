@@ -446,7 +446,10 @@ public class UI extends javax.swing.JFrame {
 
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
 
-        curr.setMappingTerm(targetTerms.getSelectedValue());
+        String tt = targetTerms.getSelectedValue();
+        if(tt == null) tt = "";
+
+        curr.setMappingTerm(tt);
         curr.setMappingStatus(2);
         mappings.set(sourceTerms.getSelectedIndex(), curr);
         refreshSourceTerms();
