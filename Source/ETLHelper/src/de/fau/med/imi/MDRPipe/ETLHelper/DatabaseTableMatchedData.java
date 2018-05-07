@@ -172,24 +172,28 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		String nonMatchedConcepts = "";
 		
 		String query = "SELECT ";
-			query += "DISTINCT \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\", \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE + "\", ";
-			query += "COUNT(\"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\") as conceptCount ";
-		query += "FROM " + this.getName() + " ";
-		query += "WHERE \"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP + "\" IS NOT \"X\" ";
-		query += "GROUP BY \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\", \"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE + "\"";
+			query += "DISTINCT s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\", ";
+			query += "COUNT(s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\") as conceptCount ";
+		query += "FROM " + this.getName() + " m ";
+		query += "LEFT OUTER JOIN " + this.getDatabaseStorage().getDatabaseTableSourceNamespace().getName() + " s ";
+		query += "ON m.\"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\" = s.\"" + DatabaseTableSourceNamespace.SOURCE_SOURCE_SLOT + "\" ";
+		query += "WHERE m.\"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP + "\" IS NOT \"X\" ";
+		query += "GROUP BY s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\"";
+		
+		//System.out.println("bla " + query);
 		
 		try {
 			this.getDatabaseStorage().setStatement(this.getDatabaseStorage().getConnection().createStatement());
 			this.getDatabaseStorage().getStatement().setQueryTimeout(30);
 			ResultSet nonMatchedConceptsResultSet = this.getDatabaseStorage().getStatement().executeQuery(query);
 			while(nonMatchedConceptsResultSet.next()) {
-				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT)  + " = " + nonMatchedConceptsResultSet.getString(DatabaseTableMatchedData.MATCHED_DATA_DATA_VALUE) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
+				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableSourceNamespace.SOURCE_PATH) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
 			}
 		} catch (SQLException e) {
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
-			System.out.println("Es gab einen Fehler beim Ausführen der Abfrage.");
+			System.out.println("Error when executing the query: " + query);
 		}
 		
 		return nonMatchedConcepts;

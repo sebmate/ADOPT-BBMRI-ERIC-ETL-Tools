@@ -6,8 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
+import java.util.Set;
 
 import de.fau.med.imi.MDRPipe.MDRPipeConfiguration;
 
@@ -73,7 +75,8 @@ public class DataTypeTransformations {
 	}
 
 	private String normalizeInteger(String in) {
-		in = in.trim();
+		in = in.trim();//.replaceAll(",", ".");
+
 		String returnValue = null;
 		try {
 			returnValue = "" + Integer.parseInt(in);
@@ -86,7 +89,7 @@ public class DataTypeTransformations {
 	}
 
 	private String normalizeFloat(String in) {
-		in = in.trim();
+		in = in.trim().replaceAll(",", ".");
 		String returnValue = null;
 		try {
 			returnValue = "" + Float.parseFloat(in);
@@ -340,7 +343,7 @@ public class DataTypeTransformations {
 	}
 	
 	private void convertFromFloatToInteger(ETLResultEntry etlResultEntry) {
-		if(normalizeInteger(etlResultEntry.getDataValue()) != null) {
+		if(normalizeFloat(etlResultEntry.getDataValue()) != null) {
 			etlResultEntry.setFinalValue(normalizeInteger(etlResultEntry.getDataValue()));
 			this.setSuccess(etlResultEntry, "OK");
 		} else {
@@ -593,7 +596,10 @@ public class DataTypeTransformations {
 			System.out.println(" ERROR: Cannot convert from \"" + sourceDataType + "\" to " + targetDataType + "!");
 		}
 		if(!etlResultEntry.getTargetDataType().equals("(unknown)")) {
-			this.getConversionErrors().add(etlResultEntry.getDataConcept() + ": " + etlResultEntry.getDataValue());
+			//this.getConversionErrors().add(etlResultEntry.getDataConcept() + ": " + etlResultEntry.getDataValue());
+			
+			this.getConversionErrors().add(etlResultEntry.getSourceDataType() + " => " + etlResultEntry.getTargetDataType() + ": " + etlResultEntry.getDataConcept() + " = " + etlResultEntry.getDataValue() + " => " + etlResultEntry.getTargetPath());
+			
 		}
 		this.setSuccess(etlResultEntry, "ERROR");
 	}
@@ -624,10 +630,18 @@ public class DataTypeTransformations {
 			
 			System.out.println("");
 			
-			System.out.println("=== Information about the errors ===");
+			System.out.println("=== Information about the errors ===\n");
 			
-			for(int i = 0; i < this.getConversionErrors().size(); i++) {
-				System.out.println("\t" + this.getConversionErrors().get(i));
+			
+			//https://stackoverflow.com/a/203992
+				
+			List<String> al = this.getConversionErrors();
+			Set<String> hs = new HashSet<>();
+			hs.addAll(al);
+			al.clear();
+			al.addAll(hs);	
+			for(int i = 0; i < al.size(); i++) {
+				System.out.println("\t" + al.get(i));
 			}
 			
 		}
