@@ -3,8 +3,11 @@ package de.fau.med.imi.TablePreprocessor;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
@@ -77,16 +80,32 @@ public class TablePreprocessor {
 
 			System.out.println("Found " + columns + " columns in file:\n");
 
+			ArrayList<String> knownColumns = new ArrayList<String>();
+			ArrayList<String> redundantColumns = new ArrayList<String>();
+			
 			for (int c = 0; c < columns; c++) {
 
 				String cName = th.getCell(0, c);
 				String cType = th.getCell(1, c).toUpperCase();
 
+				
+				
 				if (c == 0) {
+					
 					System.out.println(" - Treating the first column (" + cName + ")  as column with patient ids.");
+					
 				} else {
 
-					System.out.println(" - " + cName + " = " + cType);
+					System.out.print(" - " + cName + " = " + cType);
+					
+					if (knownColumns.contains(cName)) {
+						System.out.println("     ########## ERROR: REDUNDANT COLUMN ##########");
+						redundantColumns.add(cName);
+					} else {
+						knownColumns.add(cName);
+						System.out.println("");
+					}
+					
 
 					if (cType.equals("ENUMERATED"))
 						cntENUMERATED++;
@@ -204,6 +223,8 @@ public class TablePreprocessor {
 			System.out.println("Number of type STRING: " + cntSTRING);
 			System.out.println("Number of type DATE: " + cntDATE);
 			System.out.println("Number of type DATETIME: " + cntDATETIME);
+			
+			System.out.println("\nRedundant columns: " + redundantColumns);
 
 		} catch (
 
