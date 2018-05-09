@@ -103,6 +103,7 @@ class MappingFile {
                         SourceString = columns[0];
                         Score = columns[1];
                         Map = columns[2];
+                        OriginalMap = columns[2];
                         TargetString = columns[3];
                     }
                     if (colCount == 5) {
