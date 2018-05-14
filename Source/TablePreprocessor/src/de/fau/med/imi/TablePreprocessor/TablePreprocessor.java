@@ -85,8 +85,8 @@ public class TablePreprocessor {
 			
 			for (int c = 0; c < columns; c++) {
 
-				String cName = th.getCell(0, c);
-				String cType = th.getCell(1, c).toUpperCase();
+				String cName = th.getCell(0, c).trim();
+				String cType = th.getCell(1, c).toUpperCase().trim();
 
 				
 				
