@@ -26,13 +26,13 @@ public class ElementTransformer {
 		
 		System.out.println("");
 		
-		System.out.println("========= DATA TRANSFORMATION PROCESS =========");
+		System.out.println("========= FACTS DATA TRANSFORMATION PROCESS =========");
 		
 		System.out.println("");
 
-		System.out.println("=== Performing actions on datatables ===");
+		System.out.println("=== Performing actions on data tables ===");
 		
-		System.out.print("Performing datatype transformations ... ");
+		System.out.print("Performing datatype transformations (casting) ... ");
 		
 		ArrayList<ETLResultEntry> etlResultEntries = new ArrayList<ETLResultEntry>();
 		
@@ -83,14 +83,14 @@ public class ElementTransformer {
 				
 			}
 			
-			System.out.println("successful!");
+			System.out.println("OK");
 			
 		} catch (SQLException e) {
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
 			e.printStackTrace();
-			System.out.println("not successful!");
+			System.out.println("ERROR");
 		}
 		
 		/*
@@ -116,12 +116,9 @@ public class ElementTransformer {
 		
 		*/
 		
-		System.out.println("");
-		
 		this.getDataTypeTransformations().showDataTypeTransformations();
-		
 		return etlResultEntries;
-		
+	
 	}
 	
 	public void insertETLResultEntriesIntoDatabaseTableTransformedData(ArrayList<ETLResultEntry> etlResultEntries) throws SQLException {

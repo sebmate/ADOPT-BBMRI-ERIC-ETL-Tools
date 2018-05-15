@@ -36,10 +36,10 @@ public class ElementMatcher {
 		System.out.println("");
 		
 		try {
-			System.out.println("=== Performing actions on datatables ===");
+			System.out.println("=== Performing actions on data tables ===");
 			buildTranslationTable();
 			buildMatchedDataTable();
-			System.out.println("Performing actions on datatables successful!\n");
+			System.out.println("Performing actions on data tables successful!\n");
 		} catch (Exception e) {
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
@@ -62,9 +62,10 @@ public class ElementMatcher {
 			this.getDatabase().setStatement(this.getDatabase().getConnection().createStatement());
 			this.getDatabase().getStatement().setQueryTimeout(30);
 			this.getDatabase().getStatement().executeUpdate(this.getDatabase().getDatabaseTableTranslation().buildDatabaseTableTranslation());
-			System.out.println("successful.");
-		} catch (SQLException e) {
-			System.out.println("not successful.");
+			System.out.println("OK");
+		} catch (Exception e) {
+			System.out.println("ERROR");
+
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
@@ -77,9 +78,10 @@ public class ElementMatcher {
 			this.getDatabase().setStatement(this.getDatabase().getConnection().createStatement());
 			this.getDatabase().getStatement().setQueryTimeout(30);
 			this.getDatabase().getStatement().executeUpdate(this.getDatabase().getDatabaseTableMatchedData().buildDatabaseTableMatchedData());
-			System.out.println("successful.");
-		} catch (SQLException e) {
-			System.out.println("not successful.");
+			System.out.println("OK");
+		} catch (Exception e) {
+			System.out.println("ERROR");
+
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}

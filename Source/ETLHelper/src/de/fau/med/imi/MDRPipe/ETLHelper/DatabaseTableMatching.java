@@ -39,8 +39,8 @@ public class DatabaseTableMatching extends DatabaseTable {
 	
 	public void showDatabaseTableSummary() throws SQLException {
 		System.out.println("=== Summary of the mapping rules ===");
-		System.out.println("Number of different source strings (dataelement and value): " + this.countDistinctValuesInColumn(DatabaseTableMatching.MATCHING_SOURCE_STRING));
-		System.out.println("Number of found mappings between source and target strings: " + this.countSpecificValuesInColumn(DatabaseTableMatching.MATCHING_DO_MATCH, "X"));
+		System.out.println("Number of different source strings (data element and value): " + this.countDistinctValuesInColumn(DatabaseTableMatching.MATCHING_SOURCE_STRING) + "   (Concept path including the value for value sets and Boolean, or the data type for anything except value sets or Boolean.)");
+		System.out.println("Number of found mappings between source and target strings: " + this.countSpecificValuesInColumn(DatabaseTableMatching.MATCHING_DO_MATCH, "X") + "   (Should be the same value as above; if not, this indicates missing mappings.)");
 	}
 
 }

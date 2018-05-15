@@ -124,6 +124,8 @@ public class DataTypeTransformations {
 		allowedDateFormats.add("yyyy-MM");
 		allowedDateFormats.add("dd.MM.yyyy");
 		allowedDateFormats.add("dd.MM.yy");
+		allowedDateFormats.add("yyyy.MM.dd");
+		
 		
 		Date date = null;
 		String dateString = null;
@@ -605,8 +607,8 @@ public class DataTypeTransformations {
 	}
 	
 	public void showDataTypeTransformations() {
-		
-		System.out.println("=== Information about the used transformation rules (by rule) ===");
+			
+		System.out.println("\n  The following data type castings (from TYPE => TYPE) were applied:\n");
 		
 		for(int i = 0; i < this.getCountedTransformations().length - 1; i++) {
 			for(int j = 0; j < this.getCountedTransformations()[i].length - 1; j++) {
@@ -614,7 +616,7 @@ public class DataTypeTransformations {
 				String toDataType = this.getDataTypes().get(j);
 				int count = this.getSpecificTransformationCount(fromDataType, toDataType);
 				if(count != 0) {
-					System.out.print(fromDataType + " => " + toDataType + ": " + count + " (");
+					System.out.print("\t" + fromDataType + " => " + toDataType + ": " + count + " (");
 					for(int k = 0; k < this.getSuccessStates().size(); k++) {
 						System.out.print(this.getSuccessStates().get(k) + ": " + this.getSpecificTransformationSuccessCount(fromDataType, toDataType, k));
 						if(k < this.getSuccessStates().size()-1) {
@@ -630,7 +632,7 @@ public class DataTypeTransformations {
 			
 			System.out.println("");
 			
-			System.out.println("=== Information about the errors ===\n");
+			System.out.println("  The following data type castings triggered errors:\n");
 			
 			
 			//https://stackoverflow.com/a/203992
@@ -685,7 +687,7 @@ public class DataTypeTransformations {
 		
 		System.out.println("");
 		
-		System.out.println(ETLHelper.round(percent, 2) + "% of the data records that do have a mapping could be transformed.");
+		System.out.println("  => " + ETLHelper.round(percent, 2) + "% of the data records that do have a mapping could be transformed.");
 		
 	}
 	

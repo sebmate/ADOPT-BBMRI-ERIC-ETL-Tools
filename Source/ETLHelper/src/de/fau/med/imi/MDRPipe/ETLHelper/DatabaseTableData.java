@@ -39,11 +39,11 @@ public class DatabaseTableData extends DatabaseTable {
 	}
 	
 	public void showDatabaseTableSummary() throws SQLException {
-		System.out.println("=== Summary of the biobank data (from Excel/CSV file) ===");
-		System.out.println("Number of patients: " + this.countDistinctValuesInColumn(DatabaseTableData.DATA_CASEID));
-		System.out.println("Number of data records: " + this.countValuesInColumn(DatabaseTableData.DATA_VALUE));
-		System.out.println("Number of different concepts: " + this.countDistinctValuesInColumn(DatabaseTableData.DATA_CONCEPT));
-		System.out.println("Number of empty concepts: " + this.countEmptyValuesInColumn(DatabaseTableData.DATA_CONCEPT));
+		System.out.println("=== Summary of input data (from Excel/CSV file) ===");
+		System.out.println("Number of patients:           " + this.countDistinctValuesInColumn(DatabaseTableData.DATA_CASEID));
+		System.out.println("Number of data records:       " + this.countValuesInColumn(DatabaseTableData.DATA_VALUE) + "   (Lines in the CSV file or non-empty cells in the Excel file.)");
+		System.out.println("Number of different concepts: " + this.countDistinctValuesInColumn(DatabaseTableData.DATA_CONCEPT) + "   (Number of columns in the Excel file or distinct values in the CSV file's attribute column.)");
+		System.out.println("Number of empty concepts:     " + this.countEmptyValuesInColumn(DatabaseTableData.DATA_CONCEPT) + "   (Number of data records in the CSV/Excel file without a concept (SOURCE_SLOT), only applicable if the CSV/MDR route is taken.)");
 	}
 
 }

@@ -25,7 +25,7 @@ public class FileUploader {
 
 	public void uploadFiles() throws SQLException {
 
-		System.out.println("We will match your data from namespace " + MDRPipeConfiguration.getMdrSourceNamespace() + " to the namespace " + MDRPipeConfiguration.getMdrTargetNamespace() + ".\n");
+		System.out.println("Transforming data to comply with the definition of namespace \"" + MDRPipeConfiguration.getMdrTargetNamespace() + "\".\n");
 
 		try {
 			System.out.println("=== Uploading files into database ===");
@@ -33,7 +33,7 @@ public class FileUploader {
 			UploadFileToDatabase("sourceNamespace");
 			UploadFileToDatabase("targetNamespace");
 			UploadFileToDatabase("matching");
-			System.out.println("Uploading files into database successful!\n");
+			System.out.println("Uploading files into database completed.\n");
 		} catch (Exception e) {
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
@@ -86,9 +86,9 @@ public class FileUploader {
 		System.out.print("Uploading data (" + this.getData() + ")... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getDataFolder() + this.getData(), this.getDatabase().getDatabaseTableData().getName(), true);
-			System.out.println("successful.");
+			System.out.println("OK");
 		} catch (Exception e) {
-			System.out.println("not successful.");
+			System.out.println("ERROR");
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
@@ -99,9 +99,10 @@ public class FileUploader {
 		System.out.print("Uploading source namespace (" + this.getSourceNamespace() + ")... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMetadataFolder() + this.getSourceNamespace(), this.getDatabase().getDatabaseTableSourceNamespace().getName(), true);
-			System.out.println("successful.");
+			System.out.println("OK");
 		} catch (Exception e) {
-			System.out.println("not successful.");
+			System.out.println("ERROR");
+
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
@@ -112,9 +113,10 @@ public class FileUploader {
 		System.out.print("Uploading target namespace (" + this.getTargetNamespace() + ")... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMetadataFolder() + this.getTargetNamespace(), this.getDatabase().getDatabaseTableTargetNamespace().getName(), true);
-			System.out.println("successful.");
+			System.out.println("OK");
 		} catch (Exception e) {
-			System.out.println("not successful.");
+			System.out.println("ERROR");
+
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
@@ -125,9 +127,10 @@ public class FileUploader {
 		System.out.print("Uploading matching (" + this.getMatching() + ")... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMappingsFolder() + this.getMatching(), this.getDatabase().getDatabaseTableMatching().getName(), true);
-			System.out.println("successful.");
+			System.out.println("OK");
 		} catch (Exception e) {
-			System.out.println("not successful.");
+			System.out.println("ERROR");
+
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}

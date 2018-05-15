@@ -61,10 +61,7 @@ public class ETLHelper {
 		myXMLCreator.createXML();
 		
 		System.out.println("");
-		
-		System.out.println("");
-		
-		System.out.println("If you experience any problems with the programme please contact christian.knell@fau.de and / or sebastian.mate@fau.de!");
+		System.out.println("If you experience any problems with this program, please contact christian.knell@fau.de or sebastian.mate@fau.de.");
 		
 	}
 	
@@ -121,9 +118,9 @@ public class ETLHelper {
 		int numberOfDataRecordsWithMappingRuleAndSuccessfulTransformation = ETLHelper.getElementTransformer().getDataTypeTransformations().countNumberOfTranslationRulesBySuccess("OK");
 		double percent = ((double) numberOfDataRecordsWithMappingRuleAndSuccessfulTransformation / (double) originalNumberOfDataRecords) * 100.0;
 		System.out.println("");
-		System.out.println("=== Summary about the ETL process ===");
+		System.out.println("=== Final summary about the ETL process ===");
 		System.out.println("");
-		System.out.println(ETLHelper.round(percent, 2) + "% of the input data records could be mapped and transformed.");
+		System.out.println("In total, " + ETLHelper.round(percent, 2) + "% of the input data records could be mapped and transformed.");
 	}
 
 	public static Options getCommandLineOptions() {

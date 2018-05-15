@@ -42,9 +42,9 @@ public class DatabaseTableSourceNamespace extends DatabaseTable {
 		int distinctValuesInColumnURN = this.countDistinctValuesInColumn(DatabaseTableSourceNamespace.SOURCE_URN);
 		int distinctValuesinColumnSourceSlots = this.countDistinctValuesInColumn(DatabaseTableSourceNamespace.SOURCE_SOURCE_SLOT);
 		int emptySourceSlots = this.countEmptyValuesInColumn(DatabaseTableSourceNamespace.SOURCE_SOURCE_SLOT);
-		System.out.println("Number of different dataelements: " + distinctValuesInColumnURN);
-		System.out.println("Number of different concepts (SOURCE_SLOT): " + distinctValuesinColumnSourceSlots);
-		System.out.println("Number of empty SOURCE_SLOT: " + emptySourceSlots);
+		System.out.println("Number of different data elements: " + distinctValuesInColumnURN + "   (Number of distinct MDR URNs; only applicable if the CSV/MDR route is taken.)");
+		System.out.println("Number of different SOURCE_SLOTs: " + distinctValuesinColumnSourceSlots + "   (Number of distinct references to the CSV file's attribute column entries; only applicable if the CSV/MDR route is taken.)");
+		System.out.println("Number of empty SOURCE_SLOTs:     " + emptySourceSlots + "   (If > 0, this indicates that the MDR's metadata is missing the required SOURCE slot entries; only applicable if the CSV/MDR route is taken.)");
 	}
 
 }

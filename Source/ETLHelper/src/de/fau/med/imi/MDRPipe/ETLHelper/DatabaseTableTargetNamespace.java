@@ -39,7 +39,7 @@ public class DatabaseTableTargetNamespace extends DatabaseTable {
 	
 	public void showDatabaseTableSummary() throws SQLException {
 		System.out.println("=== Summary of the target namespace ===");		
-		System.out.println("Number of different dataelements: " + this.countDistinctValuesInColumn(DatabaseTableTargetNamespace.TARGET_URN));
+		System.out.println("Number of different data elements: " + this.countDistinctValuesInColumn(DatabaseTableTargetNamespace.TARGET_URN) + "   (Number of distinct MDR URNs.)");
 	}
 
 }

@@ -149,28 +149,31 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		System.out.println("=== Assessment of mapping completeness ===");
 		
 		int numberOfDataelements = this.countValuesInColumn(DatabaseTableMatchedData.MATCHED_DATA_DATA_CASEID);
-		System.out.println("Number of data records that should have a mapping: " + numberOfDataelements);
+		System.out.println("Number of data records (facts) that should have a mapping: " + numberOfDataelements);
 		
 		int numberOfMatchedDataelements = this.countSpecificValuesInColumn(DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP, "X");
-		System.out.println("Number of data records that do have a mapping: " + numberOfMatchedDataelements);
+		System.out.println("Number of data records (facts) that do have a mapping: " + numberOfMatchedDataelements);
 		
 		int numberOfNonMatchedDataelements = this.countNonSpecificValuesInColumn(DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP, "X");
-		System.out.println("Number of data records that don't have a mapping: " + numberOfNonMatchedDataelements);
+		System.out.println("Number of data records (facts) that don't have a mapping: " + numberOfNonMatchedDataelements);
+		double percent = ((double) numberOfMatchedDataelements / (double) numberOfDataelements) * 100.0;
+		System.out.println("\n  => " + ETLHelper.round(percent, 2) + "% of the data records (facts) have a mapping.");
 		
 		if(numberOfNonMatchedDataelements > 0) {
 			System.out.println("");
-			System.out.println(this.showNonMatchedDataRecords());
+			System.out.println(this.showNonMappedDataElements());
+			System.out.println(this.showUnprocessedData());
 		}
 		
-		double percent = ((double) numberOfMatchedDataelements / (double) numberOfDataelements) * 100.0;
-		System.out.println(ETLHelper.round(percent, 2) + "% of the data records have a mapping.");
+		
 		
 	}
 	
-	public String showNonMatchedDataRecords() {
+	public String showNonMappedDataElements() {
 		
-		String nonMatchedConcepts = "";
-		
+		String nonMatchedConcepts = "  Items (not facts) without a mapping (consider updating the mapping file):\n\n";
+
+		/*
 		String query = "SELECT ";
 			query += "DISTINCT s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\", ";
 			query += "COUNT(s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\") as conceptCount ";
@@ -180,14 +183,18 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		query += "WHERE m.\"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP + "\" IS NOT \"X\" ";
 		query += "GROUP BY s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\"";
 		
-		//System.out.println("bla " + query);
+		*/
+
+		String query = "SELECT DISTINCT s.\"MDR Path (do not edit)\" AS UNMAPPED\r\nFROM sourceNamespace s \r\nEXCEPT\r\nSELECT DISTINCT m.\"SourceString\"\r\nFROM matchings m WHERE m.\"Map\" = \"X\"\r\n";
+		
 		
 		try {
 			this.getDatabaseStorage().setStatement(this.getDatabaseStorage().getConnection().createStatement());
 			this.getDatabaseStorage().getStatement().setQueryTimeout(30);
 			ResultSet nonMatchedConceptsResultSet = this.getDatabaseStorage().getStatement().executeQuery(query);
 			while(nonMatchedConceptsResultSet.next()) {
-				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableSourceNamespace.SOURCE_PATH) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
+				//nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableSourceNamespace.SOURCE_PATH) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
+				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString("UNMAPPED") + "\n";
 			}
 		} catch (SQLException e) {
 			if(MDRPipeConfiguration.getDebug()) {
@@ -199,5 +206,48 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 		return nonMatchedConcepts;
 		
 	}
+	
+	
+public String showUnprocessedData() {
+		
+		String nonMatchedConcepts = "  Items (not facts) for which no data was processed (because of missing mapping or missing data in the source table):\n\n";
+
+		/*
+		String query = "SELECT ";
+			query += "DISTINCT s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\", ";
+			query += "COUNT(s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\") as conceptCount ";
+		query += "FROM " + this.getName() + " m ";
+		query += "LEFT OUTER JOIN " + this.getDatabaseStorage().getDatabaseTableSourceNamespace().getName() + " s ";
+		query += "ON m.\"" + DatabaseTableMatchedData.MATCHED_DATA_DATA_CONCEPT + "\" = s.\"" + DatabaseTableSourceNamespace.SOURCE_SOURCE_SLOT + "\" ";
+		query += "WHERE m.\"" + DatabaseTableMatchedData.MATCHED_DATA_MAPPING_DO_MAP + "\" IS NOT \"X\" ";
+		query += "GROUP BY s.\"" + DatabaseTableSourceNamespace.SOURCE_PATH + "\"";
+		
+		*/
+
+		String query = "SELECT DISTINCT s.\"MDR Path (do not edit)\" AS LACKING\r\nFROM sourceNamespace s \r\nexcept\r\nSELECT DISTINCT m.\"SOURCE_PATH\"\r\nFROM matchedData m\r\nORDER BY m.\"SOURCE_PATH\"";
+		
+		
+		try {
+			this.getDatabaseStorage().setStatement(this.getDatabaseStorage().getConnection().createStatement());
+			this.getDatabaseStorage().getStatement().setQueryTimeout(30);
+			ResultSet nonMatchedConceptsResultSet = this.getDatabaseStorage().getStatement().executeQuery(query);
+			while(nonMatchedConceptsResultSet.next()) {
+				//nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString(DatabaseTableSourceNamespace.SOURCE_PATH) + " (" + nonMatchedConceptsResultSet.getString("conceptCount") + "x) \n";
+				nonMatchedConcepts += "\t" + nonMatchedConceptsResultSet.getString("LACKING") + "\n";
+			}
+		} catch (SQLException e) {
+			if(MDRPipeConfiguration.getDebug()) {
+				e.printStackTrace();
+			}
+			System.out.println("Error when executing the query: " + query);
+		}
+		
+		return nonMatchedConcepts;
+		
+	}
+	
+	
+	
+	
 
 }
