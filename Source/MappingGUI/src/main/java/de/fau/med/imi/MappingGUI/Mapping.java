@@ -19,6 +19,7 @@ public class Mapping {
     private int mappingStatus = 0;
     private String OriginalMappingTerm = "";
 
+    /*
     Mapping(String SourceString, String MappingTerm, ArrayList<Match> Matches) {
         this.SourceString = SourceString;
         this.MappingTerm = MappingTerm;
@@ -31,14 +32,16 @@ public class Mapping {
         this.Matchings = matches;
         this.mappingStatus = mappingStatus;
     }
-
-    Mapping(String SourceString, String MappingTerm, String OriginalMappingTerm, ArrayList<Match> matches) {
+    */
+    
+    Mapping(String SourceString, String MappingTerm, String OriginalMappingTerm, ArrayList<Match> matches, int mappingStatus) {
         this.SourceString = SourceString;
         this.MappingTerm = MappingTerm;
         this.OriginalMappingTerm = OriginalMappingTerm;
         this.Matchings = matches;
         this.mappingStatus = mappingStatus;
     }
+   
 
     /**
      * @return the SourceString

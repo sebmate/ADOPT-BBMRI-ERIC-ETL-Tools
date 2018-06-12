@@ -124,6 +124,9 @@ class MappingFile {
 
                     if (Map.equals("X")) {
                         MappingTerm = TargetString;
+                    }
+
+                    if (OriginalMap.equals("X")) {
                         OriginalMappingTerm = TargetString;
                     }
 
@@ -136,7 +139,8 @@ class MappingFile {
                 } else if (tempMatches.size() > 0) { // a blank line was found (= next source term), process previous entries:
 
                     ArrayList<Match> matches = new ArrayList<>(tempMatches);
-                    Mapping mapping = new Mapping(SourceString, MappingTerm, OriginalMappingTerm, matches);
+                    Mapping mapping = new Mapping(SourceString, MappingTerm, OriginalMappingTerm, matches, Integer.parseInt(Status));
+
                     MappingTerm = "";
                     OriginalMappingTerm = "";
 

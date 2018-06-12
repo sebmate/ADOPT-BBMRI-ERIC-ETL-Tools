@@ -11,7 +11,10 @@ import java.awt.Component;
 import java.awt.List;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -110,6 +113,7 @@ public class UI extends javax.swing.JFrame {
         saveAsButton = new javax.swing.JButton();
         integrateButton = new javax.swing.JButton();
         autoJumpCheckbox = new javax.swing.JCheckBox();
+        statsButton = new javax.swing.JButton();
 
         searchTermWindow.setTitle("Find other term");
         searchTermWindow.setSize(new java.awt.Dimension(500, 40));
@@ -270,6 +274,13 @@ public class UI extends javax.swing.JFrame {
         autoJumpCheckbox.setSelected(true);
         autoJumpCheckbox.setText("Auto jump to next entry");
 
+        statsButton.setText("Statistics");
+        statsButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                statsButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -294,8 +305,10 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(statsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logo))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -321,7 +334,8 @@ public class UI extends javax.swing.JFrame {
                             .addComponent(openFileButton)
                             .addComponent(saveFileButton)
                             .addComponent(saveAsButton)
-                            .addComponent(integrateButton))
+                            .addComponent(integrateButton)
+                            .addComponent(statsButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -434,7 +448,7 @@ public class UI extends javax.swing.JFrame {
             mf = new MappingFile(file.getPath());
             mappings = mf.getMappings();
             refreshSourceTerms();
-                        saveFileButton.setEnabled(true);
+            saveFileButton.setEnabled(true);
             saveAsButton.setEnabled(true);
         } else {
             System.out.println("Open command cancelled by user.");
@@ -447,7 +461,9 @@ public class UI extends javax.swing.JFrame {
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
 
         String tt = targetTerms.getSelectedValue();
-        if(tt == null) tt = "";
+        if (tt == null) {
+            tt = "";
+        }
 
         curr.setMappingTerm(tt);
         curr.setMappingStatus(2);
@@ -474,20 +490,19 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_integrateButtonActionPerformed
 
     private void revertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revertButtonActionPerformed
+        
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
-
+        
         if (!curr.getOriginalMappingTerm().equals("")) {
             curr.setMappingTerm(curr.getOriginalMappingTerm());
             curr.setMappingStatus(1);
             mappings.set(sourceTerms.getSelectedIndex(), curr);
         } else {
             JOptionPane.showMessageDialog(null, "There is no original/suggested mapping to revert to. Please try to find one yourself.", "No suggested mapping.", JOptionPane.INFORMATION_MESSAGE);
-
         }
 
         refreshSourceTerms();
         refreshTargetTerms();
-
     }//GEN-LAST:event_revertButtonActionPerformed
 
     private void saveFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveFileButtonActionPerformed
@@ -543,6 +558,274 @@ public class UI extends javax.swing.JFrame {
             appendToMatches();
         }
     }//GEN-LAST:event_targetTerminologyMouseClicked
+
+    private void statsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statsButtonActionPerformed
+
+        int Type0 = 0;
+        int Type1 = 0;
+        int Type2 = 0;
+        int Type3 = 0;
+        int Type4 = 0;
+        int Type4a = 0;
+        int Type4b = 0;
+        int Type4c = 0;
+        int Type5 = 0;
+        int Type6 = 0;
+        int Type7 = 0;
+
+        ArrayList<String> t0 = new ArrayList();
+        ArrayList<String> t1 = new ArrayList();
+        ArrayList<String> t2 = new ArrayList();
+        ArrayList<String> t3 = new ArrayList();
+        ArrayList<String> t4 = new ArrayList();
+        ArrayList<String> t4a = new ArrayList();
+        ArrayList<String> t4b = new ArrayList();
+        ArrayList<String> t4c = new ArrayList();
+        ArrayList<String> t5 = new ArrayList();
+        ArrayList<String> t6 = new ArrayList();
+        ArrayList<String> t7 = new ArrayList();
+
+        String statTable = "LOCATION;TYPE;SOURCE STRING;TOP SUGGESTION;CORRECTED MAPPING\n";
+
+        for (int a = 0; a < mappings.size(); a++) {
+            Mapping mapping = mappings.get(a);
+            ArrayList<Match> matches = mapping.getMatchings();
+
+            if (mapping.getMappingStatus() < 2) {
+
+                Type0++;
+                t0.add("No mapping approved for: '" + mapping.getSourceString() + "'");
+
+                statTable += "SITE;0;" + mapping.getSourceString() + ";" + ";\n";
+
+            } else {
+
+                int mapX = -1;
+                int mapOrigX = -1;
+                String mScore = "";
+
+                boolean hasEquivalent = false;
+                boolean createdMapping = false;
+                boolean isCorrect = false;
+                boolean amongMatches = false;
+
+                for (int b = 0; b < matches.size(); b++) {
+                    if (matches.get(b).getMap().equals("X")) {
+                        mapX = b;
+                        mScore = matches.get(b).getScore();
+                    }
+                    if (matches.get(b).getOriginalMap().equals("X")) {
+                        mapOrigX = b;
+                        mScore = matches.get(b).getScore();
+                    }
+                }
+                if (mapX > -1) {
+                    hasEquivalent = true;
+                }
+                if (mapOrigX > -1) {
+                    createdMapping = true;
+                }
+                if (mapX == mapOrigX && !mScore.trim().toUpperCase().equals("MANUAL")) {
+                    isCorrect = true;
+                }
+                if (!mScore.trim().toUpperCase().equals("MANUAL") && mapX > -1) {
+                    amongMatches = true;
+                }
+                if (!hasEquivalent && !createdMapping && isCorrect && !amongMatches) {
+
+                    Type1++;
+                    t1.add("No equivalent in target for: '" + mapping.getSourceString() + "'");
+                    statTable += "SITE;1;" + mapping.getSourceString() + ";" + ";\n";
+
+                } else if (!hasEquivalent && createdMapping && !isCorrect && !amongMatches) {
+
+                    Type2++;
+                    t2.add("   No equivalent in target for: '" + mapping.getSourceString() + "'\n"
+                            + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n");
+
+                    statTable += "SITE;2;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";\n";
+
+                } else if (hasEquivalent && !createdMapping && !isCorrect && !amongMatches) {
+
+                    Type3++;
+                    t3.add("        No mapping created for: '" + mapping.getSourceString() + "'\n"
+                            + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
+                            + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+
+                    statTable += "SITE;3;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                } else if (hasEquivalent && !createdMapping && !isCorrect && amongMatches) {
+
+                    Type4++;
+                    t4.add("        No mapping created for: '" + mapping.getSourceString() + "'\n"
+                            + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
+                            + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n"
+                    );
+
+                    statTable += "SITE;4;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                    if (mapX == 0) {
+                        Type4a++;
+                        t4a.add("        No mapping created for: '" + mapping.getSourceString() + "'\n"
+                                + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
+                                + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                        statTable += "SITE;4A;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                    } else if (mScore.equals(matches.get(0).getScore())) {
+                        Type4b++;
+                        t4b.add("        No mapping created for: '" + mapping.getSourceString() + "'\n"
+                                + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
+                                + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                        statTable += "SITE;4B;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                    } else {
+                        Type4c++;
+                        t4c.add("        No mapping created for: '" + mapping.getSourceString() + "'\n"
+                                + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
+                                + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                        statTable += "SITE;4C;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                    }
+
+                } else if (hasEquivalent && createdMapping && !isCorrect && !amongMatches) {
+                    Type5++;
+                    t5.add("Wrong mapping created for: '" + mapping.getSourceString() + "'\n"
+                            + "    the wrong mapping was: '" + matches.get(0).getTargetString() + "'\n"
+                            + "   the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                    statTable += "SITE;5;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                } else if (hasEquivalent && createdMapping && !isCorrect && amongMatches) {
+                    Type6++;
+                    t6.add("Wrong mapping created for: '" + mapping.getSourceString() + "'\n"
+                            + "    the wrong mapping was: '" + matches.get(0).getTargetString() + "'\n"
+                            + "   the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                    statTable += "SITE;6;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                } else if (hasEquivalent && createdMapping && isCorrect && amongMatches) {
+                    Type7++;
+                    t7.add("Correct mapping created for: '" + mapping.getSourceString() + "'\n"
+                            + "  the automatic mapping was: '" + matches.get(0).getTargetString() + "'\n"
+                            + "     the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
+                    statTable += "SITE;7;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+
+                } else {
+                    System.out.println("Don't know how to classify:");
+                    System.out.println(" hasEquivalent: " + hasEquivalent);
+                    System.out.println(" createdMapping: " + createdMapping);
+                    System.out.println(" isCorrect: " + isCorrect);
+                    System.out.println(" amongMatches: " + amongMatches);
+                    System.out.println("");
+                    System.out.println(" Source Term: " + mapping.getSourceString());
+                    System.out.println(" Suggested: " + matches.get(0).getTargetString());
+                    if (mapX > -1) {
+                        System.out.println(" Corrected: " + matches.get(mapX).getTargetString());
+                    } else {
+                        System.out.println(" Corrected: NO MAPPING");
+                    }
+                    System.out.println(" Score: " + mScore.trim());
+                    System.exit(0);
+                }
+            }
+        }
+
+        String statFile = "";
+
+        statFile += "\n" + ("Statistics about automatic mapping quality:\n");
+
+        statFile += "\n" + (" Type 0: " + Type0);
+        statFile += "\n" + (" Type 1: " + Type1);
+        statFile += "\n" + (" Type 2: " + Type2);
+        statFile += "\n" + (" Type 3: " + Type3);
+        statFile += "\n" + (" Type 4: " + Type4);
+        statFile += "\n" + ("Type 4A: " + Type4a);
+        statFile += "\n" + ("Type 4B: " + Type4b);
+        statFile += "\n" + ("Type 4C: " + Type4c);
+        statFile += "\n" + (" Type 5: " + Type5);
+        statFile += "\n" + (" Type 6: " + Type6);
+        statFile += "\n" + (" Type 7: " + Type7);
+        statFile += "\n" + ("");
+
+        statFile += "\n" + ("\n=========== Type 0: Mapping was not approved by the user. ===========\n");
+
+        for (int c = 0; c < t0.size(); c++) {
+            statFile += "\n" + (t0.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 1: No mapping was created, which is correct because there's no equivalent item in the target terminology. ===========\n");
+
+        for (int c = 0; c < t1.size(); c++) {
+            statFile += "\n" + (t1.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 2: A mapping was created, which is wrong, because there's no equivalent item in the target terminology. ===========\n");
+
+        for (int c = 0; c < t2.size(); c++) {
+            statFile += "\n" + (t2.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 3: No mapping was created, but should have been. Additionally the correct term was not in the list of proposals. ===========\n");
+
+        for (int c = 0; c < t3.size(); c++) {
+            statFile += "\n" + (t3.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 4A: No mapping was created, but should have been. The correct term was the first top-score proposal. ===========\n");
+
+        for (int c = 0; c < t4a.size(); c++) {
+            statFile += "\n" + (t4a.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 4B: No mapping was created, but should have been. The correct term was one of the other top-score proposals. ===========\n");
+
+        for (int c = 0; c < t4b.size(); c++) {
+            statFile += "\n" + (t4b.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 4C: No mapping was created, but should have been. The correct term was one of the lower-score proposals. ===========\n");
+
+        for (int c = 0; c < t4c.size(); c++) {
+            statFile += "\n" + (t4c.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 5: A wrong mapping was created. The correct one was not in the list of proposals. ===========\n");
+
+        for (int c = 0; c < t5.size(); c++) {
+            statFile += "\n" + (t5.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 6: A wrong mapping was created. The correct one was in the list of proposals. ===========\n");
+
+        for (int c = 0; c < t6.size(); c++) {
+            statFile += "\n" + (t6.get(c));
+        }
+
+        statFile += "\n" + ("\n=========== Type 7: A correct mapping was created. ===========\n");
+
+        for (int c = 0; c < t7.size(); c++) {
+            statFile += "\n" + (t7.get(c));
+        }
+
+        MDRPipeConfiguration conf = new MDRPipeConfiguration("default");
+        String site = MDRPipeConfiguration.getExportLocation();
+
+        PrintWriter writer;
+        try {
+            writer = new PrintWriter(site + " Statistics.txt", "UTF-8");
+            writer.println(statFile.replaceAll("\n", "\r\n"));
+            writer.close();
+            java.awt.Desktop.getDesktop().edit(new File(site + " Statistics.txt"));
+        } catch (Exception ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        try {
+            writer = new PrintWriter(site + " Statistics.csv", "UTF-8");
+            writer.println(statTable.replaceAll("\n", "\r\n").replaceAll("SITE", site));
+            writer.close();
+        } catch (Exception ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_statsButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -611,6 +894,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JButton saveFileButton;
     private javax.swing.JFrame searchTermWindow;
     private javax.swing.JList<String> sourceTerms;
+    private javax.swing.JButton statsButton;
     private javax.swing.JList<String> targetTerminology;
     private javax.swing.JList<String> targetTerms;
     // End of variables declaration//GEN-END:variables
@@ -677,11 +961,13 @@ public class UI extends javax.swing.JFrame {
         String selectedSourceTerm = mappings.get(sourceTerms.getSelectedIndex()).getSourceString();
         int mappingStatus = mappings.get(sourceTerms.getSelectedIndex()).getMappingStatus();
         String targetTerm = mappings.get(sourceTerms.getSelectedIndex()).getMappingTerm();
+        String origMapp = mappings.get(sourceTerms.getSelectedIndex()).getOriginalMappingTerm();
 
         System.out.println("Selected index: " + selectedIndex);
         System.out.println("Selected source term: " + selectedSourceTerm);
         System.out.println("Mapping status: " + mappingStatus);
         System.out.println("Target term: " + targetTerm);
+        System.out.println("Original mapping: " + origMapp);
         System.out.println();
 
         targetTerms.clearSelection();
