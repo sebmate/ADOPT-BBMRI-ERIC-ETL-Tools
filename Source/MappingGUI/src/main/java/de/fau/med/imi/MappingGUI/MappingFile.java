@@ -89,7 +89,7 @@ class MappingFile {
             String Map = "", OriginalMap = "";
             String TargetString = "";
             String MappingTerm = "", OriginalMappingTerm = "";
-            String Status = "";
+            String Status = "0";
 
             ArrayList<Match> tempMatches = new ArrayList<>();
 
