@@ -231,7 +231,7 @@ public class UI extends javax.swing.JFrame {
         });
 
         approveButton.setBackground(new java.awt.Color(138, 211, 138));
-        approveButton.setText(" Approve mapping");
+        approveButton.setText(" Approve");
         approveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 approveButtonActionPerformed(evt);
