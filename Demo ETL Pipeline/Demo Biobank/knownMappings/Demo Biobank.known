@@ -1,0 +1,55 @@
+SourceString	Score	Map (original, do not edit)	Map	TargetString	Status
+
+TNM-T = 1	23.13		X	Histopathology / TNM / Primary Tumor = T1	2
+
+TNM-T = 2	23.13		X	Histopathology / TNM / Primary Tumor = T2	2
+
+TNM-T = 3	23.13		X	Histopathology / TNM / Primary Tumor = T3	2
+
+TNM-N = 1	23.13		X	Histopathology / TNM / Regional lymph nodes = N1	2
+
+TNM-N = 2	23.13		X	Histopathology / TNM / Regional lymph nodes = N2	2
+
+TNM-N = 3	23.13		X	Histopathology / TNM / Regional lymph nodes = N3	2
+
+TNM-M = 0	23.13		X	Histopathology / TNM / Distant metastasis = M0	2
+
+TNM-M = 1	23.13		X	Histopathology / TNM / Distant metastasis = M1	2
+
+UICC Stage = 0	51.43		X	Histopathology / UICC staging / Stage = 0	2
+
+UICC Stage = 3C	22.43		X	Histopathology / UICC staging / Stage = IIIC	2
+
+UICC Stage = 1	21.43		X	Histopathology / UICC staging / Stage = I	2
+
+UICC Stage = 4	21.43		X	Histopathology / UICC staging / Stage = IV	2
+
+
+UICC Stage = 2A	23.8		X	Histopathology / UICC staging / Stage = II A	2
+
+Colonoscopy = Negative	118.0		X	Diagnostic exam / Colonoscopy = Negative	2
+
+Colonoscopy = Unknown	112.0		X	Diagnostic exam / Colonoscopy = Unknown	2
+
+Colonoscopy = Positive	118.0		X	Diagnostic exam / Colonoscopy = Positive	2
+
+Colonoscopy = Not Done	540.0		X	Diagnostic exam / Colonoscopy = Not done	2
+
+CT = Data Not Available	612.0		X	Diagnostic exam / CT = Done, data not available	2
+
+CT = Data Available	194.0		X	Diagnostic exam / CT = Done, data available	2
+
+CT = Not Done	1286.0		X	Diagnostic exam / CT = Not done	2
+
+
+Gender = Male	64.0		X	Patient Data / Biological sex = male	2
+
+Gender = Female	76.0		X	Patient Data / Biological sex = female	2
+
+Age = INTEGER	20.0		X	Patient Data / Age at diagnosis (rounded to years) = INTEGER	2
+
+Material Type = Healthy Tissue	276.0		X	Sample / Material type = Healthy colon tissue	2
+
+Material Type = Tumor	240.0		X	Sample / Material type = Tumor tissue	2
+
+Sample ID = STRING	196.0		X	Sample / Sample ID = STRING	2
