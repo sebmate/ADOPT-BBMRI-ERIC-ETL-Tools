@@ -211,62 +211,80 @@ class MappingFile {
         return mappings;
     }
 
-    void saveMappings(ArrayList<Mapping> mappings, String file) {
+    void saveMappings(ArrayList<Mapping> mappings, String file, String site) {
 
+        // Write normal mapping file:
         System.out.println("Writing data to " + file);
-
         BufferedWriter bw = null;
         FileWriter fw = null;
-
         try {
-
             fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
-
             bw.write("SourceString\tScore\tMap (original, do not edit)\tMap\tTargetString\tStatus\n");
-
             for (int a = 0; a < mappings.size(); a++) {
-
                 bw.write("\n");
-
                 ArrayList<Match> matches = mappings.get(a).getMatchings();
-
                 for (int b = 0; b < matches.size(); b++) {
-
                     String mapEntry = "";
-
                     if (mappings.get(a).getMappingTerm().equals(matches.get(b).getTargetString())) {
                         mapEntry = "X";
                     }
-
                     bw.write(mappings.get(a).getSourceString() + "\t" + matches.get(b).getScore() + "\t" + matches.get(b).getOriginalMap() + "\t" + mapEntry + "\t" + matches.get(b).getTargetString() + "\t" + mappings.get(a).getMappingStatus() + "\n");
                 }
             }
-
             System.out.println("Done");
-
         } catch (Exception e) {
-
             e.printStackTrace();
-
         } finally {
-
             try {
-
                 if (bw != null) {
                     bw.close();
                 }
-
                 if (fw != null) {
                     fw.close();
                 }
-
             } catch (Exception ex) {
-
                 ex.printStackTrace();
-
             }
-
         }
+
+        // Write normal mapping file:
+        // TODO: Handling when not using the CCDC file structure.
+        file = "knownMappings\\" + site + ".known";
+
+        System.out.println("Writing validated mappings to " + file);
+
+        try {
+            fw = new FileWriter(file);
+            bw = new BufferedWriter(fw);
+            bw.write("SourceString\tScore\tMap (original, do not edit)\tMap\tTargetString\tStatus\n");
+            for (int a = 0; a < mappings.size(); a++) {
+                bw.write("\n");
+                ArrayList<Match> matches = mappings.get(a).getMatchings();
+                for (int b = 0; b < matches.size(); b++) {
+                    String mapEntry = "";
+                    if (mappings.get(a).getMappingTerm().equals(matches.get(b).getTargetString()) && mappings.get(a).getMappingStatus() == 2) {
+                        mapEntry = "X";
+                        bw.write(mappings.get(a).getSourceString() + "\t" + matches.get(b).getScore() + "\t" + matches.get(b).getOriginalMap() + "\t" + mapEntry + "\t" + matches.get(b).getTargetString() + "\t" + mappings.get(a).getMappingStatus() + "\n");
+                    }
+                }
+            }
+            System.out.println("Done");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bw != null) {
+                    bw.close();
+                }
+                if (fw != null) {
+                    fw.close();
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
     }
+
 }

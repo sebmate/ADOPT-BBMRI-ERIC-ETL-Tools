@@ -111,7 +111,7 @@ public class UI extends javax.swing.JFrame {
         saveFileButton = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
         saveAsButton = new javax.swing.JButton();
-        integrateButton = new javax.swing.JButton();
+        knownButton = new javax.swing.JButton();
         autoJumpCheckbox = new javax.swing.JCheckBox();
         statsButton = new javax.swing.JButton();
 
@@ -263,18 +263,18 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        integrateButton.setText(" Merge ...");
-        integrateButton.setEnabled(false);
-        integrateButton.addActionListener(new java.awt.event.ActionListener() {
+        knownButton.setText("Apply Known Mappings");
+        knownButton.setToolTipText("");
+        knownButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                integrateButtonActionPerformed(evt);
+                knownButtonActionPerformed(evt);
             }
         });
 
         autoJumpCheckbox.setSelected(true);
         autoJumpCheckbox.setText("Auto jump to next entry");
 
-        statsButton.setText("Statistics");
+        statsButton.setText(" Statistics");
         statsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 statsButtonActionPerformed(evt);
@@ -290,16 +290,16 @@ public class UI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(openFileButton, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(saveFileButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jLabel1))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(saveAsButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(integrateButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(statsButton)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,7 +307,7 @@ public class UI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(statsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(knownButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logo))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -334,8 +334,8 @@ public class UI extends javax.swing.JFrame {
                             .addComponent(openFileButton)
                             .addComponent(saveFileButton)
                             .addComponent(saveAsButton)
-                            .addComponent(integrateButton)
-                            .addComponent(statsButton))
+                            .addComponent(statsButton)
+                            .addComponent(knownButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
@@ -353,7 +353,7 @@ public class UI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(approveButton)
                             .addComponent(autoJumpCheckbox)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -485,14 +485,46 @@ public class UI extends javax.swing.JFrame {
         sourceTerms.ensureIndexIsVisible(sourceTerms.getSelectedIndex());
     }//GEN-LAST:event_approveButtonActionPerformed
 
-    private void integrateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_integrateButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_integrateButtonActionPerformed
+    private void knownButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knownButtonActionPerformed
+
+        File dir = new File("knownMappings");
+        File[] directoryListing = dir.listFiles();
+        if (directoryListing != null) {
+            for (File child : directoryListing) {
+                //System.out.println(child.getAbsolutePath());
+
+                if (child.getAbsolutePath().contains(".known")) {
+                    mf = new MappingFile(child.getPath());
+                    ArrayList<Mapping> tempMappings = mf.getMappings();
+
+                    for (int a = 0; a < mappings.size(); a++) {
+                        for (int b = 0; b < tempMappings.size(); b++) {
+
+                            if (mappings.get(a).getSourceString().toUpperCase().equals(tempMappings.get(b).getSourceString().toUpperCase())
+                                    && mappings.get(a).getMappingStatus() != 2) {
+
+                                System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
+                                //System.out.println("                           Which is: " + mappings.get(a).getMappingTerm());
+
+                                for (int c = 0; c < mappings.get(a).getMatchings().size(); c++) {
+                                    if (mappings.get(a).getMatchings().get(c).getTargetString().equals(tempMappings.get(b).getMappingTerm())) {
+                                        mappings.get(a).setMappingStatus(2);
+                                        mappings.get(a).setMappingTerm(tempMappings.get(b).getMappingTerm());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        refreshSourceTerms();
+    }//GEN-LAST:event_knownButtonActionPerformed
 
     private void revertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revertButtonActionPerformed
-        
+
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
-        
+
         if (!curr.getOriginalMappingTerm().equals("")) {
             curr.setMappingTerm(curr.getOriginalMappingTerm());
             curr.setMappingStatus(1);
@@ -506,10 +538,16 @@ public class UI extends javax.swing.JFrame {
     }//GEN-LAST:event_revertButtonActionPerformed
 
     private void saveFileButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveFileButtonActionPerformed
-        mf.saveMappings(mappings, currentFile);
+        MDRPipeConfiguration conf = new MDRPipeConfiguration("default");
+        String site = MDRPipeConfiguration.getExportLocation();
+
+        mf.saveMappings(mappings, currentFile, site);
     }//GEN-LAST:event_saveFileButtonActionPerformed
 
     private void saveAsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveAsButtonActionPerformed
+        MDRPipeConfiguration conf = new MDRPipeConfiguration("default");
+        String site = MDRPipeConfiguration.getExportLocation();
+
         File workingDirectory = new File(System.getProperty("user.dir"));
         final JFileChooser fc = new JFileChooser();
         fc.setCurrentDirectory(workingDirectory);
@@ -517,7 +555,7 @@ public class UI extends javax.swing.JFrame {
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             File file = fc.getSelectedFile();
-            mf.saveMappings(mappings, file.getPath());
+            mf.saveMappings(mappings, currentFile, site);
         } else {
             System.out.println("Save command cancelled by user.");
         }
@@ -878,7 +916,6 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JButton cancelButton;
     private javax.swing.JTextField filterText;
     private javax.swing.JButton findButton;
-    private javax.swing.JButton integrateButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -886,6 +923,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JButton knownButton;
     private javax.swing.JLabel logo;
     private javax.swing.JButton openFileButton;
     private javax.swing.JButton removeMappingButton;
