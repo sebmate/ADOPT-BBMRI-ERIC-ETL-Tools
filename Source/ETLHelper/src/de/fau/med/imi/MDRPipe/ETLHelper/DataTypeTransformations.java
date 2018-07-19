@@ -609,7 +609,8 @@ public class DataTypeTransformations {
 	public void showDataTypeTransformations() {
 			
 		System.out.println("\n  The following data type castings (from TYPE => TYPE) were applied:\n");
-		
+				
+	
 		for(int i = 0; i < this.getCountedTransformations().length - 1; i++) {
 			for(int j = 0; j < this.getCountedTransformations()[i].length - 1; j++) {
 				String fromDataType = this.getDataTypes().get(i);
@@ -628,10 +629,94 @@ public class DataTypeTransformations {
 			}
 		}
 		
+		
+		// Uncomment this block to output statistics that can be easier used in Excel:
+
+		/*
+
+		System.out.println("\n  The following data type castings (from TYPE => TYPE) were applied (OK/WARNING/ERROR):\n");
+		
+		
+		String from = "", to = "";
+		for (int f = 0; f < 7; f++) {
+			switch (f) {
+			case 0:
+				from = "ENUMERATED";
+				break;
+			case 1:
+				from = "INTEGER";
+				break;
+			case 2:
+				from = "FLOAT";
+				break;
+			case 3:
+				from = "BOOLEAN";
+				break;
+			case 4:
+				from = "STRING";
+				break;
+			case 5:
+				from = "DATE";
+				break;
+			case 6:
+				from = "DATETIME";
+				break;
+			}
+			
+			for (int t = 0; t < 7; t++) {
+
+				switch (t) {
+				case 0:
+					to = "ENUMERATED";
+					break;
+				case 1:
+					to = "INTEGER";
+					break;
+				case 2:
+					to = "FLOAT";
+					break;
+				case 3:
+					to = "BOOLEAN";
+					break;
+				case 4:
+					to = "STRING";
+					break;
+				case 5:
+					to = "DATE";
+					break;
+				case 6:
+					to = "DATETIME";
+					break;
+				}
+
+				System.out.print("\t" + from + " => " + to + ":\t");
+				
+				for(int i = 0; i < this.getCountedTransformations().length - 1; i++) {
+					for(int j = 0; j < this.getCountedTransformations()[i].length - 1; j++) {
+						String fromDataType = this.getDataTypes().get(i);
+						String toDataType = this.getDataTypes().get(j);
+						int count = this.getSpecificTransformationCount(fromDataType, toDataType);
+						if(count != 0) {
+							if (fromDataType.equals(from) && toDataType.equals(to)) {
+								System.out.print(this.getSpecificTransformationSuccessCount(fromDataType, toDataType, 2));
+								System.out.print("/");
+								System.out.print(this.getSpecificTransformationSuccessCount(fromDataType, toDataType, 1));
+								System.out.print("/");
+								System.out.print(this.getSpecificTransformationSuccessCount(fromDataType, toDataType, 0));
+							}
+						}
+					}
+				}
+				
+				System.out.println("");
+			}
+		}
+		
+		*/
+		
 		if(this.getConversionErrors().size() > 0) {
 			
 			System.out.println("");
-			
 			System.out.println("  The following data type castings triggered errors:\n");
 			
 			

@@ -77,7 +77,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 		Event currentEvent = null;
 		Event lastEvent = null;
 		String lastEventType = null;
-		
+
 		for (XMLEntry currentXmlEntry : xmlEntries) {
 
 			XMLEntryForBBMRI xmlEntryForBBMRI = (XMLEntryForBBMRI) currentXmlEntry;
@@ -118,14 +118,12 @@ public class XMLFormatForBBMRI implements XMLFormat {
 
 			Boolean doNotAdd = false;
 
-			
 			switch (dataelementType) {
 			case "BASIC":
 
 				de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.BasicData.Dataelement dataelementForBasicData = createDataelementForBasicData(
 						mdrkey, name, value);
 
-				
 				List<Dataelement> dataElements = currentBasicData.getDataelement();
 				doNotAdd = false;
 				for (Dataelement dataEl : dataElements) {
@@ -136,10 +134,11 @@ public class XMLFormatForBBMRI implements XMLFormat {
 						doNotAdd = true;
 					} else if (dataEl.getName().equals(name) && !dataEl.getValue().equals(value)) {
 
-						System.out.println("Error: The new entry \"" + name + " = " + value + "\" is contradicting the already processed entry \""
-								+ dataEl.getName() + " = " + dataEl.getValue() + "\" for patient "
-								+ currentPatient.getIdentifier().getValue() + ". Ignored the new entry.");
-						
+						System.out.println("Error: The new entry \"" + name + " = " + value
+								+ "\" is contradicting the already processed entry \"" + dataEl.getName() + " = "
+								+ dataEl.getValue() + "\" for patient " + currentPatient.getIdentifier().getValue()
+								+ ". Ignored the new entry.");
+
 						doNotAdd = true;
 					}
 				}
@@ -147,7 +146,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				if (!doNotAdd) {
 					currentBasicData.getDataelement().add(dataelementForBasicData);
 				}
-				
+
 				break;
 			case "EVENTS":
 
@@ -159,10 +158,9 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.Events.Event.Dataelement dataelementForEventData = createDataelementForEventData(
 						mdrkey, name, value);
 
-				
 				List<de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.Events.Event.Dataelement> dataElements2 = /* currentBasicData */currentEvent
 						.getDataelement();
-				
+
 				doNotAdd = false;
 				for (de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.Events.Event.Dataelement dataEl : dataElements2) {
 					if (dataEl.getName().equals(name) && dataEl.getValue().equals(value)) {
@@ -172,10 +170,11 @@ public class XMLFormatForBBMRI implements XMLFormat {
 						doNotAdd = true;
 					} else if (dataEl.getName().equals(name) && !dataEl.getValue().equals(value)) {
 
-						System.out.println("Error: The new entry \"" + name + " = " + value + "\" is contradicting the already processed entry \""
-								+ dataEl.getName() + " = " + dataEl.getValue() + "\" for patient "
-								+ currentPatient.getIdentifier().getValue() + ". Ignored the new entry.");
-						
+						System.out.println("Error: The new entry \"" + name + " = " + value
+								+ "\" is contradicting the already processed entry \"" + dataEl.getName() + " = "
+								+ dataEl.getValue() + "\" for patient " + currentPatient.getIdentifier().getValue()
+								+ ". Ignored the new entry.");
+
 						doNotAdd = true;
 					}
 				}
@@ -235,7 +234,8 @@ public class XMLFormatForBBMRI implements XMLFormat {
 					+ " has been created successfully in the directory " + MDRPipeConfiguration.getXmlFolder() + ".");
 		} catch (IOException e) {
 			System.out.println("\nThe XML file " + MDRPipeConfiguration.getXmlFileName()
-					+ " has NOT been created successfully in the directory " + MDRPipeConfiguration.getXmlFolder() + ".");
+					+ " has NOT been created successfully in the directory " + MDRPipeConfiguration.getXmlFolder()
+					+ ".");
 			if (MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
@@ -313,12 +313,18 @@ public class XMLFormatForBBMRI implements XMLFormat {
 
 		// Get Informations as XML-List
 		Document dataelementInformationsAsXML = null;
+
 		try {
 			dataelementInformationsAsXML = getDataelementInformationFromRestService();
 		} catch (Exception e) {
+			e.printStackTrace();
 			if (MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
 			}
+		}
+
+		if (dataelementInformationsAsXML == null) {
+			System.out.println("ERROR (1): dataelementInformationsAsXML == null");
 		}
 
 		// Parse Informations into correct format
@@ -347,34 +353,45 @@ public class XMLFormatForBBMRI implements XMLFormat {
 
 	}
 
-	private Document getDataelementInformationFromRestService()
-			throws IOException, ParserConfigurationException, SAXException {
+	private Document getDataelementInformationFromRestService() {
 
+		System.out.println("Pulling data element information from REST service");
+		
 		HttpURLConnection con = null;
 		Document doc = null;
 		StringBuilder content = new StringBuilder();
 
 		try {
+
+			System.out.println("URL is: " + MDRPipeConfiguration.getStoreUrl() + "/osseimport/mdrkeylist");
 			URL myurl = new URL(MDRPipeConfiguration.getStoreUrl() + "/osseimport/mdrkeylist");
 			con = (HttpURLConnection) myurl.openConnection();
 			con.setRequestMethod("GET");
 			try (BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()))) {
 				String line;
 				while ((line = in.readLine()) != null) {
+					
 					content.append(line);
 					content.append(System.lineSeparator());
 				}
 			}
+		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 			con.disconnect();
 		}
+		
+		try {
+			DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			InputSource is = new InputSource();
+			is.setCharacterStream(new StringReader(content.toString()));
+			doc = db.parse(is);
+			return doc;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-		DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		InputSource is = new InputSource();
-		is.setCharacterStream(new StringReader(content.toString()));
-		doc = db.parse(is);
-
-		return doc;
+		return null;
 
 	}
 
