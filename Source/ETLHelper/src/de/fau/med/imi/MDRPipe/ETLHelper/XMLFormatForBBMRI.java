@@ -2,18 +2,25 @@ package de.fau.med.imi.MDRPipe.ETLHelper;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -355,8 +362,8 @@ public class XMLFormatForBBMRI implements XMLFormat {
 
 	private Document getDataelementInformationFromRestService() {
 
-		System.out.println("Pulling data element information from REST service");
-		
+		System.out.print("Pulling data element information from REST service ... ");
+
 		HttpURLConnection con = null;
 		Document doc = null;
 		StringBuilder content = new StringBuilder();
@@ -370,17 +377,33 @@ public class XMLFormatForBBMRI implements XMLFormat {
 			try (BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()))) {
 				String line;
 				while ((line = in.readLine()) != null) {
-					
 					content.append(line);
 					content.append(System.lineSeparator());
 				}
 			}
+			System.out.println("... Done!");
+
+			try (PrintWriter out = new PrintWriter("metadata/mdrkeylist.xml")) {
+				out.println(content.toString());
+			}
+
 		} catch (Exception e) {
-			e.printStackTrace();
+
+			System.out.println("... Failed! As a fallback, loading it from file 'metadata/mdrkeylist.xml' ... ");
+			try {
+				String c = new String(Files.readAllBytes(Paths.get("metadata/mdrkeylist.xml")), StandardCharsets.UTF_8);
+				content = new StringBuilder();
+				content.append(c);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+
+			//e.printStackTrace();
 		} finally {
 			con.disconnect();
 		}
-		
+
 		try {
 			DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			InputSource is = new InputSource();

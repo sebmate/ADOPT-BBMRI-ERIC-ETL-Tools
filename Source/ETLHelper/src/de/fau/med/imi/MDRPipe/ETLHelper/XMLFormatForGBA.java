@@ -275,6 +275,11 @@ public class XMLFormatForGBA implements XMLFormat {
 	// TODO: generic way
 	private Document getDataelementInformationFromRestService() throws IOException, ParserConfigurationException, SAXException {
 
+		// TODO: replace with the BBMRI version that implements better error handling and caching!
+		
+		System.out.println("TODO: replace with the BBMRI version that implements better error handling and caching!");
+		System.exit(0);
+		
 		HttpURLConnection con = null;
 		Document doc = null;
 		StringBuilder content = new StringBuilder();
