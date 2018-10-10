@@ -1,4 +1,4 @@
-FALSE; FALSE neg
+﻿FALSE; FALSE neg
 No; No neg
 Not; Not neg
 TRUE; TRUE pos
@@ -11,7 +11,374 @@ Hepatic; Hepatic Liver
 Osseous; Bone Skeleton
 Pulmonary; Lung
 Sex; Gender
-MSI; Microsatellite Instability 
+MSI; Microsatellite Instability
+umol; Moles
+mmol; Moles
+pmol; Moles
+ml; Volume
+dl; Volume
+l; Volume
+ul; Volume
+pg; Mass
+ng; Mass
+ug; Mass
+g; Mass
+mg; Mass
+kg; Mass
+uE; Units
+IE; Units
+kU; Units
+E; Units
+mE; Units
+mIU; Units
+mU; Units
+uU; Units
+U; Units
+
+
+######; Synonyms below taken from http://laboratoryalliance.com/healthcare-providers/laboratory-services/test-abbreviations/
+
+A1A; Alpha-1 Antitrypsin
+A1c; Hemoglobin A1c
+AB; Antibody
+ABG; Arterial Blood Gas
+ABRH; ABO Group and Rh Type
+ABT; Antibody Titer
+ACA; Anti-Cardiolipin Antibodies
+ACE; Angiotensin Converting Enzyme
+ACID PHOS; Acid Phosphatase
+ACP; Acid Phosphatase
+ACT; Activated Clotting Time
+ACTH; Adrenocorticotropic Hormone
+ADA; Adenosine Deaminase
+AFB; Acid-Fast Bacillus
+AFP; Alpha Fetoprotein
+AG; Antigen
+ALA; Aminolevulinic Acid
+Alb; Albumin
+Alk Phos; Alkaline Phosphatase
+ALP; Alkaline Phosphatase
+ANA; Antinuclear Antibody
+Anti-HBc; Hepatitis B Core Antibody
+Anti-HBe; Hepatitis Be Antibody
+Anti-HBs; Hepatitis B Surface Antibody
+Anti-HCV; Hepatitis C Antibody
+APT; Stool for Fetal Hemoglobin
+aPTT; Activated Partial Thrombin Time
+ASN; Antibody Screen
+ASO; Antistreptolysin-O
+ASP; Aspirin Resistance
+AT III; Antithrombin-III Activity
+B12; Vitamin B12
+BMP; Basic Metabolic Panel
+BNP; Brain Natriuretic Peptide
+BUN; Blood Urea Nitrogen
+C1; Complement C1, Functional
+C1Q; C1Q Binding Assay
+C2; Complement C2
+C3; Complement C3
+C4;  Complement C4
+Ca; Calcium
+CBC; Complete Blood Count
+CBCD; Complete Blood Count with Differential
+CEA; Carcinoembryonic Antigen
+CH50; Complement Immunoassay, Total
+CK; Creatine Kinase
+Cl; Chloride
+CMB; CKMB Panel
+CMP; Comprehensive Metabolic Panel
+CMV; Cytomegalovirus
+CMV Ag; CMV Antigenemia
+CO; Carbon Monoxide
+CO2; Carbon Dioxide
+COHB; Carboxyhemoglobin
+CONABO; Confirmatory Type
+CPK; Creatine Phosphokinase (Creatine Kinase)
+Cr; Creatinine
+CRCL, CrCl; Creatinine Clearance
+CRD; Cord Type and DAT
+CREAT; Creatinine
+CRP; C-Reactive Protein
+Cu; Copper
+D Bil; Direct Bilirubin
+DAT; Direct Antiglobulin (Coombs) Test
+DCAS; DAT and AB Screen
+DHEA; Dehydroepiandrosterone
+DHEAS; Dehydroepiandrosterone-Sulfate
+DIFM; Differential
+Dig; Digoxin
+EOS; Eosinophils
+EPO; Erythropoietin
+ERA; Estrogen Receptor Assay
+ESR; Erythrocyte Sedimentation Rate
+ETOH; Ethanol
+FBS; Fasting Blood Sugar (Glucose)
+Fe; Total Iron
+FEP; Free Erythrocyte Protoporphyrin
+FFN; Fetal Fibronectin
+FFQ; Fecal Fat
+Fol; Folate
+FSH/LH; FSH/LH Evaluation
+FT3; Free T3
+FT4; Free Thyroxine
+G2PP; 2 Hour Postprandial Glucose
+G-6-PD; Glucose-6-Phosphate Dehydrogenase
+Gamma GT; Gamma Glutamyl Transferase
+GCT; Glucose Challenge Test
+GDS; Gestational Diabetes Screen
+GGT; Gamma Glutamyl Transferase
+GH; Growth Hormone
+Glu; Glucose
+H&H; Hemoglobin and Hematocrit
+H/H; Hemoglobin and Hematocrit
+Hapto; Haptoglobin
+HbA1c; Hemoglobin A1c
+HBeAb; Hepatitis Be Virus Antibody
+HBeAg; Hepatitis Be Virus Antigen 
+HBsAb; Hepatitis B Surface Antibody
+HBsAg; Hepatitis B Surface Antigen
+hCG; Human Chorionic Gonadotropin Urine Pregnancy Test
+HCT; Hematocrit
+HDL; High Density Lipoprotein
+HFP; Hepatic Function Panel
+HGB; Hemoglobin
+HgbA1c; Hemoglobin A1c
+HGH; Human Growth Hormone
+HIAA; 5-Hydroxyindoleacetic Acid
+HIV; Human Immunodeficiency Virus
+HPV; Human Papilloma Virus
+HSV; Herpes Simplex Virus
+iCa; Ionized Calcium
+IFE; Immunofixation Electrophoresis
+IgA; Immunoglobulin A
+IgE; Immunoglobulin E
+IGF; Insulin-Like Growth Factor-I
+IgG; Immunoglobulin G
+IgM; Immunoglobulin M
+INR; Prothrombin Time
+Jo-1; Jo-1 Antibody
+KB; Kleihauer-Betke
+K; Potassium
+Lact(o); Lactoferrin
+LD; Lactate Dehydrogenase
+LDH; Lactate Dehydrogenase
+LFT; Liver Function Tests
+LH; Luteinizing Hormone
+Li+; Lithium
+Li; Lithium
+MetHb; Methemoglobin
+MetHgb; Methemoglobin
+Mg, Mag; Magnesium
+MIC; Minimum Inhibitory Concentration
+MMA; Methylmalonic Acid
+Mn; Manganese
+Mono; Mononucleosis
+NA; Sodium
+NEOTY; Neonate Type and DAT
+NEOXM; Neonate Type and XM  
+NH3; Ammonia
+NTR; Newborn Type and Rh
+PAP; Pap Smear Pap Smear & HPV DNA Test Prostatic Acid Phosphatase
+Pb; Lead
+PBG; Porphobilinogen
+PCP; Phencyclidine
+PEP; Protein Electrophoresis
+PHOS; Phosphorus
+PKU; Phenylketonuria
+PLT or PLT Ct; Platelet Count
+PO4; Phosphorus
+PRL; Prolactin
+PRU; P2Y12
+PSA; Prostate Specific Antigen
+PT; Prothrombin Time
+PTH; Parathyroid Hormone
+PTT; Partial Thromboplastin Time
+QIG; Quantitative Immunoglobulins
+RBC; Red Blood Cell
+RET; Reticulocyte Count
+RF; Rheumatoid Factor
+RFP; Renal Function Panel
+RhIG (Eval); RhIG Evaluation
+RPR; Rapid Plasma Reagin
+RSV; Respiratory Syncytial Virus
+Scl-70; Scleroderma Antibody
+SHBG; Sex Hormone-Binding Globulin
+SIFE; Serum Immunofixation Electrophoresis
+Siro; Sirolimus
+SPEP; Serum Protein Electrophoresis
+SSA; Sjögren’s Syndrome A Antibody
+SSB; Sjögren’s Syndrome B Antibody
+SSDNA; Single Stranded DNA
+T Bil; Total Bilirubin
+T3; Triiodothyronine
+T4; Thyroxine
+Tacro; Tacrolimus
+TBG; Thyroxine Binding Globulin
+TGL;  Triglycerides
+Theo; Theophylline
+TIBC; Total Iron Binding Capacity
+TP; Total Protein
+TREP; Treponemal Antibodies
+Trep Ab; Treponemal Antibodies
+TRH;  Thyrotropin Releasing Hormone
+Trig; Triglycerides
+TRXN; Transfusion Reaction Evaluation
+TSH; Thyroid Stimulating Hormone
+TSI; Thyroid Stimulating Immunoglobulin
+TT; Thrombin Time
+TYSC; Type and Screen
+UIFE; Urine Immunofixation Electrophoresis
+UPE, UPEP or;  
+Ur Prot Elect; Urine Protein Electrophoresis
+VCA; Viral Capsid Antigen 
+VDRL; Venereal Disease Reference Lab (Syphilis Test, CSF)
+Vit A; Vitamin A (Retinol)
+Vit B1; Vitamin B1 (Thiamine)
+Vit B12; Vitamin B12
+Vit B2; Vitamin B2 (Riboflavin)
+Vit B6; Vitamin B6 (Pyridoxine)
+Vit C; Vitamin C
+Vit D; 25-Hydroxy Vitamin D
+VLDL; Very Low Density Lipoprotein
+VMA; Vanillylmandelic Acid
+VZG; Varicella zoster IgG
+WBC; White Blood Cell Count
+Xa; LMW Heparin
+XM; Type and Crossmatch
+Zn; Zinc
+ZPP; Zinc Protoporphyrin
+
+
+######; Synonyms below taken from https://medlineplus.gov/appendixb.html
+ABG; Arterial blood gases
+ACE; Angiotensin converting enzyme
+ACL; Anterior cruciate ligament
+ADHD; Attention deficit hyperactivity disorder
+AFIB; Atrial fibrillation
+AIDS; Acquired immunodeficiency syndrome
+ALP; Alkaline phosphatase
+ALS; Amyotrophic lateral sclerosis. 
+ALT; Alanine aminotransferase
+AMD; Age-related macular degeneration
+AMI; Acute myocardial infarction
+AODM; Adult onset diabetes mellitus
+AST; Aspartate aminotransferase
+AVM; Arteriovenous malformation
+BID; Twice a day
+BMI; Body mass index
+BP; Blood pressure
+BPH; Benign prostatic hypertrophy
+BRCA; Breast Cancer Gene 
+BUN; Blood urea nitrogen
+CA; Cancer OR Calcium
+CA-125; Cancer antigen 125
+CABG; Coronary artery bypass graft
+CAD; Coronary artery disease
+CAT; Computerized axial tomography
+CBC; Complete blood count
+CHD; Congenital heart disease
+CHF; Congestive heart failure
+CMV; Cytomegalovirus
+CNS; Central nervous system
+COPD; Chronic obstructive pulmonary disease
+CPK; Creatine phosphokinase
+CPR; Cardiopulmonary resuscitation
+CRF; Chronic renal failure
+CRP; C-reactive protein
+CSF; Cerebrospinal fluid
+CVA; Cerebrovascular accident
+CXR; Chest x-ray
+D&C; Dilatation and curettage
+DJD; Degenerative joint disease
+DM; Diabetes mellitus
+DTP; Diphtheria, tetanus, pertussis
+DVT; Deep-vein thrombosis
+DX; Diagnosis
+ECG, EKG; Electrocardiogram
+ECHO; Echocardiogram
+EEG; Electroencephalogram
+EMG; Electromyography
+ENT; Ear, nose and throat
+ERCP; Endoscopic retrograde cholangiopancreatography
+ESR; Erythrocyte sedimentation rate
+ESRD; End-stage renal (kidney) disease
+FSH; Follicle stimulating hormone
+GERD; Gastroesophageal reflux disease
+GI; Gastrointestinal
+GFR; Glomerular filtration rate
+GU; Genitourinary
+HAV; Hepatitis A virus
+HBV; Hepatitis B virus
+HCT; Hematocrit 
+HCV; Hepatitis C virus
+HDL; High density lipoprotein
+HGB; Hemoglobin 
+HIV; Human immunodeficiency virus
+HPV; Human papilloma virus
+HRT; Hormone replacement therapy
+HTN; Hypertension
+IBD; Inflammatory bowel disease
+IBS; Irritable bowel syndrome
+ICD; Implantable cardioverter defibrillator
+ICU; Intensive care unit
+IDDM; Insulin-dependent diabetes mellitus
+IUD; Intrauterine device
+IV; Intravenous
+IVP; Intravenous pyelogram
+LDL; Low density lipoprotein
+LFT; Liver function tests
+MI; Myocardial infarction
+MMR; Measles, mumps, and rubella
+MRI; Magnetic resonance imaging
+MRSA; Methicillin-resistant Staphylococcus aureus
+MS; Multiple sclerosis
+NG; Nasogastric
+NIDDM; Non-insulin dependent diabetes mellitus
+NKDA; No known drug allergies
+NSAID; Non-steroidal anti-inflammatory drug
+OCD; Obsessive-compulsive disorder
+PAD; Peripheral arterial disease
+PAP; Papanicolau 
+PAT; Paroxysmal atrial tachycardia
+PET; Positron emission tomography
+PFT; Pulmonary function test
+PID; Pelvic inflammatory disease
+PMS; Premenstrual syndrome
+PPD; Purified protein derivative
+PRN; As needed
+PSA; Prostate specific antigen
+PT; Prothrombin time
+PTH; Parathyroid hormone
+PTSD; Post-traumatic stress syndrome
+PTT; Partial thromboplastin time
+PUD; Peptic ulcer disease
+PVC; Premature ventricular contraction
+QID; Four times a day 
+RA; Rheumatoid arthritis
+RBC; Red blood cell
+RSV; Respiratory syncytial virus
+Rx; Treatment
+SAD; Seasonal affective disorder
+SIDS; Sudden infant death syndrome
+SLE; Systemic lupus erythematosus
+SOB; Shortness of Breath
+STD; Sexually transmitted disease
+T3; Triiodothyronine
+T4; Thyroxine
+TB; Tuberculosis
+TAH; Total abdominal hysterectomy
+TIA; Transient ischemic attack
+TIBC; Total iron binding capacity
+TID; Three times a day 
+TMJ; Temporomandibular joint
+TORCH; Stands for a group of infections that may cause birth defects
+TSH; Thyroid stimulating hormone
+TURP; Transurethral resection of prostate gland
+URI; Upper respiratory infection
+UTI; Urinary tract infection
+XRT; Radiotherapy
+WBC; White blood cell
+
 
 ######; Synonyms below taken from https://en.wikipedia.org/wiki/List_of_medical_abbreviations
 ABG; arterial blood gas
@@ -83,7 +450,6 @@ ICF; intracellular fluid
 ICU; intensive care unit
 IgA; etc. immunoglobin A
 IL; interleukin
-IM; intramuscular
 INR; international normalized ratio
 IPPB; intermittent positive pressure breathing
 IU; international unit
