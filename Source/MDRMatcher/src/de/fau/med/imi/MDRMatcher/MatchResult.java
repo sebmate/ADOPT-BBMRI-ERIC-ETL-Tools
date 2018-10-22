@@ -1,8 +1,13 @@
 package de.fau.med.imi.MDRMatcher;
 
+import java.io.Serializable;
 
-public class MatchResult {
+public class MatchResult  implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private MappingTerm term1;
 	private MappingTerm term2;
 	private double matchScore = 0;

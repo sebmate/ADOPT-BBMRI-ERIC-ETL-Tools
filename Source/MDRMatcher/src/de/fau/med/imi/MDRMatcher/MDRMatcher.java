@@ -1,10 +1,16 @@
 package de.fau.med.imi.MDRMatcher;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
@@ -15,7 +21,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 import org.joda.time.format.PeriodFormatter;
 import org.joda.time.format.PeriodFormatterBuilder;
@@ -28,6 +36,10 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.eclipse.collections.api.bag.Bag;
+import org.eclipse.collections.api.list.MutableList;
+import org.eclipse.collections.impl.factory.Lists;
 
 class MatchingThread extends Thread {
 
@@ -36,17 +48,61 @@ class MatchingThread extends Thread {
 	private String knownWords = "";
 	private String mappingLog = "";
 	private int dataElementsCnt;
+	private int subMatch = 0;
+	private int previouslyDone;
 
 	private String threadName = "";
+	private boolean pleaseHalt;
+	private double meanFrequency = 0;
 
-	private ArrayList<ArrayList<MatchResult>> threadMatches = new ArrayList<ArrayList<MatchResult>>();
+	private Map<String, Long> sortedWordFrequencies = new HashMap<String, Long>();
+	private Map<Integer, Double> freqPosition = new HashMap<Integer, Double>();
+
+	// private ArrayList<ArrayList<MatchResult>> threadMatches = new
+	// ArrayList<ArrayList<MatchResult>>();
 
 	MatchingThread(MetadataDefinition source, MetadataDefinition target, String knownWords, String threadName) {
 		this.source = source;
 		this.target = target;
 		this.threadName = threadName;
+
+		sortedWordFrequencies = target.getSortedWordFrequencies();
+		freqPosition = new HashMap<Integer, Double>(); // <How often the word occurs> <weight 0...1 which is
+														// rare...frequent>
+
+		this.meanFrequency = 0;
+		int wordCnt = 0;
+		int aggOcc = 0;
+		double percentage = 0;
+		long numOccurrances = 1, lastNumOccurrances = -1;
+
+		long totalSize = 0;
+		for (Entry<String, Long> entry : sortedWordFrequencies.entrySet()) {
+			totalSize += entry.getValue().longValue();
+		}
+
+		for (Entry<String, Long> entry : sortedWordFrequencies.entrySet()) {
+
+			numOccurrances = entry.getValue().longValue();
+			aggOcc += numOccurrances;
+			percentage = (-((double) aggOcc / (double) totalSize) + 1.0) * 100.0 + 1.0;
+
+			if (numOccurrances != lastNumOccurrances) {
+				freqPosition.put((int) numOccurrances, percentage);
+				// System.out.println(numOccurrances + ": " + percentage);
+			}
+			// System.out.println(wordCnt + ": " + entry.getKey() + ": " + numOccurrances +
+			// "x");
+			wordCnt++;
+			lastNumOccurrances = numOccurrances;
+		}
+
+		// meanFrequency = totFrequency / wordCnt;
+		// System.out.println(meanFrequency);
+		// System.exit(0);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void run() {
 
@@ -54,27 +110,79 @@ class MatchingThread extends Thread {
 		// System.out.println(source.getTerm(a).getSimplifiedTermString());
 		// }
 
+		/*
+		 * System.out.println("Thread " + threadName +
+		 * ": Loading complete target terminology."); String completeTargetTerminology =
+		 * ""; int size = target.getTermsCount(); for (int a = 0; a < size; a++) {
+		 * //completeTargetTerminology += target.getTerm(a).getSimplifiedTermString() +
+		 * " ; "; } System.out.println("Thread " + threadName +
+		 * ": Done loading complete target terminology.");
+		 */
+
 		for (int a = 0; a < source.getTermsCount(); a++) {
 
 			ArrayList<MatchResult> matchResults = new ArrayList<MatchResult>();
-			for (int b = 0; b < target.getTermsCount(); b++) {
-				BagOfWordsMatcher matcher = new BagOfWordsMatcher(source.getTerm(a), target.getTerm(b), knownWords);
-				// System.out.println(source.getTerm(a).getInfoCode() + " <=> " +
-				// target.getTerm(b).getInfoCode());
-				MatchResult matchResult = matcher.match();
-				if (matchResult.getMatchScore() > 0) {
-					matchResults.add(matchResult);
+			String sourceTerm = source.getTerm(a).getSimplifiedTermString();
+
+			if (sourceTerm != null) {
+				String cachefile = DigestUtils.md5Hex(source.getTerm(a).getInfoCode()) + ".obj";
+				File f = new File("cache/" + cachefile);
+
+				if (!f.exists()) {
+
+					double maxScore = 0;
+
+					for (int b = 0; b < target.getTermsCount(); b++) {
+						subMatch = b;
+
+						BagOfWordsMatcher matcher = new BagOfWordsMatcher(source.getTerm(a), target.getTerm(b),
+								knownWords, sortedWordFrequencies, freqPosition);
+
+						// System.out.println(source.getTerm(a).getInfoCode() + " <=> " +
+						// target.getTerm(b).getInfoCode());
+						MatchResult matchResult = matcher.match();
+
+						double score = matchResult.getMatchScore();
+						if (score > maxScore)
+							maxScore = score;
+						if (score >= maxScore * .11) {
+							// matchResult.setMatchLog("");
+							matchResults.add(matchResult);
+						}
+
+						if (pleaseHalt) {
+							return;
+						}
+					}
+
+					Collections.sort(matchResults, new MatchResultsComparator());
+
+					for (int c = matchResults.size() - 1; c >= 0; c--) {
+						if (matchResults.get(c).getMatchScore() < maxScore * 0.11) {
+							matchResults.remove(c);
+						}
+					}
+
+					try {
+						FileOutputStream fileOut = new FileOutputStream("cache/" + cachefile);
+						ObjectOutputStream out = new ObjectOutputStream(fileOut);
+						out.writeObject(matchResults);
+						out.close();
+						fileOut.close();
+					} catch (IOException i2) {
+						i2.printStackTrace();
+					}
+				} else {
+
+					previouslyDone++;
 				}
+
+				// threadMatches.add(matchResults);
+				dataElementsCnt++;
+				subMatch = target.getTermsCount();
+				matchResults = null;
 			}
-
-			Collections.sort(matchResults, new MatchResultsComparator());
-			threadMatches.add(matchResults);
-
-			dataElementsCnt++;
-			// System.out.print(threadName);
-			// if (dataElementsCnt % 10 == 0) {
-			// System.out.println(" " + dataElementsCnt + " items");
-			// }
+			subMatch = -1;
 		}
 
 	}
@@ -87,14 +195,35 @@ class MatchingThread extends Thread {
 		return dataElementsCnt;
 	}
 
-	ArrayList<ArrayList<MatchResult>> getThreadMatches() {
-		return threadMatches;
+	public double getDoneFract() {
+		return (double) dataElementsCnt + ((double) subMatch / (double) target.getTermsCount());
 	}
 
-	private void setThreadMatches(ArrayList<ArrayList<MatchResult>> threadMatches) {
-		this.threadMatches = threadMatches;
+	// ArrayList<ArrayList<MatchResult>> getThreadMatches() {
+	// return threadMatches;
+	// }
+
+	public String getSubMatch() {
+		if (subMatch > 0) {
+			return (int) (((double) subMatch / (double) target.getTermsCount()) * 100.0) + "%";
+		} else if (subMatch == 0) {
+			return "0%";
+		} else {
+			return "---";
+		}
 	}
 
+	public void requestStop() {
+		pleaseHalt = true;
+	}
+
+	int getPreviouslyDone() {
+		return previouslyDone;
+	}
+
+	void setPreviouslyDone(int previouslyDone) {
+		this.previouslyDone = previouslyDone;
+	}
 }
 
 public class MDRMatcher {
@@ -110,12 +239,17 @@ public class MDRMatcher {
 
 	public static void main(String[] args) {
 
-		System.out.println("\nWelcome to the Samply MDR Matcher Utility 2.0!\n");
+		/*
+		 * MutableList<String> l = Lists.mutable.empty(); l.add("ciao"); l.add("ciao");
+		 * l.add("ciao"); Bag<String> words = l.toBag();
+		 * System.out.println(words.occurrencesOf("ciao")); System.exit(0);
+		 */
+
+		System.out.println("\nWelcome to the Samply MDR Matcher 2.0!\n");
 
 		// Parse command line options:
 
 		Options options = new Options();
-
 		Option optNamespace1 = new Option("s", "source", true, "the source namespace TSV file");
 		optNamespace1.setRequired(true);
 		options.addOption(optNamespace1);
@@ -145,9 +279,12 @@ public class MDRMatcher {
 		final String targetNamespaceFile = cmd.getOptionValue("target");
 		final String outputMappingFile = cmd.getOptionValue("output");
 
+		System.out.println("Loading source terminology and processing synonyms ...");
 		final MetadataDefinition source = new MetadataDefinition(sourceNamespaceFile);
+		System.out.println("Loading target terminology and processing synonyms ...");
 		final MetadataDefinition target = new MetadataDefinition(targetNamespaceFile);
 
+		System.out.println("Loading Ressources/Top10000.txt to treat them as known words ...");
 		// https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-usa.txt
 		try (BufferedReader br = new BufferedReader(new FileReader("Ressources/Top10000.txt"))) {
 			StringBuilder sb = new StringBuilder();
@@ -162,6 +299,7 @@ public class MDRMatcher {
 			e.printStackTrace();
 		}
 
+		System.out.println("Loading Ressources/Synonyms.txt to treat them as known words ...");
 		// also add synonyms to known words:
 		try (BufferedReader br = new BufferedReader(new FileReader("Ressources/Synonyms.txt"))) {
 			StringBuilder sb = new StringBuilder();
@@ -179,7 +317,7 @@ public class MDRMatcher {
 			e.printStackTrace();
 		}
 
-		System.out.println("Matching \"" + sourceNamespaceFile + "\" to \"" + targetNamespaceFile
+		System.out.println("\nMatching \"" + sourceNamespaceFile + "\" to \"" + targetNamespaceFile
 				+ "\". This will take a while ...");
 
 		System.out.println("Will match " + (source.getTermsCount()) + " source items to " + (target.getTermsCount())
@@ -189,6 +327,7 @@ public class MDRMatcher {
 			private boolean someThreadIsRunning;
 			private boolean gotData = true;
 
+			@SuppressWarnings("unchecked")
 			@Override
 			public void run() {
 				List<MatchingThread> threads = new ArrayList<>();
@@ -213,27 +352,54 @@ public class MDRMatcher {
 				someThreadIsRunning = true;
 
 				int totalTodo = 0;
+				double totalDoneFract = 0;
+				int totalTodo2 = 0;
+				double totalDoneFract2 = 0;
 				int totalDone = 0;
-				int lastTotalDone = -1;
+				String processSummary = "Nothing finished yet.";
 
-				while (someThreadIsRunning) {
+				NonblockingBufferedReader reader = new NonblockingBufferedReader(System.in);
+				String line = null;
 
-					totalTodo = 0;
-					totalDone = 0;
-					someThreadIsRunning = false;
-					for (MatchingThread thr : threads) {
-						someThreadIsRunning = thr.isAlive() || someThreadIsRunning;
-						totalDone += thr.getDone();
-						totalTodo += thr.getTodo();
-					}
+				try {
 
-					if (lastTotalDone != totalDone) {
+					while (someThreadIsRunning) {
 
-						int percCompleted = (int) ((double) totalDone / (double) totalTodo * 100.0);
+						if ((line = reader.readLine()) != null) {
+							System.out.println("Keystroke detected, gracefully stopping threads ...\n");
+							for (MatchingThread thr : threads) {
+								thr.requestStop();
+							}
+							// System.exit(0);
+						}
+
+						totalTodo = 0;
+						totalDoneFract = 0;
+						totalTodo2 = 0;
+						totalDoneFract2 = 0;
+						totalDone = 0;
+
+						String subProcess = "";
+
+						someThreadIsRunning = false;
+						for (MatchingThread thr : threads) {
+							someThreadIsRunning = thr.isAlive() || someThreadIsRunning;
+							totalDoneFract += thr.getDoneFract() - thr.getPreviouslyDone();
+							;
+							totalDone += thr.getDone();
+							totalTodo += thr.getTodo() - thr.getPreviouslyDone();
+							;
+							totalDoneFract2 += thr.getDoneFract();
+							totalTodo2 += thr.getTodo();
+							subProcess += thr.getSubMatch() + " ";
+						}
+						subProcess = "Threads: " + subProcess.trim() + ". ";
+
+						int percCompleted = (int) ((double) totalDoneFract2 / (double) totalTodo2 * 100.0);
 						double runningTime = (System.currentTimeMillis() / 1000.0) - startTime;
 
-						double donePerSec = totalDone / runningTime;
-						double remainingSecs = (totalTodo - totalDone) / donePerSec;
+						double donePerSec = totalDoneFract / runningTime;
+						double remainingSecs = (totalTodo - totalDoneFract) / donePerSec;
 
 						Duration duration = new Duration((int) (remainingSecs * 1000.0)); // in milliseconds
 						PeriodFormatter formatter = new PeriodFormatterBuilder().appendDays().appendSuffix("d")
@@ -246,7 +412,7 @@ public class MDRMatcher {
 
 						String finishesTimeString = finishesTime + "";
 
-						if (totalDone == 0) {
+						if (totalDoneFract == 0) {
 							formattedRemainingTime = "unknown";
 							finishesTimeString = "unknown";
 						}
@@ -254,110 +420,173 @@ public class MDRMatcher {
 						if (formattedRemainingTime.equals(""))
 							formattedRemainingTime = "0s";
 
-						System.out.println("Completed " + totalDone + "/" + totalTodo + " = " + percCompleted
-								+ "%, remaining: " + formattedRemainingTime + ", finishes: " + finishesTimeString);
+						processSummary = "Total: " + percCompleted + "% done, " + totalDone + "/" + totalTodo
+								+ " source items matched. Time remaining: " + formattedRemainingTime + ", finishes: "
+								+ finishesTimeString;
+
+						System.out.println(subProcess + processSummary);
 
 						try {
-							Thread.sleep(100);
+							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}
-					lastTotalDone = totalDone;
+					System.out.println("\nMatching done. Compiling results into mapping file ...\n");
+
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
+				reader.close();
 
-				String result = "SourceString\tScore\tMap\tTargetString\n\n";
+				Boolean abort = false;
 
-				int atRow = 0;
+				try {
 
-				while (gotData) {
-					gotData = false;
-					for (int t = 0; t < numThreads; t++) {
-						if (threads.get(t).getThreadMatches().size() > atRow) {
-							gotData = true;
-							ArrayList<MatchResult> matchResults = threads.get(t).getThreadMatches().get(atRow);
-							double matchScore = 0;
-							if (matchResults.size() == 0) {
-								cntMatchQuality0++;
-							}
-							if (matchResults.size() == 0) {
-								result += matchResults.get(0).getTerm1().getInfoCode() + "\t" + 0 + "\t\t"
-										+ "NO MATCH FOUND!" + "\n";
-							} else {
-								mappingLog += "\n############################################################################################################################################################\n\n";
+					PrintWriter writer2 = new PrintWriter(outputMappingFile, "Cp1252");
+					PrintWriter writer3 = new PrintWriter(outputMappingFile + ".log", "Cp1252");
 
-								double highestScore = 0;
-								for (int c = 0; c < matchResults.size() && c <= 200; c++) {
-									if (c == 0 && matchResults.get(c).getMatchScore() >= 30) {
-										cntMatchQuality3++;
-									} else if (c == 0 && matchResults.get(c).getMatchScore() >= 20) {
-										cntMatchQuality2++;
-									} else if (c == 0 && matchResults.get(c).getMatchScore() >= 10) {
-										cntMatchQuality1++;
-									} else if (c == 0 && matchResults.get(c).getMatchScore() < 10) {
-										cntMatchQuality0++;
-									}
-									String sources = matchResults.get(c).getTerm1().getInfoCode();
-									String targets = matchResults.get(c).getTerm2().getInfoCode();
-									matchScore = matchResults.get(c).getMatchScore();
-									String doMap = "";
-									if (c == 0 && matchResults.size() > 1) {
-										if (matchResults.get(c).getMatchScore() > matchResults.get(c + 1)
-												.getMatchScore() && !sources.contains("FALSE")) {
-											doMap = "X";
+					writer2.print("SourceString\tScore\tMap\tTargetString\n\n");
+
+					for (int a = 0; a < source.getTermsCount(); a++) {
+
+						if (!abort) {
+
+							// try {
+							// if ((line = reader1.readLine()) != null) {
+							// System.out.println("Keystroke detected, finishing ...\n");
+							// abort = true;
+							// }
+							// } catch (IOException e) {
+							// // TODO Auto-generated catch block
+							// e.printStackTrace();
+							// }
+
+							String sourceTerm = source.getTerm(a).getInfoCode();
+							if (sourceTerm != null) {
+								String cachefile = DigestUtils.md5Hex(sourceTerm) + ".obj";
+								File f = new File("cache/" + cachefile);
+								if (f.exists() && !f.isDirectory()) {
+
+
+									System.out.print("Processing " + (a + 1) + "/" + source.getTermsCount() + ": cache/"
+											+ cachefile + " ");
+
+									try {
+
+										FileInputStream fileIn = new FileInputStream("cache/" + cachefile);
+										ObjectInputStream in = new ObjectInputStream(fileIn);
+										ArrayList<MatchResult> matchResults = new ArrayList<MatchResult>();
+										System.out.print(".");
+										matchResults = (ArrayList<MatchResult>) in.readObject();
+										in.close();
+										fileIn.close();
+										System.out.print(".");
+
+										double matchScore = 0;
+
+										if (matchResults.size() == 0) {
+											cntMatchQuality0++;
+											writer3.print(matchResults.get(0).getTerm1().getInfoCode() + "\t" + 0
+													+ "\t\t" + "NO MATCH FOUND!" + "\n");
+
+										} else {
+
+											writer3.print(
+													"\n############################################################################################################################################################\n\n");
+
+											double cutOff = 0;
+											System.out.print(".");
+
+											int matchResultsSize = matchResults.size();
+											// System.out.print(matchResultsSize);
+											boolean cont = true;
+
+											for (int c = 0; c < matchResultsSize && c <= 200; c++) {
+
+												/*
+												 * if (c == 0 && matchResults.get(c).getMatchScore() >= 30) {
+												 * cntMatchQuality3++; } else if (c == 0 &&
+												 * matchResults.get(c).getMatchScore() >= 20) { cntMatchQuality2++; }
+												 * else if (c == 0 && matchResults.get(c).getMatchScore() >= 10) {
+												 * cntMatchQuality1++; } else if (c == 0 &&
+												 * matchResults.get(c).getMatchScore() < 10) { cntMatchQuality0++; }
+												 */
+
+												if (cont) {
+
+													MatchResult o = matchResults.get(c);
+													String sources = o.getTerm1().getInfoCode();
+													String targets = o.getTerm2().getInfoCode();
+													matchScore = o.getMatchScore();
+													String doMap = "";
+
+													if (c == 0 && matchResultsSize > 1) {
+														if (o.getMatchScore() > matchResults.get(c + 1).getMatchScore()
+																&& !sources.contains("FALSE")) {
+															doMap = "X";
+														}
+														cutOff = matchScore * .11;
+													}
+
+													if (matchScore > cutOff) {
+
+														writer2.print(sources + "\t" + round(matchScore, 2) + "\t"
+																+ doMap + "\t" + targets + "\n");
+
+														writer3.print(
+																"\n------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n");
+														writer3.print(sources + "\t" + round(matchScore, 2) + "\t"
+																+ doMap + "\t" + targets + "\n");
+														writer3.print("\n" + o.getMatchLog());
+
+													} else {
+														cont = false;
+													}
+
+												}
+
+											}
+
+											System.out.println(".");
 										}
-										highestScore = matchScore;
-									}
-									if (matchScore > highestScore * 0.33) {
-										mappingLog += "\n------------------------------------------------------------------------------------------------------------------------------------------------------------\n\n";
-										result += sources + "\t" + round(matchScore, 2) + "\t" + doMap + "\t" + targets
-												+ "\n";
-										mappingLog += sources + "\t" + round(matchScore, 2) + "\t" + doMap + "\t"
-												+ targets + "\n";
-										mappingLog += "\n" + matchResults.get(c).getMatchLog();
+										writer2.print("\n");
+
+									} catch (IOException i) {
+										i.printStackTrace();
+										return;
+									} catch (ClassNotFoundException c) {
+										c.printStackTrace();
+										return;
 									}
 								}
 							}
-							result += "\n";
 						}
 					}
-					atRow++;
-				}
 
-				System.out.println("\nDone! Estimated probabilities for data elements to have matches:");
-				System.out.println(
-						"  None (00-09): " + (int) ((double) cntMatchQuality0 / source.getTermsCount() * 100.0) + "%");
-				System.out.println(
-						"   Low (10-19): " + (int) ((double) cntMatchQuality1 / source.getTermsCount() * 100.0) + "%");
-				System.out.println(
-						"Medium (20-29): " + (int) ((double) cntMatchQuality2 / source.getTermsCount() * 100.0) + "%");
-				System.out.println(
-						"  High (>= 30): " + (int) ((double) cntMatchQuality3 / source.getTermsCount() * 100.0) + "%");
-
-				// Write result to file:
-
-				PrintWriter writer2;
-				try {
-					writer2 = new PrintWriter(outputMappingFile, "UTF-8");
-					writer2.println(result.substring(0, result.length() - 1));
 					writer2.close();
-					System.out.println("\nA mapping file \"" + outputMappingFile + "\" has been created.");
-				} catch (FileNotFoundException e) { // TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch
-
-				(UnsupportedEncodingException e) { // TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-
-				try {
-					PrintWriter writer3 = new PrintWriter(outputMappingFile + ".log", "UTF-8");
-					writer3.print(mappingLog);
 					writer3.close();
-				} catch (FileNotFoundException | UnsupportedEncodingException e) {
+
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				
+				System.out.println("\nDone!");
+				
+				/*
+				 * System.out.
+				 * println("\nDone! Estimated probabilities for data elements to have matches:"
+				 * ); System.out.println( "  None (00-09): " + (int) ((double) cntMatchQuality0
+				 * / source.getTermsCount() * 100.0) + "%"); System.out.println(
+				 * "   Low (10-19): " + (int) ((double) cntMatchQuality1 /
+				 * source.getTermsCount() * 100.0) + "%"); System.out.println(
+				 * "Medium (20-29): " + (int) ((double) cntMatchQuality2 /
+				 * source.getTermsCount() * 100.0) + "%"); System.out.println(
+				 * "  High (>= 30): " + (int) ((double) cntMatchQuality3 /
+				 * source.getTermsCount() * 100.0) + "%");
+				 */
 
 			}
 

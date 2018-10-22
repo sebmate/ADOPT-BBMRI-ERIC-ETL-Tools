@@ -5,9 +5,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.apache.commons.lang3.StringUtils;
+
+
 
 public class MetadataDefinition {
 
@@ -15,6 +22,10 @@ public class MetadataDefinition {
 	private List<MappingTerm> mappingTerms = new ArrayList<MappingTerm>();
 
 	private int numberOfTerms = 0;
+
+	private String[] allTerms;
+	private String allTermsStr = ""; // contains all words, for word frequency
+	Map<String, Long> wordFrequencies = null;
 
 	// Simple file reader
 	public String[] readLines(String filename) throws IOException {
@@ -36,18 +47,30 @@ public class MetadataDefinition {
 	// Reads a metadata definition file
 	public MetadataDefinition(String filename) {
 
-		List<String> synonyms = loadSynonyms();
+		//List<String> synonyms = new ArrayList<String>();    // faster for hacking
+        List<String> synonyms = loadSynonyms(); // the correct method
 
 		try {
 			fileContent = readLines(filename);
-			//setTermsCount(fileContent.length);
+			
+			// setTermsCount(fileContent.length);
 			for (int a = 0; a < fileContent.length; a++) {
-
 				if (!fileContent[a].trim().equals("") && a > 0) {
 					MappingTerm temp = new MappingTerm(fileContent[a], synonyms);
 					mappingTerms.add(temp);
+					// System.out.println(temp.getSimplifiedTermString());
+					allTermsStr = allTermsStr + temp.getSimplifiedTermString() + " ";
 				}
 			}
+			
+			System.out.print("-> Computing word frequencies ...");
+			
+			// https://stackoverflow.com/a/33703958
+			Stream<String> stream = Stream.of(allTermsStr.split("\\W+")).parallel();
+			wordFrequencies = stream.collect(Collectors.groupingBy(String::toString,Collectors.counting()));
+			System.out.println(" OK");
+	
+		    
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -73,12 +96,12 @@ public class MetadataDefinition {
 	}
 
 	public int getTermsCount() {
-		//return numberOfTerms;
+		// return numberOfTerms;
 		return mappingTerms.size();
 	}
 
 	void setTermsCount(int numberOfTerms) {
-		//this.numberOfTerms = numberOfTerms;
+		// this.numberOfTerms = numberOfTerms;
 	}
 
 	public MappingTerm getTerm(int i) {
@@ -104,18 +127,26 @@ public class MetadataDefinition {
 	void setMappingTerms(List<MappingTerm> mappingTerms) {
 		this.mappingTerms = mappingTerms;
 	}
-	
+
 	// Return a part of this class' metadata
 	public MetadataDefinition getPartial(int offset, int step) {
 		MetadataDefinition partial = new MetadataDefinition();
 		List<MappingTerm> partialMappingTerms = new ArrayList<MappingTerm>();
-		
+
 		for (int a = offset; a < mappingTerms.size(); a = a + step) {
 			partialMappingTerms.add(mappingTerms.get(a));
 		}
-			
+
 		partial.setMappingTerms(partialMappingTerms);
 		return partial;
+	}
+
+	Map<String, Long> getSortedWordFrequencies() {
+		return MapUtil.sortByValue(wordFrequencies);
+	}
+	
+	Map<String, Long> getWordFrequencies() {
+		return wordFrequencies;
 	}
 
 }

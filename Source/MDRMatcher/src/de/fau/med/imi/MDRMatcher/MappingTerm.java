@@ -1,12 +1,17 @@
 package de.fau.med.imi.MDRMatcher;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
-public class MappingTerm {
+public class MappingTerm  implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String fullTerm;
 	String term;
 	String simplifiedTerm;
@@ -54,7 +59,7 @@ public class MappingTerm {
 					// } else {
 					r += k[b] + " ";
 					// }
-				}
+				} 
 			} else {
 				// System.out.println("Removed stopword: " + w[a]);
 			}
@@ -86,15 +91,17 @@ public class MappingTerm {
 			// Resolve Synonyms:
 			for (int a = 0; a < t.length; a++) {
 				String newWord = t[a].trim();
-				for (int b = 0; b < synonyms.size(); b++) {
-					String[] s = synonyms.get(b).split(";");
-					if (newWord.equalsIgnoreCase(synonyms.get(b).split(";")[0].trim())) {
-						// System.out.println(newWord);
-						newWord = synonyms.get(b).split(";")[1].trim();
-						// System.out.println(newWord);
+
+				if (!newWord.equals("")) {
+					for (int b = 0; b < synonyms.size(); b++) {
+						String[] s = synonyms.get(b).split(";");
+						if (newWord.equalsIgnoreCase(synonyms.get(b).split(";")[0].trim())) {
+							// System.out.println(newWord);
+							newWord = synonyms.get(b).split(";")[1].trim();
+						}
 					}
 				}
-
+			
 				// Insert spaces in upper case words:
 				// if (newWord.toUpperCase().equals(newWord)) {
 				// if (!newWord.equals("ENUMERATED") &&
@@ -134,7 +141,6 @@ public class MappingTerm {
 
 		} catch (Exception e) {
 			System.err.println("Error: Could not split '" + term + "'. Check file formats!");
-			e.printStackTrace();
 		}
 	}
 
@@ -164,7 +170,7 @@ public class MappingTerm {
 
 	public int getWordCount() {
 		return words.size();
-	}
+	} 
 
 	public int getGramCount(int gram) {
 		return words.size() - gram + 1;
