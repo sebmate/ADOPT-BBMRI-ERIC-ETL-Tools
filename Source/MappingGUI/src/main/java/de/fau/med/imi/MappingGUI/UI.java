@@ -96,7 +96,7 @@ public class UI extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         targetTerminology = new javax.swing.JList<>();
         cancelButton = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         sourceTerms = new javax.swing.JList<>();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -149,10 +149,10 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Add to list of matches");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        addButton.setText("Add to list of matches");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                addButtonActionPerformed(evt);
             }
         });
 
@@ -172,7 +172,7 @@ public class UI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(cancelButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         searchTermWindowLayout.setVerticalGroup(
@@ -187,7 +187,7 @@ public class UI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(searchTermWindowLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelButton)
-                    .addComponent(jButton2))
+                    .addComponent(addButton))
                 .addContainerGap())
         );
 
@@ -415,7 +415,7 @@ public class UI extends javax.swing.JFrame {
                 sb.append(System.lineSeparator());
                 line = br.readLine();
                 atLine++;
-                
+
                 if (line != null) {
                     String[] entries = line.split("\t");
                     if (entries.length == 6) {
@@ -423,7 +423,7 @@ public class UI extends javax.swing.JFrame {
                         targetTermList.add(entries[4]);
                     } else {
                         hasError = true;
-                        errorLines += atLine+ "; ";
+                        errorLines += atLine + "; ";
                     }
                 }
             }
@@ -495,18 +495,7 @@ public class UI extends javax.swing.JFrame {
         mappings.set(sourceTerms.getSelectedIndex(), curr);
         refreshSourceTerms();
 
-        /*
-        String tt = targetTerms.getSelectedValue();
-        if (tt == null) {
-            tt = "";
-        }
-        curr.setMappingTerm(tt);
-        curr.setMappingStatus(2);
-        mappings.set(sourceTerms.getSelectedIndex(), curr);
-        refreshSourceTerms();
-         */
         sourceTerms.ensureIndexIsVisible(sourceTerms.getSelectedIndex());
-
         if (autoJumpCheckbox.isSelected()) {
             int k = sourceTerms.getSelectedIndex();
             while (k < mappings.size() && mappings.get(k).getMappingStatus() > 1) {
@@ -517,6 +506,7 @@ public class UI extends javax.swing.JFrame {
             }
         }
         sourceTerms.ensureIndexIsVisible(sourceTerms.getSelectedIndex());
+
     }//GEN-LAST:event_approveButtonActionPerformed
 
     private void knownButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_knownButtonActionPerformed
@@ -536,21 +526,52 @@ public class UI extends javax.swing.JFrame {
 
                             //System.out.println(mappings.get(a).getSourceString().toUpperCase());
                             //System.out.println(tempMappings.get(b).getSourceString().toUpperCase());
-                            
-                            
                             if (mappings.get(a).getSourceString().toUpperCase().equals(tempMappings.get(b).getSourceString().toUpperCase())
                                     && mappings.get(a).getMappingStatus() != 2) {
 
-                                //System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
-                                //System.out.println("                           Which is: " + tempMappings.get(a).getMappingTerms());
+                                ArrayList<String> m = tempMappings.get(b).getMappingTerms();
 
-                                for (int c = 0; c < mappings.get(a).getMatchings().size(); c++) {
-                                    ArrayList<String> m = tempMappings.get(b).getMappingTerms();
-                                    if (m.contains(mappings.get(a).getMatchings().get(c).getTargetString())) {
-                                        mappings.get(a).setMappingStatus(2);
-                                        mappings.get(a).setMappingTerms(m);
+                                for (int f = 0; f < m.size(); f++) {
+
+                                    boolean found = false;
+                                    for (int c = 0; c < mappings.get(a).getMatchings().size(); c++) {
+                                        if (m.get(f).equals(mappings.get(a).getMatchings().get(c).getTargetString())) {
+                                            //System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
+                                            //System.out.println("                           Which is: " + m.get(f));
+                                            mappings.get(a).setMappingStatus(2);
+                                            mappings.get(a).setMappingTerms(m);
+                                            found = true;
+                                        }
                                     }
+
+                                    if (!found) {
+                                        //System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
+                                        //System.out.println("                  Adding it to list: " + m.get(f));
+                                        Mapping currentMapping = mappings.get(a);
+                                        ArrayList<Match> currentMatchings = currentMapping.getMatchings();
+                                        Match newMatch = new Match("MANUAL", "X", "", m.get(f));
+                                        currentMatchings.add(newMatch);
+                                        currentMapping.setMatchings(currentMatchings);
+                                        mappings.set(a, currentMapping);
+
+                                    }
+
                                 }
+
+
+                                /*
+                                if (!found) {
+                                    if (!targetTerminology.isSelectionEmpty()) {
+                                        Mapping currentMapping = mappings.get(sourceTerms.getSelectedIndex());
+                                        ArrayList<Match> currentMatchings = currentMapping.getMatchings();
+                                        Match newMatch = new Match("MANUAL", "X", "", tempMappings.get(a).getMappingTerms());
+                                        currentMatchings.add(newMatch);
+                                        currentMapping.setMatchings(currentMatchings);
+                                        mappings.set(sourceTerms.getSelectedIndex(), currentMapping);
+                                        refreshTargetTerms();
+                                        targetTerms.setSelectedIndex(targetTerms.getModel().getSize() - 1);
+                                    }
+                                }*/
                             }
                         }
                     }
@@ -558,6 +579,7 @@ public class UI extends javax.swing.JFrame {
             }
         }
         refreshSourceTerms();
+        refreshTargetTerms();
     }//GEN-LAST:event_knownButtonActionPerformed
 
     private void revertButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_revertButtonActionPerformed
@@ -613,9 +635,9 @@ public class UI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_filterTextKeyTyped
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         appendToMatches();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_addButtonActionPerformed
 
     private void filterTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterTextActionPerformed
         // TODO add your handling code here:
@@ -958,12 +980,12 @@ public class UI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton addButton;
     private javax.swing.JButton approveButton;
     private javax.swing.JCheckBox autoJumpCheckbox;
     private javax.swing.JButton cancelButton;
     private javax.swing.JTextField filterText;
     private javax.swing.JButton findButton;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -1054,7 +1076,6 @@ public class UI extends javax.swing.JFrame {
         //System.out.println("Mapping status: " + mappingStatus);
         //System.out.println("Original mapping: " + origMapp);
         //System.out.println();
-
         targetTerms.clearSelection();
 
         for (int a = 0; a < mappings.size(); a++) {
