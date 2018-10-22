@@ -19,7 +19,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>de.fau.med.imii.MappingGUI.UI</mainClass>
+                  <mainClass>de.fau.med.imi.MappingGUI.UI</mainClass>
                 </transformer>
               </transformers>
             </configuration>

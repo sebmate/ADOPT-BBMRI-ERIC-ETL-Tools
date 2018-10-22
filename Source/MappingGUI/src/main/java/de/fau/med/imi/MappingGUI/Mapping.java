@@ -14,34 +14,19 @@ import java.util.ArrayList;
 public class Mapping {
 
     private String SourceString = "";
-    private String MappingTerm = "";
+    //private String MappingTerm = "";
     private ArrayList<Match> Matchings = new ArrayList<>();
     private int mappingStatus = 0;
     private String OriginalMappingTerm = "";
+    private ArrayList<String> Mappings = new ArrayList<>();
 
-    /*
-    Mapping(String SourceString, String MappingTerm, ArrayList<Match> Matches) {
+    Mapping(String SourceString, ArrayList<String> Mappings, String OriginalMappingTerm, ArrayList<Match> matches, int mappingStatus) {
         this.SourceString = SourceString;
-        this.MappingTerm = MappingTerm;
-        this.Matchings = Matches;
-    }
-
-    Mapping(String SourceString, String MappingTerm, ArrayList<Match> matches, int mappingStatus) {
-        this.SourceString = SourceString;
-        this.MappingTerm = MappingTerm;
-        this.Matchings = matches;
-        this.mappingStatus = mappingStatus;
-    }
-    */
-    
-    Mapping(String SourceString, String MappingTerm, String OriginalMappingTerm, ArrayList<Match> matches, int mappingStatus) {
-        this.SourceString = SourceString;
-        this.MappingTerm = MappingTerm;
+        this.Mappings = Mappings;
         this.OriginalMappingTerm = OriginalMappingTerm;
         this.Matchings = matches;
         this.mappingStatus = mappingStatus;
     }
-   
 
     /**
      * @return the SourceString
@@ -55,20 +40,6 @@ public class Mapping {
      */
     public void setSourceString(String SourceString) {
         this.SourceString = SourceString;
-    }
-
-    /**
-     * @return the MappingTerm
-     */
-    public String getMappingTerm() {
-        return MappingTerm;
-    }
-
-    /**
-     * @param MappingTerm the MappingTerm to set
-     */
-    public void setMappingTerm(String MappingTerm) {
-        this.MappingTerm = MappingTerm;
     }
 
     /**
@@ -113,4 +84,12 @@ public class Mapping {
         this.OriginalMappingTerm = OriginalMappingTerm;
     }
 
+    void setMappingTerms(ArrayList<String> mappings) {
+        this.Mappings = mappings;
+    }
+    
+    ArrayList<String> getMappingTerms() {
+        return this.Mappings;
+    }
+    
 }

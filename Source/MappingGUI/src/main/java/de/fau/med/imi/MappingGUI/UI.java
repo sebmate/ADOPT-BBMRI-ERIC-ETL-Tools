@@ -114,6 +114,7 @@ public class UI extends javax.swing.JFrame {
         knownButton = new javax.swing.JButton();
         autoJumpCheckbox = new javax.swing.JCheckBox();
         statsButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         searchTermWindow.setTitle("Find other term");
         searchTermWindow.setSize(new java.awt.Dimension(500, 40));
@@ -191,7 +192,7 @@ public class UI extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("BBMRI-ERIC Mapping GUI");
+        setTitle("BBMRI-ERIC MappingGUI (Version 1.1)");
         setLocationByPlatform(true);
 
         sourceTerms.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -201,6 +202,11 @@ public class UI extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(sourceTerms);
 
+        targetTerms.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                targetTermsValueChanged(evt);
+            }
+        });
         jScrollPane2.setViewportView(targetTerms);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -272,7 +278,7 @@ public class UI extends javax.swing.JFrame {
         });
 
         autoJumpCheckbox.setSelected(true);
-        autoJumpCheckbox.setText("Auto jump to next entry");
+        autoJumpCheckbox.setText("Auto jump to next unapproved mapping.");
 
         statsButton.setText(" Statistics");
         statsButton.addActionListener(new java.awt.event.ActionListener() {
@@ -281,6 +287,8 @@ public class UI extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setText("Tipp: Keep CTRL pressed to select mutiple entries.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -288,7 +296,6 @@ public class UI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
@@ -299,36 +306,36 @@ public class UI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(saveAsButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(statsButton)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(statsButton))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(removeMappingButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(revertButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(findButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(approveButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addComponent(knownButton, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(logo))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(removeMappingButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(autoJumpCheckbox)
-                            .addComponent(revertButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(findButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(approveButton, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(autoJumpCheckbox)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(logo)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(openFileButton)
@@ -336,24 +343,26 @@ public class UI extends javax.swing.JFrame {
                             .addComponent(saveAsButton)
                             .addComponent(statsButton)
                             .addComponent(knownButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addGap(35, 35, 35)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel1))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jLabel1)))
+                    .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jScrollPane2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(removeMappingButton)
                             .addComponent(revertButton)
-                            .addComponent(findButton))
+                            .addComponent(findButton)
+                            .addComponent(approveButton))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(approveButton)
-                            .addComponent(autoJumpCheckbox)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 399, Short.MAX_VALUE))
+                            .addComponent(autoJumpCheckbox)
+                            .addComponent(jLabel3)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -362,7 +371,7 @@ public class UI extends javax.swing.JFrame {
 
     private void removeMappingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeMappingButtonActionPerformed
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
-        curr.setMappingTerm("");
+        curr.setMappingTerms(new ArrayList<String>());
         curr.setMappingStatus(0);
         mappings.set(sourceTerms.getSelectedIndex(), curr);
         targetTerms.clearSelection();
@@ -397,17 +406,32 @@ public class UI extends javax.swing.JFrame {
             BufferedReader br = new BufferedReader(new FileReader(targetNsFile));
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
+            boolean hasError = false;
+            String errorLines = "";
+            int atLine = 0;
 
             while (line != null) {
                 sb.append(line);
                 sb.append(System.lineSeparator());
                 line = br.readLine();
+                atLine++;
+                
                 if (line != null) {
                     String[] entries = line.split("\t");
-                    listModel.addElement(entries[4]);
-                    targetTermList.add(entries[4]);
+                    if (entries.length == 6) {
+                        listModel.addElement(entries[4]);
+                        targetTermList.add(entries[4]);
+                    } else {
+                        hasError = true;
+                        errorLines += atLine+ "; ";
+                    }
                 }
             }
+
+            if (hasError) {
+                JOptionPane.showMessageDialog(null, "The central terminology file appears to have formatting errors. This is not critical, but the entry you are looking for may be missing in the list.\nThe following lines contain errors:\n" + errorLines, "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+
             sb.append(System.lineSeparator());
 
             //System.out.println(fileContents);
@@ -460,16 +484,27 @@ public class UI extends javax.swing.JFrame {
 
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
 
-        String tt = targetTerms.getSelectedValue();
-        if (tt == null) {
-            tt = "";
+        int[] selects = targetTerms.getSelectedIndices();
+        ArrayList<String> maps = new ArrayList<String>();
+        for (int a = 0; a < selects.length; a++) {
+            maps.add(targetTerms.getModel().getElementAt(selects[a]));
         }
+        curr.setMappingTerms(maps);
 
-        curr.setMappingTerm(tt);
         curr.setMappingStatus(2);
         mappings.set(sourceTerms.getSelectedIndex(), curr);
         refreshSourceTerms();
 
+        /*
+        String tt = targetTerms.getSelectedValue();
+        if (tt == null) {
+            tt = "";
+        }
+        curr.setMappingTerm(tt);
+        curr.setMappingStatus(2);
+        mappings.set(sourceTerms.getSelectedIndex(), curr);
+        refreshSourceTerms();
+         */
         sourceTerms.ensureIndexIsVisible(sourceTerms.getSelectedIndex());
 
         if (autoJumpCheckbox.isSelected()) {
@@ -481,7 +516,6 @@ public class UI extends javax.swing.JFrame {
                 sourceTerms.setSelectedIndex(k);
             }
         }
-
         sourceTerms.ensureIndexIsVisible(sourceTerms.getSelectedIndex());
     }//GEN-LAST:event_approveButtonActionPerformed
 
@@ -500,16 +534,21 @@ public class UI extends javax.swing.JFrame {
                     for (int a = 0; a < mappings.size(); a++) {
                         for (int b = 0; b < tempMappings.size(); b++) {
 
+                            //System.out.println(mappings.get(a).getSourceString().toUpperCase());
+                            //System.out.println(tempMappings.get(b).getSourceString().toUpperCase());
+                            
+                            
                             if (mappings.get(a).getSourceString().toUpperCase().equals(tempMappings.get(b).getSourceString().toUpperCase())
                                     && mappings.get(a).getMappingStatus() != 2) {
 
-                                System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
-                                //System.out.println("                           Which is: " + mappings.get(a).getMappingTerm());
+                                //System.out.println("Found a previously made mapping for: " + mappings.get(a).getSourceString());
+                                //System.out.println("                           Which is: " + tempMappings.get(a).getMappingTerms());
 
                                 for (int c = 0; c < mappings.get(a).getMatchings().size(); c++) {
-                                    if (mappings.get(a).getMatchings().get(c).getTargetString().equals(tempMappings.get(b).getMappingTerm())) {
+                                    ArrayList<String> m = tempMappings.get(b).getMappingTerms();
+                                    if (m.contains(mappings.get(a).getMatchings().get(c).getTargetString())) {
                                         mappings.get(a).setMappingStatus(2);
-                                        mappings.get(a).setMappingTerm(tempMappings.get(b).getMappingTerm());
+                                        mappings.get(a).setMappingTerms(m);
                                     }
                                 }
                             }
@@ -526,7 +565,11 @@ public class UI extends javax.swing.JFrame {
         Mapping curr = mappings.get(sourceTerms.getSelectedIndex());
 
         if (!curr.getOriginalMappingTerm().equals("")) {
-            curr.setMappingTerm(curr.getOriginalMappingTerm());
+
+            ArrayList<String> originalMappingTerm = new ArrayList<String>();
+            originalMappingTerm.add(curr.getOriginalMappingTerm());
+            curr.setMappingTerms(originalMappingTerm);
+
             curr.setMappingStatus(1);
             mappings.set(sourceTerms.getSelectedIndex(), curr);
         } else {
@@ -865,6 +908,10 @@ public class UI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_statsButtonActionPerformed
 
+    private void targetTermsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_targetTermsValueChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_targetTermsValueChanged
+
     /**
      * @param args the command line arguments
      */
@@ -919,6 +966,7 @@ public class UI extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -998,15 +1046,14 @@ public class UI extends javax.swing.JFrame {
         int selectedIndex = sourceTerms.getSelectedIndex();
         String selectedSourceTerm = mappings.get(sourceTerms.getSelectedIndex()).getSourceString();
         int mappingStatus = mappings.get(sourceTerms.getSelectedIndex()).getMappingStatus();
-        String targetTerm = mappings.get(sourceTerms.getSelectedIndex()).getMappingTerm();
+        //String targetTerm = mappings.get(sourceTerms.getSelectedIndex()).getMappingTerm();
         String origMapp = mappings.get(sourceTerms.getSelectedIndex()).getOriginalMappingTerm();
 
-        System.out.println("Selected index: " + selectedIndex);
-        System.out.println("Selected source term: " + selectedSourceTerm);
-        System.out.println("Mapping status: " + mappingStatus);
-        System.out.println("Target term: " + targetTerm);
-        System.out.println("Original mapping: " + origMapp);
-        System.out.println();
+        //System.out.println("Selected index: " + selectedIndex);
+        //System.out.println("Selected source term: " + selectedSourceTerm);
+        //System.out.println("Mapping status: " + mappingStatus);
+        //System.out.println("Original mapping: " + origMapp);
+        //System.out.println();
 
         targetTerms.clearSelection();
 
@@ -1014,19 +1061,25 @@ public class UI extends javax.swing.JFrame {
             if (sourceTerms.getSelectedValue().equals(mappings.get(a).getSourceString())) {
                 ArrayList<Match> matchings = mappings.get(a).getMatchings();
                 DefaultListModel listModel = new DefaultListModel();
+                targetTerms.setModel(listModel);
+                ArrayList<Integer> indices = new ArrayList<>();
                 for (int b = 0; b < matchings.size(); b++) {
                     listModel.addElement(matchings.get(b).getTargetString());
-                    //if (matchings.get(b).getTargetString().equals(mappings.get(a).getMappingTerm())) {
                     //if (matchings.get(b).getMap().equals("X")) {
-                    if (matchings.get(b).getTargetString().equals(mappings.get(a).getMappingTerm())) {
-                        System.out.println("Selecting: " + mappings.get(a).getMappingTerm());
-                        selected = b;
+                    //System.out.println(mappings.get(a).getMappingTerms());
+                    if (mappings.get(a).getMappingTerms().contains(matchings.get(b).getTargetString())) {
+                        //if (matchings.get(b).getTargetString().equals(mappings.get(a).getMappingTerms())) {
+                        //System.out.println("Loading: " + b + ": " + matchings.get(b).getTargetString());
+                        //selected = b;
+                        indices.add(b);
                     }
                 }
-                targetTerms.setModel(listModel);
-                if (selected >= 0) {
-                    targetTerms.setSelectedIndex(selected);
-                }
+
+                int[] arrIndices = indices.stream().mapToInt(i -> i).toArray();
+                targetTerms.setSelectedIndices(arrIndices);
+                //if (selected >= 0) {
+                //    targetTerms.setSelectedIndex(selected);
+                //}
             }
         }
 
