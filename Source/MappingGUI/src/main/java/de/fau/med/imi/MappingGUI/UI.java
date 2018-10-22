@@ -787,7 +787,6 @@ public class UI extends javax.swing.JFrame {
                                 + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
                                 + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                         statTable += "SITE;4C;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
-
                     }
 
                 } else if (hasEquivalent && createdMapping && !isCorrect && !amongMatches) {
@@ -1063,14 +1062,13 @@ public class UI extends javax.swing.JFrame {
     }
 
     private void refreshTargetTerms() {
-        int selected = -1;
 
-        int selectedIndex = sourceTerms.getSelectedIndex();
-        String selectedSourceTerm = mappings.get(sourceTerms.getSelectedIndex()).getSourceString();
-        int mappingStatus = mappings.get(sourceTerms.getSelectedIndex()).getMappingStatus();
+        //int selected = -1;
+        //int selectedIndex = sourceTerms.getSelectedIndex();
+        //String selectedSourceTerm = mappings.get(sourceTerms.getSelectedIndex()).getSourceString();
+        //int mappingStatus = mappings.get(sourceTerms.getSelectedIndex()).getMappingStatus();
         //String targetTerm = mappings.get(sourceTerms.getSelectedIndex()).getMappingTerm();
-        String origMapp = mappings.get(sourceTerms.getSelectedIndex()).getOriginalMappingTerm();
-
+        //String origMapp = mappings.get(sourceTerms.getSelectedIndex()).getOriginalMappingTerm();
         //System.out.println("Selected index: " + selectedIndex);
         //System.out.println("Selected source term: " + selectedSourceTerm);
         //System.out.println("Mapping status: " + mappingStatus);
@@ -1098,6 +1096,9 @@ public class UI extends javax.swing.JFrame {
 
                 int[] arrIndices = indices.stream().mapToInt(i -> i).toArray();
                 targetTerms.setSelectedIndices(arrIndices);
+                if (arrIndices.length > 0) {
+                    targetTerms.ensureIndexIsVisible(arrIndices[0]);
+                }
                 //if (selected >= 0) {
                 //    targetTerms.setSelectedIndex(selected);
                 //}
