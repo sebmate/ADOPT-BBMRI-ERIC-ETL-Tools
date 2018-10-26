@@ -66,7 +66,7 @@ public class BagOfWordsMatcher {
 							// matchScore = matchScore + (int) Math.pow(10, g - 1);
 
 							//double contribution = ((double) t1.length() * (double) g * 2.0) * getFreqWeight(t2);
-							double contribution = 2.0 * getFreqWeight(t2);
+							double contribution = 2.0 * (double) g * getFreqWeight(t2);
 							
 
 							matchScore = matchScore + contribution;
