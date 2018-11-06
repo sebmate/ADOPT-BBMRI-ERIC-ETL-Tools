@@ -37,6 +37,7 @@ import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.SerializationUtils;
 import org.eclipse.collections.api.bag.Bag;
 import org.eclipse.collections.api.list.MutableList;
 import org.eclipse.collections.impl.factory.Lists;
@@ -279,10 +280,68 @@ public class MDRMatcher {
 		final String targetNamespaceFile = cmd.getOptionValue("target");
 		final String outputMappingFile = cmd.getOptionValue("output");
 
-		System.out.println("Loading source terminology and processing synonyms ...");
-		final MetadataDefinition source = new MetadataDefinition(sourceNamespaceFile);
-		System.out.println("Loading target terminology and processing synonyms ...");
-		final MetadataDefinition target = new MetadataDefinition(targetNamespaceFile);
+		System.out.print("Loading source terminology and processing synonyms ...");
+		MetadataDefinition sourceTemp = new MetadataDefinition();
+
+		File f = new File("cache/sourceterms.obj");
+		if (f.exists() && !f.isDirectory()) {
+			System.out.println(" using cache ...");
+			try {
+				FileInputStream fileIn = new FileInputStream("cache/sourceterms.obj");
+				ObjectInputStream in = new ObjectInputStream(fileIn);
+				sourceTemp = (MetadataDefinition) in.readObject();
+				in.close();
+				fileIn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			System.out.println(" processing from file ...");
+			sourceTemp = new MetadataDefinition(sourceNamespaceFile);
+			try {
+				FileOutputStream fileOut = new FileOutputStream("cache/sourceterms.obj");
+				ObjectOutputStream out = new ObjectOutputStream(fileOut);
+				out.writeObject(sourceTemp);
+				out.close();
+				fileOut.close();
+			} catch (IOException i2) {
+				i2.printStackTrace();
+			}
+		}
+
+		final MetadataDefinition source = sourceTemp;
+
+		System.out.print("Loading target terminology and processing synonyms ...");
+
+		MetadataDefinition targetTemp = new MetadataDefinition();
+		File f2 = new File("cache/targetterms.obj");
+		if (f2.exists() && !f2.isDirectory()) {
+			System.out.println(" using cache ...");
+			try {
+				FileInputStream fileIn = new FileInputStream("cache/sourceterms.obj");
+				ObjectInputStream in = new ObjectInputStream(fileIn);
+				targetTemp = (MetadataDefinition) in.readObject();
+				in.close();
+				fileIn.close();
+			} catch (Exception i2) {
+				i2.printStackTrace();
+
+			}
+		} else {
+			System.out.println(" processing from file ...");
+			targetTemp = new MetadataDefinition(targetNamespaceFile);
+			try {
+				FileOutputStream fileOut = new FileOutputStream("cache/targetterms.obj");
+				ObjectOutputStream out = new ObjectOutputStream(fileOut);
+				out.writeObject(targetTemp);
+				out.close();
+				fileOut.close();
+			} catch (IOException i2) {
+				i2.printStackTrace();
+			}
+		}
+
+		final MetadataDefinition target = targetTemp;
 
 		System.out.println("Loading Ressources/Top10000.txt to treat them as known words ...");
 		// https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-usa.txt
@@ -470,7 +529,6 @@ public class MDRMatcher {
 								File f = new File("cache/" + cachefile);
 								if (f.exists() && !f.isDirectory()) {
 
-
 									System.out.print("Processing " + (a + 1) + "/" + source.getTermsCount() + ": cache/"
 											+ cachefile + " ");
 
@@ -572,9 +630,9 @@ public class MDRMatcher {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-				
+
 				System.out.println("\nDone!");
-				
+
 				/*
 				 * System.out.
 				 * println("\nDone! Estimated probabilities for data elements to have matches:"

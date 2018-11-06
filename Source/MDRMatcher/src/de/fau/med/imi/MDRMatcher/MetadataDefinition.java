@@ -3,6 +3,7 @@ package de.fau.med.imi.MDRMatcher;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -16,8 +17,9 @@ import org.apache.commons.lang3.StringUtils;
 
 
 
-public class MetadataDefinition {
+public class MetadataDefinition  implements Serializable {
 
+	private static final long serialVersionUID = 1L;
 	String[] fileContent;
 	private List<MappingTerm> mappingTerms = new ArrayList<MappingTerm>();
 
@@ -46,7 +48,10 @@ public class MetadataDefinition {
 
 	// Reads a metadata definition file
 	public MetadataDefinition(String filename) {
+		loadFile(filename);
+	}
 
+	void loadFile(String filename) {
 		//List<String> synonyms = new ArrayList<String>();    // faster for hacking
         List<String> synonyms = loadSynonyms(); // the correct method
 
@@ -74,6 +79,7 @@ public class MetadataDefinition {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
 	}
 
 	private List<String> loadSynonyms() {
