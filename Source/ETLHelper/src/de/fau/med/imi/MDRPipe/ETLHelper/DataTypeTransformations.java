@@ -75,11 +75,15 @@ public class DataTypeTransformations {
 	}
 
 	private String normalizeInteger(String in) {
-		in = in.trim();//.replaceAll(",", ".");
-
+		in = in.trim().replaceAll(",", ".");
 		String returnValue = null;
 		try {
-			returnValue = "" + Integer.parseInt(in);
+			if (in.contains(".")) {
+				int t = Math.round(Float.parseFloat(in));
+				returnValue = "" + t;
+			} else {
+				returnValue = "" + Integer.parseInt(in);
+			}
 		} catch (Exception e) {
 			if(MDRPipeConfiguration.getDebug()) {
 				e.printStackTrace();
@@ -345,7 +349,8 @@ public class DataTypeTransformations {
 	}
 	
 	private void convertFromFloatToInteger(ETLResultEntry etlResultEntry) {
-		if(normalizeFloat(etlResultEntry.getDataValue()) != null) {
+		if(normalizeInteger(etlResultEntry.getDataValue()) != null) {
+			//System.out.println(etlResultEntry.getDataValue() + "=>" + normalizeInteger(etlResultEntry.getDataValue()));
 			etlResultEntry.setFinalValue(normalizeInteger(etlResultEntry.getDataValue()));
 			this.setSuccess(etlResultEntry, "OK");
 		} else {
@@ -454,8 +459,6 @@ public class DataTypeTransformations {
 
 	private void convertFromStringToBoolean(ETLResultEntry etlResultEntry) {
 		if(etlResultEntry.getTargetPermValue().equals("TRUE")) {
-			showConversionError(etlResultEntry.getSourceDataType(), etlResultEntry.getTargetDataType(), etlResultEntry);
-		} else if(etlResultEntry.getTargetPermValue().equals("TRUE")) {
 			showConversionError(etlResultEntry.getSourceDataType(), etlResultEntry.getTargetDataType(), etlResultEntry);
 		} else {
 			showConversionError(etlResultEntry.getSourceDataType(), etlResultEntry.getTargetDataType(), etlResultEntry);
