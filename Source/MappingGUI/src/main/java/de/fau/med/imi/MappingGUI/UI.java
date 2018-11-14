@@ -689,6 +689,7 @@ public class UI extends javax.swing.JFrame {
         ArrayList<String> t7 = new ArrayList();
 
         String statTable = "LOCATION;TYPE;SOURCE STRING;TOP SUGGESTION;CORRECTED MAPPING\n";
+        String statSQL = "CREATE TABLE STATS (\"LOCATION\" VARCHAR2(2000 BYTE), \"TYPE\" VARCHAR2(2000 BYTE), \"SOURCE_STRING\" VARCHAR2(2000 BYTE), \"TOP_SUGGESTION\" VARCHAR2(2000 BYTE), \"CORRECTED_MAPPING\" VARCHAR2(2000 BYTE));";
 
         for (int a = 0; a < mappings.size(); a++) {
             Mapping mapping = mappings.get(a);
@@ -700,6 +701,7 @@ public class UI extends javax.swing.JFrame {
                 t0.add("No mapping approved for: '" + mapping.getSourceString() + "'");
 
                 statTable += "SITE;0;" + mapping.getSourceString() + ";" + ";\n";
+                statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '0', '" + mapping.getSourceString() + "', '', '');\n";
 
             } else {
 
@@ -739,6 +741,7 @@ public class UI extends javax.swing.JFrame {
                     Type1++;
                     t1.add("No equivalent in target for: '" + mapping.getSourceString() + "'");
                     statTable += "SITE;1;" + mapping.getSourceString() + ";" + ";\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '1', '" + mapping.getSourceString() + "', '', '');\n";
 
                 } else if (!hasEquivalent && createdMapping && !isCorrect && !amongMatches) {
 
@@ -747,6 +750,7 @@ public class UI extends javax.swing.JFrame {
                             + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n");
 
                     statTable += "SITE;2;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '2', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '');\n";
 
                 } else if (hasEquivalent && !createdMapping && !isCorrect && !amongMatches) {
 
@@ -756,6 +760,7 @@ public class UI extends javax.swing.JFrame {
                             + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
 
                     statTable += "SITE;3;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '3', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                 } else if (hasEquivalent && !createdMapping && !isCorrect && amongMatches) {
 
@@ -766,6 +771,7 @@ public class UI extends javax.swing.JFrame {
                     );
 
                     statTable += "SITE;4;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '4', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                     if (mapX == 0) {
                         Type4a++;
@@ -773,6 +779,7 @@ public class UI extends javax.swing.JFrame {
                                 + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
                                 + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                         statTable += "SITE;4A;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                        statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '4A', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                     } else if (mScore.equals(matches.get(0).getScore())) {
                         Type4b++;
@@ -780,6 +787,7 @@ public class UI extends javax.swing.JFrame {
                                 + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
                                 + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                         statTable += "SITE;4B;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                        statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '4B', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                     } else {
                         Type4c++;
@@ -787,6 +795,8 @@ public class UI extends javax.swing.JFrame {
                                 + "first top-score suggestion was: '" + matches.get(0).getTargetString() + "'\n"
                                 + "        the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                         statTable += "SITE;4C;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                        statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '4C', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
+
                     }
 
                 } else if (hasEquivalent && createdMapping && !isCorrect && !amongMatches) {
@@ -795,6 +805,7 @@ public class UI extends javax.swing.JFrame {
                             + "    the wrong mapping was: '" + matches.get(0).getTargetString() + "'\n"
                             + "   the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                     statTable += "SITE;5;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '5', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                 } else if (hasEquivalent && createdMapping && !isCorrect && amongMatches) {
                     Type6++;
@@ -802,6 +813,7 @@ public class UI extends javax.swing.JFrame {
                             + "    the wrong mapping was: '" + matches.get(0).getTargetString() + "'\n"
                             + "   the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                     statTable += "SITE;6;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '6', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                 } else if (hasEquivalent && createdMapping && isCorrect && amongMatches) {
                     Type7++;
@@ -809,6 +821,7 @@ public class UI extends javax.swing.JFrame {
                             + "  the automatic mapping was: '" + matches.get(0).getTargetString() + "'\n"
                             + "     the correct mapping is: '" + matches.get(mapX).getTargetString() + "'\n");
                     statTable += "SITE;7;" + mapping.getSourceString() + ";" + matches.get(0).getTargetString() + ";" + matches.get(mapX).getTargetString() + "\n";
+                    statSQL += "INSERT INTO STATS (\"LOCATION\", \"TYPE\", \"SOURCE_STRING\", \"TOP_SUGGESTION\", \"CORRECTED_MAPPING\") VALUES ('SITE', '7', '" + mapping.getSourceString() + "', '" + matches.get(0).getTargetString() + "', '" + matches.get(mapX).getTargetString() + "');\n";
 
                 } else {
                     System.out.println("Don't know how to classify:");
@@ -927,6 +940,15 @@ public class UI extends javax.swing.JFrame {
         } catch (Exception ex) {
             Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        try {
+            writer = new PrintWriter(site + " Statistics.sql", "UTF-8");
+            writer.println(statSQL.replaceAll("\n", "\r\n").replaceAll("SITE", site));
+            writer.close();
+        } catch (Exception ex) {
+            Logger.getLogger(UI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }//GEN-LAST:event_statsButtonActionPerformed
 
     private void targetTermsValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_targetTermsValueChanged
