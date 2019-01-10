@@ -83,7 +83,7 @@ public class FileUploader {
 	}
 
 	private void uploadDataToDatabase() {
-		System.out.print("Uploading data (" + this.getData() + ")... ");
+		System.out.print("Uploading data (" + this.getData() + ") ... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getDataFolder() + this.getData(), this.getDatabase().getDatabaseTableData().getName(), true);
 			System.out.println("OK");
@@ -96,7 +96,7 @@ public class FileUploader {
 	}
 
 	private void uploadSourceNamespaceToDatabase() {
-		System.out.print("Uploading source namespace (" + this.getSourceNamespace() + ")... ");
+		System.out.print("Uploading source namespace (" + this.getSourceNamespace() + ") ... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMetadataFolder() + this.getSourceNamespace(), this.getDatabase().getDatabaseTableSourceNamespace().getName(), true);
 			System.out.println("OK");
@@ -110,7 +110,7 @@ public class FileUploader {
 	}
 
 	private void uploadTargetNamespaceToDatabase() {
-		System.out.print("Uploading target namespace (" + this.getTargetNamespace() + ")... ");
+		System.out.print("Uploading target namespace (" + this.getTargetNamespace() + ") ... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMetadataFolder() + this.getTargetNamespace(), this.getDatabase().getDatabaseTableTargetNamespace().getName(), true);
 			System.out.println("OK");
@@ -124,7 +124,7 @@ public class FileUploader {
 	}
 
 	private void uploadMatchingToDatabase() {
-		System.out.print("Uploading matching (" + this.getMatching() + ")... ");
+		System.out.print("Uploading matching (" + this.getMatching() + ") ... ");
 		try {
 			this.getLoader().loadCSV(MDRPipeConfiguration.getMappingsFolder() + this.getMatching(), this.getDatabase().getDatabaseTableMatching().getName(), true);
 			System.out.println("OK");

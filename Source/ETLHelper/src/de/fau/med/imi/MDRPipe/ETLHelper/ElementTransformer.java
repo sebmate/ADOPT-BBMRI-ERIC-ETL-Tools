@@ -97,7 +97,7 @@ public class ElementTransformer {
 		
 		// TODO
 		
-		System.out.print("Building transformed data table... ");
+		System.out.print("Building transformed data table ... ");
 		
 		try {
 			

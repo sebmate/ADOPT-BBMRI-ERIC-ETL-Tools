@@ -1,5 +1,6 @@
 package de.fau.med.imi.MDRPipe.ETLHelper;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -8,13 +9,13 @@ import java.sql.Statement;
 import de.fau.med.imi.MDRPipe.MDRPipeConfiguration;
 
 public class DatabaseStorage {
-	
-	private String databaseName;
-	private String connectionString;
-	
+
+	private String databaseName = "";
+	private String connectionString = "";
+
 	Connection connection;
 	Statement statement;
-	
+
 	DatabaseTableData databaseTableData;
 	DatabaseTableSourceNamespace databaseTableSourceNamespace;
 	DatabaseTableTargetNamespace databaseTableTargetNamespace;
@@ -22,68 +23,78 @@ public class DatabaseStorage {
 	DatabaseTableTranslation databaseTableTranslation;
 	DatabaseTableMatchedData databaseTableMatchedData;
 	DatabaseTableTransformedData databaseTableTransformedData;
-	
+
 	public DatabaseStorage(String databaseName) throws SQLException {
-		
+
 		this.setDatabaseName(databaseName);
+
+		System.out.print("Deleting old SQLite database ... ");
+		File file = new File(MDRPipeConfiguration.getLogFolder() + this.getDatabaseName());
+		if(file.delete()){
+			System.out.println("OK");
+		}else{
+			System.out.println("ERROR, aborting.");
+			System.exit(0);
+		}
+		
 		this.setConnectionString("jdbc:sqlite:" + MDRPipeConfiguration.getLogFolder() + this.getDatabaseName());
 		this.setConnection(DriverManager.getConnection(this.getConnectionString()));
 		this.setStatement(this.getConnection().createStatement());
 		this.getStatement().setQueryTimeout(30);
-		
+
 		// DatabaseTable Data
 		this.setDatabaseTableData(new DatabaseTableData(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableData().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableData().createDatabaseTable());
-		
+
 		// DatabaseTable SourceNamespace
 		this.setDatabaseTableSourceNamespace(new DatabaseTableSourceNamespace(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableSourceNamespace().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableSourceNamespace().createDatabaseTable());
-		
+
 		// DatabaseTable TargetNamespace
 		this.setDatabaseTableTargetNamespace(new DatabaseTableTargetNamespace(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableTargetNamespace().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableTargetNamespace().createDatabaseTable());
-		
+
 		// DatabaseTable Mapping
 		this.setDatabaseTableMatching(new DatabaseTableMatching(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableMatching().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableMatching().createDatabaseTable());
-		
+
 		// DatabaseTable Translation
 		this.setDatabaseTableTranslation(new DatabaseTableTranslation(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableTranslation().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableTranslation().createDatabaseTable());
-		
+
 		// DatabaseTable MappedData
 		this.setDatabaseTableMatchedData(new DatabaseTableMatchedData(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableMatchedData().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableMatchedData().createDatabaseTable());
-		
+
 		// DatabaseTable TransformedData
 		this.setDatabaseTableTransformedData(new DatabaseTableTransformedData(this));
 		this.getStatement().executeUpdate(this.getDatabaseTableTransformedData().dropDatabaseTable());
 		this.getStatement().executeUpdate(this.getDatabaseTableTransformedData().createDatabaseTable());
-		
+
 	}
-	
+
 	public void destroyDatabaseStorage() throws SQLException {
 		this.getConnection().close();
 	}
-	
+
 	public void exportAllDatabaseTablesToFiles() {
 		this.exportDatabaseTableToFile(this.getDatabaseTableData());
 		this.exportDatabaseTableToFile(this.getDatabaseTableMatchedData());
 		this.exportDatabaseTableToFile(this.getDatabaseTableSourceNamespace());
 		this.exportDatabaseTableToFile(this.getDatabaseTableTargetNamespace());
 	}
-	
+
 	// TODO
 	public void exportDatabaseTableToFile(DatabaseTable databaseTable) {
-		
-    }
-	
+
+	}
+
 	// TODO
 	public void insertETLResultEntryIntoDatabaseTableMatchedData(ETLResultEntry entry) throws SQLException {
 		String query = "INSERT INTO " + this.getDatabaseTableMatchedData().getName() + " ";
@@ -109,10 +120,10 @@ public class DatabaseStorage {
 		query += "\"" + entry.getMappingScore() + "\", ";
 		query += "\"" + entry.getMappingDoMap() + "\", ";
 		query += "\"" + entry.getMappingTargetString() + "\");";
-		
+
 		this.getStatement().setQueryTimeout(30);
 		this.getStatement().execute(query);
-		
+
 	}
 
 	public Connection getConnection() {
@@ -202,5 +213,5 @@ public class DatabaseStorage {
 	public void setDatabaseTableTransformedData(DatabaseTableTransformedData databaseTableTransformedData) {
 		this.databaseTableTransformedData = databaseTableTransformedData;
 	}
-	
+
 }

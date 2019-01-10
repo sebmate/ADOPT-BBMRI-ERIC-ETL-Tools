@@ -57,7 +57,7 @@ public class ElementMatcher {
 	}
 
 	private void buildTranslationTable() {
-		System.out.print("Building translation table... ");
+		System.out.print("Building translation table ... ");
 		try {
 			this.getDatabase().setStatement(this.getDatabase().getConnection().createStatement());
 			this.getDatabase().getStatement().setQueryTimeout(30);
@@ -73,7 +73,7 @@ public class ElementMatcher {
 	}
 
 	private void buildMatchedDataTable() {
-		System.out.print("Merging tables into single data table... ");
+		System.out.print("Merging tables into single data table ... ");
 		try {
 			this.getDatabase().setStatement(this.getDatabase().getConnection().createStatement());
 			this.getDatabase().getStatement().setQueryTimeout(30);
