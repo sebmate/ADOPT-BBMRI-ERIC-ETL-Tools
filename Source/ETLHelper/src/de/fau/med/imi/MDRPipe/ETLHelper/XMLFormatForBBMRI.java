@@ -83,6 +83,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 		Events currentEvents = null;
 		Event currentEvent = null;
 		Event lastEvent = null;
+
 		String lastEventType = null;
 
 		for (XMLEntry currentXmlEntry : xmlEntries) {
@@ -94,15 +95,24 @@ public class XMLFormatForBBMRI implements XMLFormat {
 			String name = xmlEntryForBBMRI.getName();
 			String value = xmlEntryForBBMRI.getValue();
 			String timeStamp = xmlEntryForBBMRI.getTimeStamp();
+			String instance = xmlEntryForBBMRI.getInstance();
 			String dataelementType = xmlEntryForBBMRI.getDataelementType();
 			String eventName = xmlEntryForBBMRI.getEventName();
 			String eventType = xmlEntryForBBMRI.getEventType();
 
 			if (!caseID.equals(lastCaseID)) {
 
-				currentPatient = factory.createOSSEImportOSSEPatient();
-				osseImport.getOSSEPatient().add(currentPatient);
+				// Petr, this was missing ...
+				lastEntity = null;
+				lastTimeStamp = null;
+				lastEventType = null;
+				lastEvent = null;
 
+				// ---
+
+				currentPatient = factory.createOSSEImportOSSEPatient();
+
+				osseImport.getOSSEPatient().add(currentPatient);
 				Identifier identifier1 = factory.createOSSEImportOSSEPatientIdentifier();
 				identifier1.setEncrypted("false");
 				identifier1.setValue(caseID);
@@ -124,6 +134,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 			}
 
 			Boolean doNotAdd = false;
+			Boolean doNotAddToEventsList = false;
 
 			switch (dataelementType) {
 			case "BASIC":
@@ -155,11 +166,32 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				}
 
 				break;
+
 			case "EVENTS":
 
 				if (!entity.equals(lastEntity) || !timeStamp.equals(lastTimeStamp)
 						|| !eventType.equals(lastEventType)) {
-					currentEvent = createEvent(eventName, eventType);
+
+					// currentEvent = createEvent(eventName, eventType);
+
+					// Petr, this looks whether an event with the same instance already exists and if so, reuses it.
+					
+					currentEvent = null;
+					doNotAddToEventsList = false;
+
+					// Look if there's an event already for the instance, if so, reuse this:
+					for (Event ev : currentEvents.getEvent()) {
+						if (ev.getEventtype().equals(eventType)) {
+							if (ev.getName().equals(eventName + "-" + instance)) {
+								currentEvent = ev;
+								//System.out.println("Reusing event");
+								doNotAddToEventsList = true;
+							}
+						}
+					}
+					if (currentEvent == null) { // There was none, so create a new one:
+						currentEvent = createEvent(eventName + "-" + instance, eventType);
+					}
 				}
 
 				de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.Events.Event.Dataelement dataelementForEventData = createDataelementForEventData(
@@ -169,6 +201,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 						.getDataelement();
 
 				doNotAdd = false;
+
 				for (de.samply.registry.schemata.import_v2.OSSEImport.OSSEPatient.Locations.Location.Events.Event.Dataelement dataEl : dataElements2) {
 					if (dataEl.getName().equals(name) && dataEl.getValue().equals(value)) {
 						System.out.println(
@@ -189,10 +222,14 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				if (!doNotAdd) {
 					currentEvent.getDataelement().add(dataelementForEventData);
 				}
-				if (!currentEvent.equals(lastEvent)) {
+
+				if (!currentEvent.equals(lastEvent) && !doNotAddToEventsList) {
 					currentEvents.getEvent().add(currentEvent);
 				}
 
+				// Petr, here is it where the last entry is remembered. Of
+				// course this need to be reset when switching to another
+				// patient.
 				lastEntity = entity;
 				lastTimeStamp = timeStamp;
 				lastEventType = eventType;
@@ -247,7 +284,6 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	@Override
@@ -399,7 +435,7 @@ public class XMLFormatForBBMRI implements XMLFormat {
 				e1.printStackTrace();
 			}
 
-			//e.printStackTrace();
+			// e.printStackTrace();
 		} finally {
 			con.disconnect();
 		}

@@ -30,7 +30,7 @@ public class ETLHelper {
 
 	public static void main(String[] args) throws SQLException, IOException {
 
-		System.out.println("Welcome to the BBMRI-ERIC ETL Helper Utility 1.02!\n");
+		System.out.println("Welcome to the BBMRI-ERIC ETL Helper Utility 1.03!\n");
 	
 		// Read Command Line
 		readCommandLine(args);

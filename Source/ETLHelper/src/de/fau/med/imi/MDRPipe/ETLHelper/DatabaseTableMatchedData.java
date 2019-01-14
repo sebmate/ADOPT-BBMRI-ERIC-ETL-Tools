@@ -141,6 +141,10 @@ public class DatabaseTableMatchedData extends DatabaseTable {
 			query += "d.\"" + DatabaseTableData.DATA_CASEID + "\" ASC, ";
 			query += "d.\"" + DatabaseTableData.DATA_INSTANCE + "\" ASC, ";
 			query += "d.\"" + DatabaseTableData.DATA_TIMESTAMP + "\" ASC";
+			
+			System.out.println(query);
+			//System.exit(0);
+			
 		return query;
 	}
 	
