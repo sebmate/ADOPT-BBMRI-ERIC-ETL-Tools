@@ -6,6 +6,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.logging.Level;
+
 import javax.ws.rs.client.ClientBuilder;
 
 import org.apache.commons.cli.CommandLine;
@@ -15,6 +17,8 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Option;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 import de.fau.med.imi.MDRPipe.MDRPipeConfiguration;
 
@@ -47,7 +51,10 @@ public class MDRExtractor {
 
 	public static void main(String[] args) throws IOException, Exception, Throwable {
 		
-		System.out.println("Welcome to the Samply MDR Extractor Utility 1.0!\n");
+		System.out.println("Welcome to the Samply MDR Extractor Utility 1.01!\n");
+		
+		LogManager.getLogger("org.apache.commons.beanutils.converters").setLevel(org.apache.log4j.Level.ERROR);
+		LogManager.getLogger("de.samply.common.mdrclient").setLevel(org.apache.log4j.Level.ERROR);
 		
 		// Read Command Line
 		readCommandLine(args);
@@ -72,7 +79,7 @@ public class MDRExtractor {
 			extractNamespace(MDRPipeConfiguration.getMdrSourceUrl(), MDRPipeConfiguration.getMdrSourceNamespace());
 		}
 		
-		System.out.println("Done. Extracted " + dataElementsCnt + " data elements with " + valuesCnt + " values.");
+		System.out.println("\n\nDone. Extracted " + dataElementsCnt + " data elements with " + valuesCnt + " values.");
 
 		// Write result to file:
 		if(MDRExtractor.getExtractedMdr().equals("target")) {
@@ -254,9 +261,8 @@ public class MDRExtractor {
 
 					String permValue = permvals.get(c).getValue();
 					
-					System.out.println(permValue);
-					
-					
+					//System.out.println(permValue);
+										
 					String desig = permvals.get(c).getMeanings().get(0).getDesignation();
 					processLine(ConceptString + desig, ConceptString + desig, urn, slotVal,
 							datatype, permValue);
