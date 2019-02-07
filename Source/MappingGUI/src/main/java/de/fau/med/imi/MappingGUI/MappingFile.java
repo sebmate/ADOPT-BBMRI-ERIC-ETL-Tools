@@ -7,8 +7,13 @@ package de.fau.med.imi.MappingGUI;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -25,7 +30,11 @@ class MappingFile {
     MappingFile(String file) {
         BufferedReader br = null;
         try {
-            br = new BufferedReader(new FileReader(file));
+
+            FileInputStream is = new FileInputStream(file);
+            InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+            br = new BufferedReader(isr);
+
             StringBuilder sb = new StringBuilder();
             String line = br.readLine();
 
@@ -33,7 +42,9 @@ class MappingFile {
                 sb.append(line);
                 sb.append(System.lineSeparator());
                 line = br.readLine();
+                //System.out.println(line);
             }
+
             sb.append("\t\t\t");
             sb.append(System.lineSeparator());
             fileContents = sb.toString();
@@ -133,11 +144,10 @@ class MappingFile {
                 }
 
                 if ((!SourceString.equals(lastSourceString) && columns.length == colCount) || a == lines.length - 1) { // New source data element
-                    
-                      // Puts the data onto the "to process" stack (tempMatches):
 
+                    // Puts the data onto the "to process" stack (tempMatches):
                     if (tempMatches.size() > 0) {
-                        
+
                         ArrayList<String> maps2 = new ArrayList<String>(maps.size());
                         for (String s : maps) {
                             maps2.add(new String(s));
@@ -240,8 +250,8 @@ class MappingFile {
         BufferedWriter bw = null;
         FileWriter fw = null;
         try {
-            fw = new FileWriter(file);
-            bw = new BufferedWriter(fw);
+            //fw = new FileWriter(file);
+            bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8));
             bw.write("SourceString\tScore\tMap (original, do not edit)\tMap\tTargetString\tStatus\n");
             for (int a = 0; a < mappings.size(); a++) {
                 bw.write("\n");

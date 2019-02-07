@@ -1,8 +1,10 @@
 package de.fau.med.imi.MDRMatcher;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +16,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.apache.commons.lang3.StringUtils;
-
-
 
 public class MetadataDefinition  implements Serializable {
 
@@ -31,8 +31,11 @@ public class MetadataDefinition  implements Serializable {
 
 	// Simple file reader
 	public String[] readLines(String filename) throws IOException {
-		FileReader fileReader = new FileReader(filename);
-		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+		FileInputStream is = new FileInputStream(filename);
+		InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+		BufferedReader bufferedReader = new BufferedReader(isr);
+
 		List<String> lines = new ArrayList<String>();
 		String line = null;
 		while ((line = bufferedReader.readLine()) != null) {
@@ -74,7 +77,6 @@ public class MetadataDefinition  implements Serializable {
 			Stream<String> stream = Stream.of(allTermsStr.split("\\W+")).parallel();
 			wordFrequencies = stream.collect(Collectors.groupingBy(String::toString,Collectors.counting()));
 			System.out.println(" OK");
-	
 		    
 		} catch (IOException e) {
 			e.printStackTrace();

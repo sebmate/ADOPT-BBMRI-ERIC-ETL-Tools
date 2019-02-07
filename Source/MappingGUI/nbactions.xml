@@ -12,7 +12,7 @@
             <properties>
                 <exec.args>-classpath %classpath de.fau.med.imi.MappingGUI.UI</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2018-10-04 LOINC-Mapping mit BBMRI-ETL-Tools\ADOPT-BBMRI-ERIC-ETL-Tools-master\Demo ETL Pipeline\Demo Biobank</exec.workingdir>
+                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2019-02-07 Harmonisierungs-Service\GBA-Experimente\Tests</exec.workingdir>
             </properties>
         </action>
         <action>
@@ -28,7 +28,7 @@
                 <exec.args>-Xdebug -Xrunjdwp:transport=dt_socket,server=n,address=${jpda.address} -classpath %classpath de.fau.med.imi.MappingGUI.UI</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
-                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2018-10-04 LOINC-Mapping mit BBMRI-ETL-Tools\ADOPT-BBMRI-ERIC-ETL-Tools-master\Demo ETL Pipeline\Demo Biobank</exec.workingdir>
+                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2019-02-07 Harmonisierungs-Service\GBA-Experimente\Tests</exec.workingdir>
             </properties>
         </action>
         <action>
@@ -43,7 +43,7 @@
             <properties>
                 <exec.args>-classpath %classpath de.fau.med.imi.MappingGUI.UI</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2018-10-04 LOINC-Mapping mit BBMRI-ETL-Tools\ADOPT-BBMRI-ERIC-ETL-Tools-master\Demo ETL Pipeline\Demo Biobank</exec.workingdir>
+                <exec.workingdir>C:\Users\matesn\Documents\Projekte\2019-02-07 Harmonisierungs-Service\GBA-Experimente\Tests</exec.workingdir>
             </properties>
         </action>
     </actions>

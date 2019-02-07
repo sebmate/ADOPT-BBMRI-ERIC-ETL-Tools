@@ -134,8 +134,8 @@ public class BagOfWordsMatcher {
 	private double getFreqWeight(String term) {
 
 		try {
-			if (term.contains(" ")) { // Contains multiple words ...
-				String[] terms = term.split(" ");
+			if (term.trim().contains(" ")) { // Contains multiple words ...
+				String[] terms = term.trim().split(" ");
 
 				//double minWeight = 0;
 				double avgWeight = 0;
@@ -143,8 +143,15 @@ public class BagOfWordsMatcher {
 				for (int a = 0; a < terms.length; a++) {
 
 					String currTerm = terms[a];
+					
+					if ( sortedWordFrequencies.get(currTerm) == null) {
+						System.exit(0);
+					}
+					
 					int freq = (int) sortedWordFrequencies.get(currTerm).longValue();
+										
 					double weight = freqPosition.get(freq).doubleValue();
+					
 					
 					/*
 					if (a==0) {

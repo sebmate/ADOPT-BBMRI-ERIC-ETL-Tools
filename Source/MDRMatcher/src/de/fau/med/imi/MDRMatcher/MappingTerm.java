@@ -30,7 +30,7 @@ public class MappingTerm  implements Serializable{
 
 	String simplifyTerm(String term) {
 
-		String temp = term.replaceAll("[^A-Za-z0-9= ]", " ");
+		String temp = term.replaceAll("[^A-Za-z0-9= ÄÖÜäöüß]", " ");
 		temp = temp.replaceAll("\\s+", " ")/* .toUpperCase() */;
 
 		temp = temp.trim();
@@ -92,7 +92,7 @@ public class MappingTerm  implements Serializable{
 			for (int a = 0; a < t.length; a++) {
 				String newWord = t[a].trim();
 
-				if (!newWord.equals("")) {
+				if (!newWord.equals("") && synonyms.size() > 0) {
 					for (int b = 0; b < synonyms.size(); b++) {
 						String[] s = synonyms.get(b).split(";");
 						if (newWord.equalsIgnoreCase(synonyms.get(b).split(";")[0].trim())) {
@@ -116,9 +116,15 @@ public class MappingTerm  implements Serializable{
 				simplifiedTerm += " " + newWord.toUpperCase();
 				simplifiedTerm = simplifiedTerm.trim();
 			}
+			
+			simplifiedTerm = simplifiedTerm.replaceAll("[Ää]", "AE");
+			simplifiedTerm = simplifiedTerm.replaceAll("[Öö]", "OE");
+			simplifiedTerm = simplifiedTerm.replaceAll("[Üü]", "UE");
+			simplifiedTerm = simplifiedTerm.replaceAll("[ß]", "SS");
 
 			simplifiedTerm = simplifiedTerm.replaceAll("[^A-Za-z0-9= ]", " ").replaceAll("\\s+", " ");
 
+			/*
 			if (simplifiedTerm.contains("=")) {
 				String[] sp = simplifiedTerm.split("=");
 
@@ -130,7 +136,8 @@ public class MappingTerm  implements Serializable{
 					simplifiedTerm = deDup(simplifiedTerm);
 				}
 			}
-
+			*/
+			
 			simplifiedTerm = simplifiedTerm.replaceAll("[^A-Za-z0-9 ]", " ").replaceAll("\\s+", " ");
 
 			String[] t2 = simplifiedTerm.split(" ");

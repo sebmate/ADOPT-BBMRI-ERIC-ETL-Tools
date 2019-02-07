@@ -125,6 +125,8 @@ class MatchingThread extends Thread {
 			ArrayList<MatchResult> matchResults = new ArrayList<MatchResult>();
 			String sourceTerm = source.getTerm(a).getSimplifiedTermString();
 
+			//System.out.println("---" + source.getTerm(a).getSimplifiedTermString());
+			
 			if (sourceTerm != null) {
 				String cachefile = DigestUtils.md5Hex(source.getTerm(a).getInfoCode()) + ".obj";
 				File f = new File("cache/" + cachefile);
@@ -146,7 +148,8 @@ class MatchingThread extends Thread {
 						double score = matchResult.getMatchScore();
 						if (score > maxScore)
 							maxScore = score;
-						if (score >= maxScore * .11) {
+						
+						if (score >= maxScore * .11 && score > 0) {
 							// matchResult.setMatchLog("");
 							matchResults.add(matchResult);
 						}
@@ -155,9 +158,20 @@ class MatchingThread extends Thread {
 							return;
 						}
 					}
+					
+					//System.out.println("1:" + matchResults.size());
 
+					if (matchResults.size() == 0) {
+						List<String> dummyList = new ArrayList();
+						MappingTerm nothing = new MappingTerm("\t \t \t \tNO MATCH FOUND!\tNO MATCH FOUND!", dummyList);
+						MatchResult dummy = new MatchResult(source.getTerm(a), nothing, 0.001, "");
+						matchResults.add(dummy);
+					}
+					
 					Collections.sort(matchResults, new MatchResultsComparator());
 
+					//System.out.println("2:" + matchResults.size());
+					
 					for (int c = matchResults.size() - 1; c >= 0; c--) {
 						if (matchResults.get(c).getMatchScore() < maxScore * 0.11) {
 							matchResults.remove(c);
@@ -168,6 +182,7 @@ class MatchingThread extends Thread {
 						FileOutputStream fileOut = new FileOutputStream("cache/" + cachefile);
 						ObjectOutputStream out = new ObjectOutputStream(fileOut);
 						out.writeObject(matchResults);
+						//System.out.println("3:" + matchResults.size());
 						out.close();
 						fileOut.close();
 					} catch (IOException i2) {
@@ -185,7 +200,6 @@ class MatchingThread extends Thread {
 			}
 			subMatch = -1;
 		}
-
 	}
 
 	int getTodo() {
@@ -246,7 +260,7 @@ public class MDRMatcher {
 		 * System.out.println(words.occurrencesOf("ciao")); System.exit(0);
 		 */
 
-		System.out.println("\nWelcome to the Samply MDR Matcher 2.0!\n");
+		System.out.println("\nWelcome to the Samply MDR Matcher 2.1!\n");
 
 		// Parse command line options:
 
@@ -393,6 +407,9 @@ public class MDRMatcher {
 
 				int cores = Runtime.getRuntime().availableProcessors();
 				int numThreads = cores;
+				
+				//numThreads = 1;
+				
 				System.out.println("Multi-threading: Using " + cores + " CPU cores.\n");
 
 				for (int th = 0; th < numThreads; th++) {
@@ -501,11 +518,13 @@ public class MDRMatcher {
 				reader.close();
 
 				Boolean abort = false;
+				PrintWriter writer2 = null;
+				PrintWriter writer3 = null;
 
 				try {
 
-					PrintWriter writer2 = new PrintWriter(outputMappingFile, "Cp1252");
-					PrintWriter writer3 = new PrintWriter(outputMappingFile + ".log", "Cp1252");
+					writer2 = new PrintWriter(outputMappingFile, "UTF-8");
+					writer3 = new PrintWriter(outputMappingFile + ".log", "UTF-8");
 
 					writer2.print("SourceString\tScore\tMap\tTargetString\n\n");
 
@@ -545,13 +564,17 @@ public class MDRMatcher {
 
 										double matchScore = 0;
 
+										//System.out.println(matchResults.size());
+										
+										/*
 										if (matchResults.size() == 0) {
 											cntMatchQuality0++;
 											writer3.print(matchResults.get(0).getTerm1().getInfoCode() + "\t" + 0
 													+ "\t\t" + "NO MATCH FOUND!" + "\n");
 
 										} else {
-
+											*/
+											
 											writer3.print(
 													"\n############################################################################################################################################################\n\n");
 
@@ -588,6 +611,9 @@ public class MDRMatcher {
 														}
 														cutOff = matchScore * .11;
 													}
+													if (c == 0 && matchResultsSize == 1 && !targets.equals("NO MATCH FOUND!")) {
+														doMap = "X";
+													}
 
 													if (matchScore > cutOff) {
 
@@ -609,7 +635,7 @@ public class MDRMatcher {
 											}
 
 											System.out.println(".");
-										}
+										//}
 										writer2.print("\n");
 
 									} catch (IOException i) {
@@ -624,12 +650,14 @@ public class MDRMatcher {
 						}
 					}
 
+
 					writer2.close();
 					writer3.close();
-
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+
 
 				System.out.println("\nDone!");
 

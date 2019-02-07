@@ -1,7 +1,9 @@
 package de.fau.med.imi.MDRMatcher;
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,8 +19,12 @@ public class MappingContentFile {
 
 	// Simple file reader
 	public String[] readLines(String filename) throws IOException {
-		FileReader fileReader = new FileReader(filename);
-		BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+		
+		FileInputStream is = new FileInputStream(filename);
+		InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+		BufferedReader bufferedReader = new BufferedReader(isr);
+		
 		List<String> lines = new ArrayList<String>();
 		String line = null;
 		while ((line = bufferedReader.readLine()) != null) {
@@ -35,8 +41,11 @@ public class MappingContentFile {
 		List<String> synonyms = new ArrayList<String>();
 
 		try {
-			fileReader = new FileReader("Ressources/Synonyms.txt");
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
+		
+			FileInputStream is = new FileInputStream("Ressources/Synonyms.txt");
+			InputStreamReader isr = new InputStreamReader(is, "UTF-8");
+			BufferedReader bufferedReader = new BufferedReader(isr);
+
 			List<String> lines = new ArrayList<String>();
 			String line = "";
 			while ((line = bufferedReader.readLine()) != null) {

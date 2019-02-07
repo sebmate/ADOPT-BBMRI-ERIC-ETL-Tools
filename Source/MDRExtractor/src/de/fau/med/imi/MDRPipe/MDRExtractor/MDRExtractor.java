@@ -51,7 +51,7 @@ public class MDRExtractor {
 
 	public static void main(String[] args) throws IOException, Exception, Throwable {
 		
-		System.out.println("Welcome to the Samply MDR Extractor Utility 1.02!\n");
+		System.out.println("Welcome to the Samply MDR Extractor Utility 1.03!\n");
 		
 		LogManager.getLogger("org.apache.commons.beanutils.converters").setLevel(org.apache.log4j.Level.ERROR);
 		LogManager.getLogger("de.samply.common.mdrclient").setLevel(org.apache.log4j.Level.ERROR);
@@ -83,12 +83,12 @@ public class MDRExtractor {
 
 		// Write result to file:
 		if(MDRExtractor.getExtractedMdr().equals("target")) {
-			PrintWriter writer = new PrintWriter(MDRPipeConfiguration.getMetadataFolder() + MDRPipeConfiguration.getMdrTargetFileName(), "Cp1252");
+			PrintWriter writer = new PrintWriter(MDRPipeConfiguration.getMetadataFolder() + MDRPipeConfiguration.getMdrTargetFileName(), "UTF-8");
 			writer.println(result.substring(0, result.length() - 1));
 			writer.close();
 			System.out.println("Extracted metadata has been written to file \"" + MDRPipeConfiguration.getMdrTargetFileName() + "\".");
 		} else {
-			PrintWriter writer = new PrintWriter(MDRPipeConfiguration.getMetadataFolder() + MDRPipeConfiguration.getMdrSourceFileName(), "Cp1252");
+			PrintWriter writer = new PrintWriter(MDRPipeConfiguration.getMetadataFolder() + MDRPipeConfiguration.getMdrSourceFileName(), "UTF-8");
 			writer.println(result.substring(0, result.length() - 1));
 			writer.close();
 			System.out.println("Extracted metadata has been written to file \"" + MDRPipeConfiguration.getMdrSourceFileName() + "\".");
